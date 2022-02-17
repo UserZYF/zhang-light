@@ -59,15 +59,15 @@
     --b3-tooltips-color: #88adb8d2;
     
 
-    /* 卡片背景 */
+    /* 卡片背景，无用，详见浅色便利贴 */
     --b3-card-error-color: #5f6368;
     --b3-card-error-background: #fbdddf;
     --b3-card-warning-color: #5f6368;
     --b3-card-warning-background: #fedb89;
     --b3-card-info-color: #5f6368;
-    --b3-card-info-background: rgba(186,206,253,.7);
+    --b3-card-info-background: rgba(186,206,253);
     --b3-card-success-color: #5f6368;
-    --b3-card-success-background: rgba(183,237,177,.8);
+    --b3-card-success-background: rgba(183,237,177);
 
     /* 自定义文字 */
     --b3-font-color1: #d83931;
@@ -121,7 +121,7 @@
     --b3-pdf-background4: #80ff80;
     --b3-pdf-background5: #98eaff;
     --b3-pdf-background6: #58b4ee;
-    --b3-pdf-background7: #b680ff;
+    --b3-pdf-background7: #d4b8f8;
     /* 动画效果 */
     --b3-transition: all 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms;
 
@@ -1133,63 +1133,39 @@ label::selection,
 
 
 /* ----------------------------------------------------调整超级块的块间距------------------------------------------ */
-/* 效果：
-- 超级块内的横排块添加间距，
-- 超级块与普通块间距一致
-- 超级块与超级块直接添加间距
- */
-
-/* 超级块与普通块间距一致  */
-.protyle-wysiwyg>.sb{
-    padding: 4px 0px !important;
+/* ————————————————————————————————————大超级块，不用设置边框—————————————————————————————— */
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]{
+    display: flex;
+    flex-wrap: wrap;
 }
-
-/* 超级块内块都设置右margin */
-.protyle-wysiwyg .sb[data-sb-layout="col"]>div[data-node-id]{
-    margin:4px 4px 4px 0px;
-    padding: 4px;
+/* —————————————————————————————————————次超级块大小—————————————————————————————————————— */
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] .sb {
+    border: 0.1em dashed rgba(128, 128, 128, 0.5);
     border-radius: 0px;
     box-sizing: border-box;
-    /* border-top: 3px solid #856404 !important; */
-    /* border: 2px dashed rgba(128, 128, 128, 0.5); */
+    margin: 0.1em 0 0.1em 0.1em;
+}
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] .sb:nth-last-child(2) {
+    margin-right: 0.1em;
+}
+/* ——————————————————————————————————————每个子超级块—————————————————————————————————————— */
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div {
+    border: 0.1em dashed rgba(128, 128, 128, 0.5);
+    border-radius: 0px;
+    box-sizing: border-box;
+    margin: 0.1em 0 0.1em 0.1em;
+    /* padding:0 0.2em; */
     background-color: #fdfdfd;
 }
-
-/* ————————————————————给超级块设置滚动虚线边框———————————————————— */
-.protyle-wysiwyg .sb[data-sb-layout="col"]>div[data-node-id]{
-    background:
-        linear-gradient(90deg, black 60%, transparent 0) repeat-x,
-        linear-gradient(90deg, black 60%, transparent 0) repeat-x,
-        linear-gradient(0deg, black 60%, transparent 0) repeat-y,
-        linear-gradient(0deg, black 60%, transparent 0) repeat-y,
-        #fdfdfd;
-    background-size: 6px 0.1em, 6px 0.1em, 0.1em 6px, 0.1em 6px;
-    background-position: 0 0, 0 100%, 0 0, 100% 0;
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div:nth-last-child(2) {
+    margin-right: 0.1em;
 }
 
-.protyle-wysiwyg .sb[data-sb-layout="col"]>div[data-node-id]:hover {
-    animation: linearGradientMove .3s infinite linear;
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] .sb:hover,
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div:hover {
+    border-color: #cf5659;
+    border-style: solid;
 }
-@keyframes linearGradientMove {100% {background-position: 4px 0, -4px 100%, 0 -4px, 100% 4px;}}
-
-/* ————————————————————给超级块设置滚动虚线边框 END———————————————————— */
-
-
-.protyle-wysiwyg .sb[data-sb-layout="col"] > div[data-node-id]:nth-last-child(2){
-    /* 超级块内最后一个块无右margin */
-    margin:4px 0px 4px 0px;
-}
-
-
-.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] .sb{
-    /* 超级块与超级块间距 */
-    margin:0px 4px 0px 0px;
-}
-.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]> .sb:nth-last-child(2){
-     /* 超级块与超级块间距，最后一个超级块无右margin */
-    margin:0px;
-}
-
 /* ----------------------------------------------------调整超级块的块间距 END------------------------------------------ */
 
 
@@ -1214,10 +1190,12 @@ label::selection,
 
 .protyle-toolbar__item--current {
     color: #cf5659 !important;
-    background-color: #cf56594d !important;
+    background-color: rgba(207, 86, 89, 0.3) !important;
     /* align-items: center; */
     border-radius: 4px;
 }
+
+
 /* --------------------------------------------------鼠标选中文本后弹出的工具栏样式 END------------------------------------- */
 
 
@@ -1491,6 +1469,7 @@ label::selection,
     border-radius: 0px;
 }
 
+
 .protyle-wysiwyg [data-node-id][custom-f="dm"]>div[contenteditable="true"][spellcheck="false"] {
     padding-left: 20px;
     width: 100%;
@@ -1507,6 +1486,11 @@ label::selection,
         transform: translateX(-100%);
         -webkit-transform: translateX(-100%);
     }
+}
+
+/* 鼠标悬浮在文字上方时暂停 */
+.protyle-wysiwyg [data-node-id][custom-f="dm"]>div[contenteditable="true"][spellcheck="false"]:hover {
+    animation-play-state: paused;
 }
 /* ----------------------------------------------自定义属性 END-------------------------------------------- */
 
@@ -1558,7 +1542,9 @@ label::selection,
 }
 /* pdf搜索高亮 */
 .textLayer .highlight.selected {
-    background-color: #ffa938b9;
+    background-color: yellow;
+    border: 0.1em dashed black;
+    border-radius: 50px;
 }
 
 /* 自定义颜色选框调整宽高 */
@@ -1632,7 +1618,7 @@ label::selection,
 }
 /* ————————————————————7紫色———————————————————— */
 .pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background7)"]:before{
-    background-color: #b680ff;
+    background-color: #d4b8f8;
     border-bottom: 2px solid purple;
 }
 
@@ -2073,11 +2059,12 @@ label::selection,
 /* ——————————————————————————————————————————分割线—————————————————————————————————————————————— */
 /* ——————————去除默认的分割线样式—————————— */
 .protyle-wysiwyg [data-node-id].hr>div {
-    border-bottom: none;
+    /* border-bottom: none; */
+    border-bottom: 0.1em solid rgba(128, 128, 128, 0.5);
 }
 
 /* ——————————给分割线添加渐变颜色—————————— */
-.hr:after {
+/* .hr:after {
     position: absolute;
     top: 3px;
     left: 0px;
@@ -2101,7 +2088,7 @@ label::selection,
     100%{
         background-position: 0% 50%;
     }
-}
+} */
 /* ——————————————————————————————————————————分割线 END—————————————————————————————————————————————— */
 
 /* ---------------------------------------自定义13种背景样式，前7种为7种彩虹色----------------------------------------- */
@@ -2204,6 +2191,8 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
     margin-left: 0px;
 }
 
+
+/* 标题自动编号位置 */
 
 /* ---------------------------设置页面格子背景-------------------------------------------------------- */
 /* 格子背景 */
@@ -2528,7 +2517,7 @@ blockquote[style*="background-color: var(--b3-card-success-background);"] {
     color: gray;
     border: 1px solid gray; */
     border-radius: 3px;
-    padding: 1px 5px !important;
+    /* padding: 1px 5px !important; */
     background-color: transparent;
     color: #cf5659;
     border: 1px solid #cf5659;
@@ -2589,7 +2578,7 @@ blockquote[style*="background-color: var(--b3-card-success-background);"] {
 
 /* ----------------------------------------------------搜索栏------------------------------------------------- */
 .search__header .b3-text-filed--text {
-    background-color: rgba(207,86,89,0.1);
+    background-color: #cf56591a;
     color: #cf5659;
     border: none;
     border-bottom: 2px solid #cf5659;
@@ -3082,23 +3071,18 @@ b:before {
 .b3-menu.b3-list.b3-list--background:not(div.emojis) {
     column-count: 4;
     min-width: 60vw !important;
-    overflow-x: none !important;
-    height: 700px;
-    max-height: 402px;
+    max-height: 419px ;
     /*最后4种样式的“清除样式”按钮会被折叠，下方有滚动条，若不想要滚动条，将402调整为408-410，但无序列表会跑到第一列*/
 }
-/* .b3-menu.b3-list.b3-list--background>:not(div.emojis) { */
-/* div.emojis {
-    column-count: 1 !important;
-} */
 
 /* ————————————————————调整挂件和模板窗口的分栏效果，仍旧分为4栏—————————————————————————————— */
 .b3-list.fn__flex-1.b3-list--background:not(#globalSearchList) {
     column-count: 4;
     min-width: 60vw !important;
-    overflow-x: none !important;
+    /* overflow-x: none !important;
     height: 700px;
-    max-height: 402px;
+    max-height: 402px; */
+    max-height: 419px ;
 }
 
 /* ————————————————————调整emoji窗口的选择效果，向右拉动滚动条查看所有emoji———————————————————— */
@@ -3262,9 +3246,17 @@ b:before {
 /* ————————————————————直接设置emoji大小———————————————————— */
 .protyle-background .protyle-background__icon svg{
 	width:78px;
-	height:78px
+	height:78px;
+    /* font-size :54px; */
 }
-
+/* ————————————————————设置win10默认emoji的大小（如果设置了的话）———————————————————— */
+.protyle-background__icon {
+    font-size: 54px !important;
+    line-height: 78px !important;
+    text-align: center;
+    width: 78px !important;
+    height: 78px !important;
+}
 /* ——————————————————————鼠标悬浮时emoji下方的背景，一般为透明，注释掉也可———————————————————————— */
 .protyle-background .protyle-background__icon:hover {
 	background-color:rgba(207, 86, 88, 0.3);
@@ -3356,6 +3348,7 @@ b:before {
     top: -20px;
 }
 
+
 /* ---------------------------------------------------------自动编号------------------------------------------------------- */
 .protyle-wysiwyg ,.b3-typography {
     counter-reset: h1 0 h2 0 h3 0 h4 0 h5 0 h6 0;
@@ -3401,4 +3394,41 @@ b:before {
     counter-increment: h6;
     content: "(" counter(h6, decimal) "). ";
 }
+
+
+/* ——————————消除h1-h6标题中含有引用时导致计数出现自动编号的影响—————————— */
+.protyle-attr::before,
+.protyle-attr--refcount.popover__block::before{
+    display: none;
+}
 /* ---------------------------------------------------------自动编号 END------------------------------------------------------- */
+
+
+/* PDF搜索栏设置 */
+.findbar {
+    padding: 5px 8px;
+    border-radius: 3px;
+}
+
+
+/* 设置图片右上角按钮背景颜色 */
+.protyle-icons {
+    background-color: #fafafa;
+    top: 7px;
+    right: 4px;
+}
+
+/* 题头图下方设置虚线边框 */
+.protyle-background__img {
+    border-bottom: 1px dashed #cfcece;
+}
+
+/* PDF鼠标悬浮时无双链的标注不显示链接弹窗 */
+.block__popover--open[data-oid="undefined"]  {
+    display: none;
+    box-shadow: var(--b3-point-shadow);
+}
+/* 调整弹窗的阴影 */
+.block__popover--open {
+    box-shadow: var(--b3-point-shadow);
+}
