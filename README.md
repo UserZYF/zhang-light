@@ -1,7 +1,3 @@
-# README
-
-# zhang-light主题
-
 ### 灵感来源
 
 - 本主题以Tsundoku Light主题为模板进行修改
