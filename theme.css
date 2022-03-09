@@ -598,12 +598,12 @@ mark {
 }
 
 /* --------------------------------下划线样式--------------------------- */
-.b3-typography u,
+/* .b3-typography u,
 .protyle-wysiwyg u {
     text-decoration: none;
     border-bottom: 2px solid gray;
-    padding-bottom: 4px;
-}
+    padding-bottom: 1px;
+} */
 
 /* ----------------------------------------------引用---------------------------------------------- */
 /* ——————————————————————————设置引用格式———————————————————————————— */
@@ -639,8 +639,10 @@ mark {
 /* ------------------------------------------------块引用/引用块------------------------------------------------- */
 /* 设置引用块格式 */
 .protyle-wysiwyg [data-node-id] span[data-type='block-ref'] {
-    color: #202124;
+    /* color: #202124; */
+    color: inherit;
     padding: 0.1em 0.2em;
+    padding-bottom: 0.05em !important;
     border-bottom: 1px solid var(--b3-theme-primary);
     margin: 2px;
 }
@@ -669,7 +671,17 @@ mark {
 
 /* 引用块打开时的阴影 */
 .block__popover--open {
-    box-shadow: var(--b3-small-shadow);
+    box-shadow: var(--b3-dialog-shadow);
+}
+
+/* 去掉h1-h6标题上块引用的下划线，感谢二群群友123的建议 */
+.h1 span[data-type='block-ref'],
+.h2 span[data-type='block-ref'],
+.h3 span[data-type='block-ref'],
+.h4 span[data-type='block-ref'],
+.h5 span[data-type='block-ref'],
+.h6 span[data-type='block-ref'] {
+    border-bottom: 1px solid transparent !important;
 }
 
 /* ------------------------------------------------块引用 END------------------------------------------------- */
@@ -677,8 +689,10 @@ mark {
 /* -----------------------------------------超链接 a----------------------------------- */
 .item__main a,
 .protyle-wysiwyg [data-node-id] span[data-type='a'] {
-    color: var(--b3-theme-primary);
+    /* color: var(--b3-theme-primary); */
+    color: inherit;
     padding: 0.1em 0.2em;
+    padding-bottom: 0.05em !important;
     margin: 2px;
     border-bottom: 1px solid gray;
 }
@@ -699,6 +713,23 @@ mark {
     background-color: var(--b3-theme-hover);
     border-radius: 3px 3px 0 0;
     border-bottom: 1px solid gray;
+    text-decoration: none;
+}
+
+/* ————————————————————标题上的链接去掉下划线，2群群友123的建议———————————————————— */
+.h1 span[data-type="a"],
+.h2 span[data-type="a"],
+.h3 span[data-type="a"],
+.h4 span[data-type="a"],
+.h5 span[data-type="a"],
+.h6 span[data-type="a"] {
+    border-bottom: 1px solid transparent !important;
+}
+
+/* ————————————————————正文中的超链接保持原来的颜色———————————————————— */
+.item__main a,
+.p [data-type="a"] {
+    color: var(--b3-theme-primary) !important;
 }
 
 /* -----------------------------------------超链接 END----------------------------------- */
@@ -832,12 +863,12 @@ mark {
 .protyle-wysiwyg img:not(img.emoji),
 .b3-typography img:not(img.emoji) {
     cursor: pointer;
-    border: 0.05em solid #fafafa !important;
+    border: 0.05em solid #fafafa;
     border-radius: var(--b3-border-radius-noraml);
     text-align: left;
     box-shadow: var(--b3-point-shadow);
     position: relative;
-    transition: var(--b3-transition);
+    /* transition: var(--b3-transition); */
     width: auto;
 }
 
@@ -1142,7 +1173,8 @@ code.hljs {
 
 /* ————————————————————————鼠标划选区域————————————————————————————*/
 .protyle-select {
-    background-color: var(--b3-theme-tm1) !important;
+    /* background-color: var(--b3-theme-tm1) !important; */
+    background-color: transparent !important;
 }
 
 /* ————————————————————————————选中块—————————————————————————————— */
@@ -1228,7 +1260,8 @@ code.hljs {
     margin: 2px !important;
     padding: 0px 6px !important;
     font-size: 14px;
-    color: gray;
+    /* color: #202124; */
+    color: var(--b3-theme-primary);
     /* background-color: var(--b3-theme-background2); */
     background-color: var(--b3-theme-background2);
     position: relative;
@@ -1654,6 +1687,21 @@ span.b3-list-item__action.b3-tooltips[data-type="more-file"]:hover {
     margin-bottom: 6px;
 }
 
+/* 设置表格自动宽度 */
+.protyle-wysiwyg [data-node-id][custom-f~=auto] table {
+    /* display: table; */
+    width: auto !important;
+    /* overflow: scroll; */
+    white-space: nowrap;
+}
+
+/* 通过自定义属性去掉图片边框和阴影 */
+.protyle-wysiwyg [data-node-id][custom-f~=pic] img {
+    box-shadow: none !important;
+    border-radius: var(--b3-border-radius-none) !important;
+    border: 0.05em solid transparent;
+}
+
 /* ----------------------------------------------自定义属性 END-------------------------------------------- */
 /* -----------------------------------------------列表转化为表格------------------------------------------- */
 /* 设置整个列表表格的缩进 */
@@ -1676,6 +1724,12 @@ span.b3-list-item__action.b3-tooltips[data-type="more-file"]:hover {
     /* outline: 0.05em solid #8080804d; */
     outline: var(--b3-border-normal);
     background-color: var(--b3-theme-background);
+    /* padding-right: 6px; */
+}
+
+/* ————————————————————调整每个子列表项右侧边距———————————————————— */
+.protyle-wysiwyg *[custom-f="bg"] .li>div {
+    margin-right: 6px;
 }
 
 .protyle-wysiwyg *[custom-f="bg"] .li:hover {
@@ -1729,11 +1783,6 @@ span.b3-list-item__action.b3-tooltips[data-type="more-file"]:hover {
 
 .list[data-node-id][data-type="NodeList"][custom-f="bg"] .protyle-action>svg {
     width: 10px;
-}
-
-/* ————————————————————表格设置为100%宽度，即填充整个空间———————————————————— */
-.protyle-wysiwyg *[custom-f="bg"] .table {
-    width: 100%;
 }
 
 /* ---------------------------------------------------------列表转化为表格 END-------------------------------------------------- */
@@ -2506,7 +2555,7 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
 }
 
 /* ---------------------------设置页面格子背景-------------------------------------------------------- */
-/* 格子背景 */
+/* 格子背景（适合light主题，其他主题需要重新设置颜色 */
 .protyle-content {
     background-image:
         linear-gradient(90deg, rgba(60, 10, 30, 0.05) 2%, transparent 0px),
@@ -2736,6 +2785,8 @@ strong[style="color: var(--b3-font-color13);"] {
     height: 23px;
     width: 23px;
     border-radius: var(--b3-border-radius-noraml);
+    box-shadow: none;
+    border: var(--b3-border-normal);
 }
 
 /* ——————————————————————为样式中13种字体设置格式—————————————————————— */
@@ -2918,23 +2969,57 @@ strong[style="color: var(--b3-font-color13);"] {
     color: black;
 }
 
+/* ————————————————————设置PDF标注的格式———————————————————— */
+button.b3-color__square[style*="background-color:var(--b3-pdf"] {
+    border-radius: var(--b3-border-radius-noraml) !important;
+    border: var(--b3-border-normal) !important;
+}
+
 /* ————————————————————设置PDF标注的相关文字———————————————————— */
-button.b3-color__square[style="background-color:var(--b3-pdf-color1)"]::before {
+button.b3-color__square[style*="background-color:var(--b3-pdf-background"]::before {
+    color: #202124;
+    font-family: "Microsoft YaHei";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background1)"]::before {
     content: "红";
-    color: var(--b3-font-color1);
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background2)"]::before {
+    content: "橙";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background3)"]::before {
+    content: "黄";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background4)"]::before {
+    content: "绿";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background5)"]::before {
+    content: "青";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background6)"]::before {
+    content: "蓝";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background7)"]::before {
+    content: "紫";
 }
 
 /* -------------------------------------------------公式相关设置--------------------------------------------- */
 /* 更改公式字体 */
-.katex {
+/* .katex {
     text-align: left;
     font-family: 'Times New Roman', "屏显臻宋" !important;
-}
+} */
 
 /* 公式居左对齐 */
-.b3-typography .katex-display>.katex>.katex-html, .protyle-wysiwyg .katex-display>.katex>.katex-html {
+/* .b3-typography .katex-display>.katex>.katex-html, .protyle-wysiwyg .katex-display>.katex>.katex-html {
     text-align: left;
-}
+} */
 
 /* -------------------------------------------------公式相关设置--------------------------------------------- */
 /* ---------------------------------------------------------头图相关设置--------------------------------------------------------- */
@@ -3015,6 +3100,11 @@ button.b3-color__square[style="background-color:var(--b3-pdf-color1)"]::before {
     text-align: center;
     width: 78px !important;
     height: 78px !important;
+}
+
+/* 调整头图下方自定义表情的圆角大小 */
+.protyle-background__icon img {
+    border-radius: var(--b3-border-radius-noraml);
 }
 
 /* ——————————————————————鼠标悬浮时emoji下方的背景，一般为透明，注释掉也可———————————————————————— */
@@ -3325,6 +3415,37 @@ textarea.b3-text-filed.fn__flex-1 {
 /* ————————————————————修改背景颜色———————————————————— */
 .protyle-wysiwyg[custom-f~=blue] {
     background-color: rgba(128, 213, 206, 0.1) !important;
+}
+
+/* 2群"随船医"贡献护眼颜色 */
+/* 绿豆沙 */
+.protyle-wysiwyg[custom-f~=green] {
+    background-color: #c8edcc !important;
+}
+
+/* WPS护眼模式 */
+.protyle-wysiwyg[custom-f~=green1] {
+    background-color: #cce8cf !important;
+}
+
+/* 青草绿 */
+.protyle-wysiwyg[custom-f~=green2] {
+    background-color: #e3eccd !important;
+}
+
+/* 杏仁黄 */
+.protyle-wysiwyg[custom-f~=yellow] {
+    background-color: #faf8df !important;
+}
+
+/* 极光灰 */
+.protyle-wysiwyg[custom-f~=gray] {
+    background-color: #ebeaf0 !important;
+}
+
+/* 瑞雪白 */
+.protyle-wysiwyg[custom-f~=white] {
+    background-color: #f1ede1 !important;
 }
 
 /* -------------------------------------------------对整个文档实行自定义属性 END--------------------------------------------- */
