@@ -1,3 +1,5 @@
+# zhang-light主题
+
 ### 灵感来源
 
 - 本主题以Tsundoku Light主题为模板进行修改
@@ -7,11 +9,15 @@
 ### 感谢列表
 
 - 感谢大家对于主题的反馈和建议
+  - @黑皮
+  - @随船医
+  - @今天你写笔记了吗
+
 - 感谢萌新，mindstudy，九炎，Roy在修复“无序列表转换成表格”这一自定义属性中提供的帮助
-  - 萌新（dark+主题作者）
-  - mindstudy(Concise Light极简主题作者)
-  - Roy（notion theme主题作者)
-  - 九炎（群内诸多挂件的作者）
+  - @萌新（dark+主题作者）
+  - @mindstudy(Concise Light极简主题作者)
+  - @Roy（notion theme主题作者)
+  - @九炎（群内诸多挂件的作者）
 
 ### 📌注意事项
 
@@ -21,7 +27,7 @@
   - 安装后可自动生效，不用做什么设置；如果没有立即生效，可以重启一下思源笔记
   - 字体效果示例
     - ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzu8xqgdlvj31hc0jitnk.jpg)
-- 自定义属性强烈推荐：自定义属性无序列表变为表格
+- **自定义属性强烈推荐：自定义属性无序列表变为表格**
 
 ### 🎉更新进度
 
@@ -53,15 +59,38 @@
 
 #### 0.4版本
 
-- 统一主题中的圆角，颜色，背景等，方便大家自定义修改（如可以很方便地将主题色修改为绿色，蓝色等）
-- 增加了一些对文档的自定义属性，如修改字体，单个文档去掉自动编号、去掉标题下的圆角矩形等
-- 修改了超链接和块引用的样式
-- 修改了 kbd 键盘的样式
-- 修改了标签样式
-- 将 h1 级别标题设置为居左
-- 增加下划线距离文字的高度
-- 去掉文档树和大纲的引用数字，保留反向链接面板和提及面板后面的引用数字。
-- 去掉 iframe 元素的边框
+* 统一主题中的圆角，颜色，背景等，方便大家自定义修改（如可以很方便地将主题色修改为绿色，蓝色等）
+* 增加了一些对文档的自定义属性，如修改字体，单个文档去掉自动编号、去掉标题下的圆角矩形等
+* 修改了超链接和块引用的样式
+* 修改了 kbd 键盘的样式
+* 修改了标签样式
+* 将 h1 级别标题设置为居左
+* 增加下划线距离文字的高度
+* 去掉文档树和大纲的引用数字，保留反向链接面板和提及面板后面的引用数字。
+* 去掉 iframe 元素的边框
+
+##### 0.4.1
+
+* 增加自定义属性图片去掉边框和阴影`f:pic`（有群友有用到段落文字中插入图片公式的情形）
+* 修改下划线的样式（下划线距离文字底部有点远）
+* 取消鼠标滑选区域显示（群友反馈，感觉不必要）
+* 更改行内代码的颜色（主题色）
+* 更改引用块和超链接在标题中的样式（自适应标题颜色，去掉下划线，这样不突兀）
+
+  * ![image.png](https://tva1.sinaimg.cn/mw690/0082QUidly1h03nw5j89uj30ji07hwhv.jpg)
+* 通过文档的自定义属性增加一些护眼色（来自群友“随船医”的推荐）
+
+  * |名称|颜色|代码|
+    | -------------| ---------| --------|
+    |杏仁黄|#faf8df|yellow|
+    |绿豆沙|#c8edcc|green|
+    |wps护眼模式|#cce8cf|green1|
+    |青草绿|#e3eccd|green2|
+    |极光灰|#ebeaf0|gray|
+    |瑞雪白|#f1ede1|white|
+* 通过自定义属性将表格设置为自适应宽度，超过100%后可以左右拖拽查看，文字不会自动分行
+
+  * ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1h03qbezd5fj31080dk7bu.jpg)
 
 ### 🎈修复bug
 
@@ -79,7 +108,11 @@
 
 #### 0.4版本
 
-- 修复笔记本不能点击emoji更换图标的bug
+* 修复笔记本不能点击emoji更换图标的bug
+
+##### 0.4.1
+
+* 列表转化为表格的自定义属性中，表格右边界与文字距离太近
 
 ### 下步计划
 
@@ -90,7 +123,7 @@
   - 不去掉，虚线框可以突出超级块之间的界限，特别是在没有背景颜色的时候
 - 考虑是否保持默认开启标题自动编号
 
-  - 默认开启，自动编号是本主题的特色之一，也得到了一些朋友的喜欢。但使用说明中会增加对 CSS 代码修改的说明，大家可以自行决定是否去掉自动编号。（在theme.css文件中搜索标题自动编号，删除相关代码即可）
+  - 默认开启，自动编号是本主题的特色之一，也得到了一些朋友的喜欢。但使用说明中会增加对 CSS 代码修改的说明，大家可以自行决定是否去掉自动编号。
 - 给“[[”引出的引用块列表增加鼠标悬浮显示全部内容的功能
 
   - Loading
@@ -106,7 +139,7 @@
 
 ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzsge4flubj31hc0sm1be.jpg)
 
-![image-20220227230623260](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220227230623260.png)
+![image.png](https://tva1.sinaimg.cn/large/0082QUidgy1h03r7o31otj31hc0sm1kx.jpg)
 
 ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzsi13jfipj31hc0sm13h.jpg)
 
@@ -140,8 +173,6 @@
 > 自定义属性shift+鼠标左键，弹出窗口中，选择“添加”，属性名填入“f”，属性值填入下列代码，即可实现相应效果，可以添加多个属性，中间用空格隔开即可
 >
 
-<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=682094343&amp;bvid=BV11U4y1f7sP&amp;cid=544504047" data-src=""></video>
-
 |分类|名称|代码|
 | --------------------------| ----------------| ------|
 |字体|楷体|k|
@@ -169,13 +200,13 @@
 ||雪容融|ay2|
 |滚动弹幕|弹幕|dm|
 |**列表转化为表格**|**表格**|bg|
+|表格自动宽度|自动|auto|
+|去掉图片边框和阴影|图片|pic|
 
 #### 便利贴自定义属性
 
 > 自定义属性<kbd>shift+鼠标左键</kbd>，弹出窗口中，选择“添加”，属性名填入“q”或者“s”，属性值填入下列代码，即可实现相应效果
 >
-
-<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=212038257&amp;bvid=BV1qa411h7hm&amp;cid=544507181" data-src=""></video>
 
 |便利贴|代码|值|
 | ------| ----| ----|
@@ -196,9 +227,45 @@
 >
 
 |分类|名称|代码|
-| ----------------------| ----------| ------|
+| ----------------------| -------------| --------|
 |去除自动文档编号|编号|bh|
 |去掉标题下面圆角矩形|标题|bt|
 |修改文档字体|鸿蒙|hm|
 ||微软雅黑|yh|
-|修改背景颜色|蓝色|blue|
+|护眼背景|蓝色|blue|
+||杏仁黄|yellow|
+||绿豆沙|green|
+||wps护眼模式|green1|
+||青草绿|green2|
+||极光灰|gray|
+||瑞雪白|white|
+
+### 视频教程
+
+#### 自定义属性 列表转化为表格
+
+<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=682094343&amp;bvid=BV11U4y1f7sP&amp;cid=544504047" data-src=""></video>
+
+---
+
+#### 自定义属性 便利贴
+
+<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=212038257&amp;bvid=BV1qa411h7hm&amp;cid=544507181" data-src=""></video>
+
+---
+
+#### 对整个文档自定义属性
+
+<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=937049677&amp;bvid=BV1ZT4y1S7dC&amp;cid=545461125" data-src=""></video>
+
+---
+
+#### 自定义属性 表格自动调节宽度（不折叠）
+
+<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=852116009&amp;bvid=BV1sL4y1u7A1&amp;cid=545461768" data-src=""></video>
+
+---
+
+#### 修改CSS永久删除自动编号等
+
+<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=767041006&amp;bvid=BV1yr4y1q7wR&amp;cid=545462311" data-src=""></video>
