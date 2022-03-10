@@ -12,7 +12,6 @@
   - @黑皮
   - @随船医
   - @今天你写笔记了吗
-
 - 感谢萌新，mindstudy，九炎，Roy在修复“无序列表转换成表格”这一自定义属性中提供的帮助
   - @萌新（dark+主题作者）
   - @mindstudy(Concise Light极简主题作者)
@@ -72,12 +71,17 @@
 ##### 0.4.1
 
 * 增加自定义属性图片去掉边框和阴影`f:pic`（有群友有用到段落文字中插入图片公式的情形）
+
 * 修改下划线的样式（下划线距离文字底部有点远）
+
 * 取消鼠标滑选区域显示（群友反馈，感觉不必要）
+
 * 更改行内代码的颜色（主题色）
+
 * 更改引用块和超链接在标题中的样式（自适应标题颜色，去掉下划线，这样不突兀）
 
   * ![image.png](https://tva1.sinaimg.cn/mw690/0082QUidly1h03nw5j89uj30ji07hwhv.jpg)
+
 * 通过文档的自定义属性增加一些护眼色（来自群友“随船医”的推荐）
 
   * |名称|颜色|代码|
@@ -88,9 +92,19 @@
     |青草绿|#e3eccd|green2|
     |极光灰|#ebeaf0|gray|
     |瑞雪白|#f1ede1|white|
+
 * 通过自定义属性将表格设置为自适应宽度，超过100%后可以左右拖拽查看，文字不会自动分行
 
   * ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1h03qbezd5fj31080dk7bu.jpg)
+
+#### 0.5版本
+
+- 为常用链接增加icon图标
+  - ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1h0526zuxcbj31hc0smgvz.jpg)
+- 增加去掉表头的自定义属性（f=biaotou)
+  - ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1h052brc95cj310j08hdh6.jpg)
+- 将自动编号等CSS片段设置为额外加载的挂件，可以在主题文件夹里直接删除文件，不用修改代码
+- 优化了一点细节
 
 ### 🎈修复bug
 
@@ -114,6 +128,11 @@
 
 * 列表转化为表格的自定义属性中，表格右边界与文字距离太近
 
+#### 0.5版本
+
+- 修复字号20时，待办事项前符号偏上的问题（群友反馈）
+- 修复模板选择里，会有空白位置出现的问题（GitHub上的反馈）
+
 ### 下步计划
 
 #### 0.3版本
@@ -133,13 +152,21 @@
 * 开发 zhang-dark 版本……
 * 最近有事情，可能两三个星期之后才更新，bug可以正常反馈
 
+#### 0.5版本
+
+- 为word,ppt,excel,pdf等文件前面增加格式
+- 适配更多的网址icon
+- 修复主题导出PDF时的若干问题
+- 修改不同级别的列表样式
+  - 实心圆，空心圆，实心方块等
+
 ### 主题截图
 
 ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzsgda4t7aj31hc0smkao.jpg)
 
 ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzsge4flubj31hc0sm1be.jpg)
 
-![image.png](https://tva1.sinaimg.cn/large/0082QUidgy1h03r7o31otj31hc0sm1kx.jpg)
+![image.png](https://tva1.sinaimg.cn/large/0082QUidly1h03r6u8h8tj31hc0sm1kx.jpg)
 
 ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzsi13jfipj31hc0sm13h.jpg)
 
@@ -201,6 +228,7 @@
 |滚动弹幕|弹幕|dm|
 |**列表转化为表格**|**表格**|bg|
 |表格自动宽度|自动|auto|
+|表格去掉表头|表头|biaotou|
 |去掉图片边框和阴影|图片|pic|
 
 #### 便利贴自定义属性
@@ -240,7 +268,7 @@
 ||极光灰|gray|
 ||瑞雪白|white|
 
-### 视频教程
+### 教程
 
 #### 自定义属性 列表转化为表格
 
@@ -268,4 +296,7 @@
 
 #### 修改CSS永久删除自动编号等
 
-<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=767041006&amp;bvid=BV1yr4y1q7wR&amp;cid=545462311" data-src=""></video>
+1. 打开`zhang-light`主题文件夹
+2. 找到`style`文件夹，删除其中的`auto-number.css`文件
+3. 重启思源笔记即可
+4. 如果没有立即生效，可以在开发者工具里边运行`window.location.reload()`即可
