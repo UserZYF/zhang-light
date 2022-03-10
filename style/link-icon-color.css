@@ -1,0 +1,329 @@
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="weibo.com"]:not(:empty),
+.b3-typography a[href *="weibo.com"] {
+    color: #d3211b !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="zhihu.com"]:not(:empty),
+.b3-typography a[href *="zhihu.com"] {
+    color: #017cdd !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="t.bilibili.com"]:not(:empty),
+.b3-typography a[href *="t.bilibili.com"] {
+    color: #00aaf4 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="bilibili.com"]:not(:empty),
+.b3-typography a[href *="bilibili.com"] {
+    color: #00aaf4 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="douban.com"]:not(:empty),
+.b3-typography a[href *="douban.com"] {
+    color: #007711 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="oschina.net"]:not(:empty),
+.b3-typography a[href *="oschina.net"] {
+    color: #21b351 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="ld246.com"]:not(:empty),
+.b3-typography a[href *="ld246.com"] {
+    color: #3d4045 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="music.163.com"]:not(:empty),
+.b3-typography a[href *="music.163.com"] {
+    color: #f10c01 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="runoob.com"]:not(:empty),
+.b3-typography a[href *="runoob.com"] {
+    color: #96b97d !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="iconfont.cn"]:not(:empty),
+.b3-typography a[href *="iconfont.cn"] {
+    color: #4068ee !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="pan.baidu.com"]:not(:empty),
+.b3-typography a[href *="pan.baidu.com"] {
+    color: #36cef7 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="yuque.com"]:not(:empty),
+.b3-typography a[href *="yuque.com"] {
+    color: #49c95c !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="52pojie.cn"]:not(:empty),
+.b3-typography a[href *="52pojie.cn"] {
+    color: #e21010 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="sspai.com"]:not(:empty),
+.b3-typography a[href *="sspai.com"] {
+    color: #d8171c !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="uisdc.com"]:not(:empty),
+.b3-typography a[href *="uisdc.com"] {
+    color: #f12d01 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="cn.bing.com"]:not(:empty),
+.b3-typography a[href *="cn.bing.com"] {
+    color: #3ca1fa !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="jianshu.com"]:not(:empty),
+.b3-typography a[href *="jianshu.com"] {
+    color: #e28979 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="blog.csdn.net"]:not(:empty),
+.b3-typography a[href *="blog.csdn.net"] {
+    color: #fc5531 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="zcool.com.cn"]:not(:empty),
+.b3-typography a[href *="zcool.com.cn"] {
+    color: #fdd001 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="ixigua.com"]:not(:empty),
+.b3-typography a[href *="ixigua.com"] {
+    color: #fb242c !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="weixin.sogou.com"]:not(:empty),
+.b3-typography a[href *="weixin.sogou.com"] {
+    color: #fc4f26 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="baidu.com"]:not(:empty),
+.b3-typography a[href *="baidu.com"] {
+    color: #1c25de !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="tieba.baidu.com"]:not(:empty),
+.b3-typography a[href *="tieba.baidu.com"] {
+    color: #3184fe !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="fanyi.baidu.com"]:not(:empty),
+.b3-typography a[href *="fanyi.baidu.com"] {
+    color: #1488f5 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="iplaysoft.com"]:not(:empty),
+.b3-typography a[href *="iplaysoft.com"] {
+    color: #3090e8 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="huaban.com"]:not(:empty),
+.b3-typography a[href *="huaban.com"] {
+    color: #e04e56 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="v.qq.com"]:not(:empty),
+.b3-typography a[href *="v.qq.com"] {
+    color: #3ec6e6 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="iqiyi.com"]:not(:empty),
+.b3-typography a[href *="iqiyi.com"] {
+    color: #07d800 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="youku.com"]:not(:empty),
+.b3-typography a[href *="youku.com"] {
+    color: #24d1f8 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="haokan.baidu.com"]:not(:empty),
+.b3-typography a[href *="haokan.baidu.com"] {
+    color: #f80611 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="y.qq.com"]:not(:empty),
+.b3-typography a[href *="y.qq.com"] {
+    color: #10be72 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="kugou.com"]:not(:empty),
+.b3-typography a[href *="kugou.com"] {
+    color: #1a80fc !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="kuwo.cn"]:not(:empty),
+.b3-typography a[href *="kuwo.cn"] {
+    color: #ff8019 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="toutiao.com"]:not(:empty),
+.b3-typography a[href *="toutiao.com"] {
+    color: #f50d00 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="tianya.cn"]:not(:empty),
+.b3-typography a[href *="tianya.cn"] {
+    color: #0787ee !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="bbs.hupu.com"]:not(:empty),
+.b3-typography a[href *="bbs.hupu.com"] {
+    color: #c01d31 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="wiz.cn"]:not(:empty),
+.b3-typography a[href *="wiz.cn"] {
+    color: #3570fe !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="yinxiang.com"]:not(:empty),
+.b3-typography a[href *="yinxiang.com"] {
+    color: #3bd72c !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="logseq.com"]:not(:empty),
+.b3-typography a[href *="logseq.com"] {
+    color: #80a1bd !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="obsidian.md"]:not(:empty),
+.b3-typography a[href *="obsidian.md"] {
+    color: #816dda !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="taobao.com"]:not(:empty),
+.b3-typography a[href *="taobao.com"] {
+    color: #fd4200 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="so.com"]:not(:empty),
+.b3-typography a[href *="so.com"] {
+    color: #fe631e !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="mp.weixin.qq.com"]:not(:empty),
+.b3-typography a[href *="mp.weixin.qq.com"] {
+    color: #04c05f !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="yandex.com"]:not(:empty),
+.b3-typography a[href *="yandex.com"] {
+    color: #fa1e19 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="wolai.com"]:not(:empty),
+.b3-typography a[href *="wolai.com"] {
+    color: #202124 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="auth.alipay.com"]:not(:empty),
+.b3-typography a[href *="auth.alipay.com"] {
+    color: #2493ca !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="aliyundrive.com"]:not(:empty),
+.b3-typography a[href *="aliyundrive.com"] {
+    color: #6a7afc !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="baike.baidu.com"]:not(:empty),
+.b3-typography a[href *="baike.baidu.com"] {
+    color: #3c44e3 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="apple.com.cn"]:not(:empty),
+.b3-typography a[href *="apple.com.cn"] {
+    color: #332928 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="huawei.com"]:not(:empty),
+.b3-typography a[href *="huawei.com"] {
+    color: #dd0218 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="samsung.com"]:not(:empty),
+.b3-typography a[href *="samsung.com"] {
+    color: #1b2796 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="mi.com"]:not(:empty),
+.b3-typography a[href *="mi.com"] {
+    color: #f47822 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="oppo.com"]:not(:empty),
+.b3-typography a[href *="oppo.com"] {
+    color: #018a56 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="vivo.com.cn"]:not(:empty),
+.b3-typography a[href *="vivo.com.cn"] {
+    color: #0090e1 !important;
+}
+
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="topbook.cc"]:not(:empty),
+.b3-typography a[href *="topbook.cc"] {
+    color: #51d7df !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="appinn.com"]:not(:empty),
+.b3-typography a[href *="appinn.com"] {
+    color: #016cdc !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="ghxi.com"]:not(:empty),
+.b3-typography a[href *="ghxi.com"] {
+    color: #ffa943 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="weread.qq.com"]:not(:empty),
+.b3-typography a[href *="weread.qq.com"] {
+    color: #31a9ff !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="news.qq.com"]:not(:empty),
+.b3-typography a[href *="news.qq.com"] {
+    color: #0089c3 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="news.163.com"]:not(:empty),
+.b3-typography a[href *="news.163.com"] {
+    color: #e10101 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="guancha.cn"]:not(:empty),
+.b3-typography a[href *="guancha.cn"] {
+    color: #be0507 !important;
+}
+
+/* pocket */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="getpocket.com"]:not(:empty),
+.b3-typography a[href *="getpocket.com"] {
+    color: #ed4156 !important;
+}
+
+/* instapaper */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="instapaper.com"]:not(:empty),
+.b3-typography a[href *="instapaper.com"] {
+    color: #000000 !important;
+}
+
+/* GitHub */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="github.com"]:not(:empty),
+.b3-typography a[href *="github.com"] {
+    color: #020202 !important;
+}
+
+/* 谷歌翻译 */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="translate.google.cn"]:not(:empty),
+.b3-typography a[href *="translate.google.cn"] {
+    color: #538ef4 !important;
+}
