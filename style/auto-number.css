@@ -1,4 +1,3 @@
-/* --------------------------------------------------标题自动编号------------------------------------------------------- */
 .protyle-wysiwyg, .b3-typography {
     counter-reset: h1 0 h2 0 h3 0 h4 0 h5 0 h6 0;
 }
@@ -24,37 +23,37 @@
 }
 
 /* 设置各级列表前后的内容  */
-.protyle-wysiwyg [data-node-id].h1>div:before,
+.protyle-wysiwyg .h1>::before,
 .b3-typography h1:before {
     counter-increment: h1;
     content: "第"counter(h1, cjk-ideographic) "章  ";
 }
 
-.protyle-wysiwyg [data-node-id].h2>div:before,
+.protyle-wysiwyg .h2>::before,
 .b3-typography h2:before {
     counter-increment: h2;
     content: "第"counter(h2, cjk-ideographic) "节  ";
 }
 
-.protyle-wysiwyg [data-node-id].h3>div:before,
+.protyle-wysiwyg .h3>::before,
 .b3-typography h3:before {
     counter-increment: h3;
     content: counter(h3, cjk-ideographic) "、";
 }
 
-.protyle-wysiwyg [data-node-id].h4>div:before,
+.protyle-wysiwyg .h4>::before,
 .b3-typography h4:before {
     counter-increment: h4;
     content: "("counter(h4, cjk-ideographic) "). ";
 }
 
-.protyle-wysiwyg [data-node-id].h5>div:before,
+.protyle-wysiwyg .h5>::before,
 .b3-typography h5:before {
     counter-increment: h5;
     content: counter(h5, decimal) ". ";
 }
 
-.protyle-wysiwyg [data-node-id].h6>div:before,
+.protyle-wysiwyg .h6>::before,
 .b3-typography h6:before {
     counter-increment: h6;
     content: "("counter(h6, decimal) "). ";
@@ -65,5 +64,3 @@
 .protyle-attr--refcount.popover__block::before {
     display: none;
 }
-
-/* -------------------------------------------------标题自动编号 END------------------------------------------------------- */
