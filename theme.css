@@ -1,338 +1,2933 @@
-
-
-# zhang-light主题
-
-### 灵感来源
-
-- 本主题以Tsundoku Light主题为模板进行修改
-- 字体配色采用了Obsidian中Orange主题中的7中彩虹配色,删除了带有透明度的部分
-- 主题页面背景灵感来自于BluePrint-From-Tsundoku-main的格子主题
-
-### 感谢列表
-
-- 感谢大家对于主题的反馈和建议
-  - @黑皮
-  - @随船医
-  - @今天你写笔记了吗
-- 感谢萌新，mindstudy，九炎，Roy在修复“无序列表转换成表格”这一自定义属性中提供的帮助
-  - @萌新（dark+主题作者）
-  - @mindstudy(Concise Light极简主题作者)
-  - @Roy（notion theme主题作者)
-  - @九炎（群内诸多挂件的作者）
-
-### 📌注意事项
-
-- **解压主题文件夹后，建议从下面网址下载仓耳今楷03-W04字体**
-
-  - https://www.ztxz.org.cn/canger/549.html
-  - 安装后可自动生效，不用做什么设置；如果没有立即生效，可以重启一下思源笔记
-  - 字体效果示例
-    - ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzu8xqgdlvj31hc0jitnk.jpg)
-- **自定义属性强烈推荐：自定义属性无序列表变为表格**
-
-### 🎉更新进度
-
-#### 0.2版本
-
-- 修改 PDF 标注样式，在高亮底部加上横线
-- 调整 PDF 双链样式，鼠标悬浮时修改为浅绿色
-- 修改分割线样式，现在分割线为动态渐变样式
-- 参考 Rem Craft 主题，修改表格设置，表格默认100%宽度
-- “/”调出的元素分为4栏，方便选择
-- 给超级块加上虚线边框，鼠标悬浮时边框可以滚动
-- 通过自定义属性，增加弹幕功能，属性值为“dm“
-- 参考 Notion-theme 主题，修改了头图相关设置，效果类似于 Notion
-- 优化了一些细节
-
-#### 0.3版本
-
-- 增加了列表转化成表格的自定义属性，f=bg (表格)
-- 将浅色便利贴和深色便利贴从样式改成了自定义属性，详见“自定义属性”
-- 修改了分栏样式，“/” 引出的分栏分为4栏，颜值更上一层楼
-- 修改了待办事项的样式，更加好看
-- 点击目录大纲时增加了顺滑的切换效果
-- 给特定标签增加了特定的格式，如“选择”，“填空”，“判断”等
-- 上标和下标的颜色修改为蓝色
-- 去掉文档树和目录大纲后边的引用数字
-- 修改文档树后边的设置和新建文档按钮
-- 优化设置面板关闭按钮（鼠标悬浮时有旋转和变色效果）
-- 优化了一些细节
-
-#### 0.4版本
-
-* 统一主题中的圆角，颜色，背景等，方便大家自定义修改（如可以很方便地将主题色修改为绿色，蓝色等）
-* 增加了一些对文档的自定义属性，如修改字体，单个文档去掉自动编号、去掉标题下的圆角矩形等
-* 修改了超链接和块引用的样式
-* 修改了 kbd 键盘的样式
-* 修改了标签样式
-* 将 h1 级别标题设置为居左
-* 增加下划线距离文字的高度
-* 去掉文档树和大纲的引用数字，保留反向链接面板和提及面板后面的引用数字。
-* 去掉 iframe 元素的边框
-
-##### 0.4.1
-
-* 增加自定义属性图片去掉边框和阴影`f:pic`（有群友有用到段落文字中插入图片公式的情形）
-
-* 修改下划线的样式（下划线距离文字底部有点远）
-
-* 取消鼠标滑选区域显示（群友反馈，感觉不必要）
-
-* 更改行内代码的颜色（主题色）
-
-* 更改引用块和超链接在标题中的样式（自适应标题颜色，去掉下划线，这样不突兀）
-
-  * ![image.png](https://tva1.sinaimg.cn/mw690/0082QUidly1h03nw5j89uj30ji07hwhv.jpg)
-
-* 通过文档的自定义属性增加一些护眼色（来自群友“随船医”的推荐）
-
-  * | 名称        | 颜色    | 代码   |
-    | ----------- | ------- | ------ |
-    | 杏仁黄      | #faf8df | yellow |
-    | 绿豆沙      | #c8edcc | green  |
-    | wps护眼模式 | #cce8cf | green1 |
-    | 青草绿      | #e3eccd | green2 |
-    | 极光灰      | #ebeaf0 | gray   |
-    | 瑞雪白      | #f1ede1 | white  |
-
-* 通过自定义属性将表格设置为自适应宽度，超过100%后可以左右拖拽查看，文字不会自动分行
-
-  * ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1h03qbezd5fj31080dk7bu.jpg)
-
-#### 0.5版本
-
-- 为常用链接增加icon图标
-  - ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1h0526zuxcbj31hc0smgvz.jpg)
-- 增加去掉表头的自定义属性（f=biaotou)
-  - ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1h052brc95cj310j08hdh6.jpg)
-- 将自动编号等CSS片段设置为额外加载的挂件，可以在主题文件夹里直接删除文件，不用修改代码
-- 优化了一点细节
-
-##### 0.51
-
-- 去掉超级块中的标题下方圆角矩形衬底和自动编号
-
-- 减小无序列表前面的符号
-
-- 优化文档右侧引用数字的样式，加上衬底和边框
-
-- 给文档树和大纲增加渐变的背景
-
-- 给标题设置弹幕时标题下方圆角矩形会消失
-
-- 将自定义属性相关代码放到`style`文件夹中
-
-  - | 分类                      | 含义                   |
-    | ------------------------- | ---------------------- |
-    | auto-number.css           | 自动编号               |
-    | h1-h6-z-index.css         | 标题下方的圆角矩形衬底 |
-    | link-icon.css             | 网址链接前面的图标     |
-    | link-icon-color.css       | 网址链接文字的颜色     |
-    | custom-function-for-block | 块的自定义属性         |
-    | custom-function-for-file  | 文档的自定义属性       |
-
-### 🎈修复bug
-
-#### 0.2版本
-
-- 去掉使用自定义表情时带有的阴影和边框
-
-#### 0.3版本
-
-- 修复“[[”引出引用块时文档名称和文档路径重叠在一起的bug
-- 修复给标题设置备注或命名时出现的自动序号错乱的bug
-- 修复头图上传本地图片时“上传”俩字点击无效的bug
-- 修复了代码行超过1000时编号会出现错乱的bug
-- 修改标签页文字过长时下方会溢出文字的bug
-
-#### 0.4版本
-
-* 修复笔记本不能点击emoji更换图标的bug
-
-##### 0.4.1
-
-* 列表转化为表格的自定义属性中，表格右边界与文字距离太近
-
-#### 0.5版本
-
-- 修复字号20时，待办事项前符号偏上的问题（群友反馈）
-- 修复模板选择里，会有空白位置出现的问题（GitHub上的反馈）
-
-##### 0.51版本
-
-- 修复行内代码和键盘不显示光标的问题
-- 修复挂件名称过长时分行显示的问题
-- 修复超级块横排时选中不明显的问题
-- 修复1.1-2倍字体自定义属性失效的问题
-- 修复嵌入块内含有标题自动编号的问题
-- 修复云空间显示错乱的问题
-
-### 下步计划
-
-#### 0.3版本
-
-- 考虑是否去掉超级块的虚线边框（超级块嵌套很多层后会影响外观）
-
-  - 不去掉，虚线框可以突出超级块之间的界限，特别是在没有背景颜色的时候
-- 考虑是否保持默认开启标题自动编号
-
-  - 默认开启，自动编号是本主题的特色之一，也得到了一些朋友的喜欢。但使用说明中会增加对 CSS 代码修改的说明，大家可以自行决定是否去掉自动编号。
-- 给“[[”引出的引用块列表增加鼠标悬浮显示全部内容的功能
-
-  - Loading
-
-#### 0.4版本
-
-* 开发 zhang-dark 版本……
-* 最近有事情，可能两三个星期之后才更新，bug可以正常反馈
-
-#### 0.5版本
-
-- 为word,ppt,excel,pdf等文件前面增加格式
-- 适配更多的网址icon
-- 修复主题导出PDF时的若干问题
-- 修改不同级别的列表样式
-  - 实心圆，空心圆，实心方块等
-
-### 主题截图
-
-![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzsgda4t7aj31hc0smkao.jpg)
-
-![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzsge4flubj31hc0sm1be.jpg)
-
-![image.png](https://tva1.sinaimg.cn/large/0082QUidly1h03r6u8h8tj31hc0sm1kx.jpg)
-
-![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzsi13jfipj31hc0sm13h.jpg)
-
-![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzsi5wv36wj31hc0smgx2.jpg)
-
-![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzsi34942uj31hc0smdq5.jpg)
-
-![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzshllc8bsj31hc0sm18t.jpg)
-
-![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzshr7al8jj31hc0smdvk.jpg)
-
-![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzshswsij6j31hc0smqnu.jpg)
-
-![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzshutksjfj31hc0smkgl.jpg)
-
-![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzshvow6okj31hc0sm1j3.jpg)
-
-![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzshzlzbpsj31hc0sm1kx.jpg)
-
-![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzsi8fsqejj31hc0smaui.jpg)
-
-![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzsibhzoegj31hc0smkdc.jpg)
-
-### 自定义属性
-
-#### 一般自定义属性
-
-> 自定义属性针对整个段落生效，不针对段落中的部分文字生效（只能是一个段落，不能按住Enter分行，要按住Ctrl+Enter）
-
-> 自定义属性shift+鼠标左键，弹出窗口中，选择“添加”，属性名填入“f”，属性值填入下列代码，即可实现相应效果，可以添加多个属性，中间用空格隔开即可
-
-| 分类               | 名称           | 代码    |
-| ------------------ | -------------- | ------- |
-| 字体               | 楷体           | k       |
-|                    | 宋体           | s       |
-|                    | 黑体           | h       |
-|                    | 微软雅黑       | w       |
-|                    | 华文行楷       | xk      |
-|                    | 隶书           | l       |
-| 下划线             | 虚线           | x       |
-|                    | 曲线/波浪线    | q       |
-| 文字竖排           | 竖排           | sp      |
-| 文字边框           | 边框           | bk      |
-| 文本缩进           | 缩进           | sj      |
-| 文字加粗           | 加粗           | jc      |
-| 文字大小           | 1.1倍          | 1.1     |
-|                    | 1.2倍          | 1.2     |
-|                    | 1.3倍          | 1.3     |
-|                    | 1.4倍          | 1.4     |
-|                    | 1.5倍          | 1.5     |
-|                    | 1.75倍         | 1.75    |
-|                    | 2倍            | 2       |
-| 英文字母大小写     | 首字母大写     | dx      |
-|                    | 所有字母都大写 | ddx     |
-| 奥运主题           | 冰墩墩         | ay      |
-|                    | 雪容融         | ay2     |
-| 滚动弹幕           | 弹幕           | dm      |
-| **列表转化为表格** | **表格**       | bg      |
-| 表格自动宽度       | 自动           | auto    |
-| 表格去掉表头       | 表头           | biaotou |
-| 去掉图片边框和阴影 | 图片           | pic     |
-
-#### 便利贴自定义属性
-
-> 自定义属性<kbd>shift+鼠标左键</kbd>，弹出窗口中，选择“添加”，属性名填入“q”或者“s”，属性值填入下列代码，即可实现相应效果
-
-| 便利贴 | 代码 | 值   |
-| ------ | ---- | ---- |
-| 浅色红 | q    | blt1 |
-| 浅色黄 | q    | blt2 |
-| 浅色蓝 | q    | blt3 |
-| 浅色绿 | q    | blt4 |
-| 深色红 | s    | blt1 |
-| 深色黄 | s    | blt2 |
-| 深色蓝 | s    | blt3 |
-| 深色绿 | s    | blt4 |
-
-#### 整个文档的自定义属性
-
-> 在文档标题左边有个icon，按住<kbd>shift</kbd>键鼠标左键单击，即可弹出框，点击添加，属性名为`f`,属性值为下列代码，可以添加多个代码，中间用空格隔开即可。
->
-> 其他各种属性，如护眼主题等正在开发ing，欢迎大家建议和反馈~😃
-
-| 分类                 | 名称        | 代码   |
-| -------------------- | ----------- | ------ |
-| 去除自动文档编号     | 编号        | bh     |
-| 去掉标题下面圆角矩形 | 标题        | bt     |
-| 修改文档字体         | 鸿蒙        | hm     |
-|                      | 微软雅黑    | yh     |
-| 护眼背景             | 蓝色        | blue   |
-|                      | 杏仁黄      | yellow |
-|                      | 绿豆沙      | green  |
-|                      | wps护眼模式 | green1 |
-|                      | 青草绿      | green2 |
-|                      | 极光灰      | gray   |
-|                      | 瑞雪白      | white  |
-
-### 教程
-
-#### 自定义属性 列表转化为表格
-
-<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=682094343&amp;bvid=BV11U4y1f7sP&amp;cid=544504047" data-src=""></video>
-
----
-
-#### 自定义属性 便利贴
-
-<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=212038257&amp;bvid=BV1qa411h7hm&amp;cid=544507181" data-src=""></video>
-
----
-
-#### 对整个文档自定义属性
-
-<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=937049677&amp;bvid=BV1ZT4y1S7dC&amp;cid=545461125" data-src=""></video>
-
----
-
-#### 自定义属性 表格自动调节宽度（不折叠）
-
-<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=852116009&amp;bvid=BV1sL4y1u7A1&amp;cid=545461768" data-src=""></video>
-
----
-
-#### 取消自动编号功能
-
-<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=682407868&bvid=BV1gU4y1d72V&cid=555904786" data-src=""></video>
-
-#### 插入公式，图片，视频
-
-<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=509971809&bvid=BV1tu411q7GK&cid=555968610" data-src=""></video>
-
-#### 主题-模板-挂件的教程
-
-<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=809998824&bvid=BV1p34y1b7ni&cid=554981214" data-src=""></video>
-
+@import url(style/auto-number.css);
+@import url(style/h1-h6-z-index.css);
+@import url(style/link-icon.css);
+@import url(style/link-icon-color.css);
+@import url(style/custom-function-for-block.css);
+@import url(style/custom-function-for-file.css);
+
+:root {
+    /* 主色 */
+    /* 菜单高亮、样式高亮、错误提示，确定删除 */
+    --b3-theme-primary: #cf5659;
+    --b3-theme-primary-light: var(--b3-theme-primary);
+    --b3-theme-primary-lighter: var(--b3-theme-primary);
+    --b3-theme-primary-lightest: #cf56594d;
+
+    /* 增加透明度 */
+    --b3-theme-tm1: #cf56594d;
+    --b3-theme-tm2: #cf56591a;
+
+    /* 鼠标悬浮颜色，用在表格中（在白色背景下直接用取色器去--b3-theme-tm1的色彩 */
+    --b3-theme-hover: #f1cccd;
+    --b3-theme-hover2: #f8ecec;
+    /* --b3-theme-hover-gray: #f0f0f0; */
+    --b3-theme-hover-gray: #e2e2e2;
+
+    /* PDF双链中不存在符合条件内容块文字颜色 */
+    --b3-theme-secondary: var(--b3-theme-primary);
+
+    /* 主要背景 */
+    --b3-theme-background: #fdfdfd;
+    --b3-theme-background2: #fafafa;
+    --b3-theme-background-gray: #e7ecef;
+    --b3-theme-background-link-hover: #e4e4e4;
+
+    /* 面包屑和标签页 */
+    --b3-theme-surface: #fafafa;
+
+    /*#f8f9fa*/
+    --b3-theme-error: #ec8d8deb;
+
+    /* 文字颜色 */
+    --b3-theme-on-primary: #fff;
+    --b3-theme-on-secondary: #fff;
+    --b3-theme-on-background: #202124;
+    --b3-font-color-gray: #9e9e9e;
+    --b3-font-color-gray-tm: #80808080;
+    --b3-font-color-hover: #202124;
+    --b3-font-color-empty: #9fa5a675;
+    --b3-font-color-oncard: #fefcfe;
+
+    /* 主要图标颜色 */
+    --b3-theme-on-surface: gray;
+    --b3-theme-on-error: #fff;
+
+    /* 字体 */
+    --b3-font-family: "仓耳今楷03", 'WWJNWLKQ', 'zh quote', -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --b3-font-family-code: "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, "HarmonyOS Sans SC", "Microsoft YaHei", "Liberation Mono", "Courier New", monospace;
+    --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
+    --b3-font-family-graph: mononoki;
+    --b3-font-family-math: KaTeX_Math;
+
+    /* 线条 */
+    --b3-border-color: rgba(128, 128, 128, 0.1);
+
+    /* 滚动条 m */
+    --b3-scroll-color: #4f657244;
+    --b3-scroll-color-card: #ffffffb3;
+
+    /* 列表 */
+    --b3-list-hover: transparent;
+
+    /* 页签 */
+    --b3-tab-background: #e1e1e1;
+    --b3-tab-background-hover: #fff;
+
+    /* 菜单 */
+    --b3-menu-background: #f8f9fa;
+
+    /* 提示气泡颜色 */
+    --b3-tooltips-color: gray;
+
+    /* 4种卡片背景 */
+    --b3-card-error-color: #5f6368;
+    --b3-card-warning-color: #5f6368;
+    --b3-card-info-color: #5f6368;
+    --b3-card-success-color: #5f6368;
+    /* --b3-card-error-background:   #fbdddf;
+    --b3-card-warning-background: #fedb89;
+    --b3-card-info-background:    #bacefd;
+    --b3-card-success-background: #b7edb1; */
+    --b3-card-error-background: #fce7e9;
+    --b3-card-warning-background: #fee6ac;
+    --b3-card-info-background: #cfddfe;
+    --b3-card-success-background: #ccf2c8;
+
+    --b3-card-darker-red: #c81a31;
+    --b3-card-darker-yellow: #ec6f05;
+    --b3-card-darker-blue: #384b76;
+    --b3-card-darker-green: #325342;
+
+    /* 13种自定义文字颜色 */
+    --b3-font-color1: #d83931;
+    --b3-font-color2: #de7802;
+    --b3-font-color3: #856404;
+    --b3-font-color4: #2ea121;
+    --b3-font-color5: #35737d;
+    --b3-font-color6: #245bdb;
+    --b3-font-color7: #6425d0;
+    --b3-font-color8: #b3b3b3;
+    --b3-font-color9: white;
+    --b3-font-color10: white;
+    --b3-font-color11: white;
+    --b3-font-color12: white;
+    --b3-font-color13: gray;
+
+    /* 13种自定义背景颜色 */
+    --b3-font-background1: #fbbfbc;
+    --b3-font-background2: #fed4a4;
+    --b3-font-background3: #ffe9a1;
+    --b3-font-background4: #b7edb1;
+    --b3-font-background5: #d1ecf1;
+    --b3-font-background6: #bacefd;
+    --b3-font-background7: #cdb2fa;
+    --b3-font-background8: #e1e1e1;
+    --b3-font-background9: #fc2e1b;
+    --b3-font-background10: #f6df5b;
+    --b3-font-background11: #2d48f8;
+    --b3-font-background12: #2a9f65;
+    --b3-font-background13: transparent;
+
+    /* PDF标注颜色 */
+    --b3-pdf-sidebar-width: 200px;
+    --b3-pdf-offset: 0;
+    --b3-pdf-background1: #ffb3ac;
+    --b3-pdf-background2: #ffec84;
+    --b3-pdf-background3: #ffff57;
+    --b3-pdf-background4: #80ff80;
+    --b3-pdf-background5: #98eaff;
+    --b3-pdf-background6: #91d5ff;
+    --b3-pdf-background7: #d4b8f8;
+
+    /* 动画效果 */
+    --b3-transition: all 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms;
+
+    /* 阴影 */
+    --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    --b3-dialog-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14),
+        0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+    --b3-right-bottom-shadow: 8px 16px 16px hsl(0deg 0% 0% / 0.25);
+    --b3-bottom-inset-shadow: 0px -10px 10px -8px var(--b3-theme-primary) inset;
+
+    /* 小阴影 */
+    --b3-small-shadow: 0px 0px 20px 3px rgba(50, 50, 50, 0.29);
+
+    /* diff */
+    --b3-diff-add: #dfd;
+    --b3-diff-add-surface: #97f295;
+    --b3-diff-del: #fee8e9;
+    --b3-diff-del-surface: #ffb6ba;
+
+    /* 图表颜色 */
+    --b3-graph-p-point: #076f7e;
+    --b3-graph-heading-point: #660e7a;
+    --b3-graph-math-point: #80ffa5;
+    --b3-graph-code-point: #00ddff;
+    --b3-graph-table-point: #37a2ff;
+    --b3-graph-list-point: #ff0087;
+    --b3-graph-todo-point: #ffbf00;
+    --b3-graph-olist-point: #b3005f;
+    --b3-graph-listitem-point: #f65b00;
+    --b3-graph-bq-point: #8d48e3;
+    --b3-graph-super-point: #dd79ff;
+    --b3-graph-doc-point: #202124;
+    --b3-graph-tag-point: #dbf32f;
+    --b3-graph-asset-point: #05c091;
+    --b3-graph-line: #5f6368;
+    --b3-graph-ref-line: #d23f31;
+    --b3-graph-tag-line: #5f6b06;
+    --b3-graph-tag-tag-line: #dbf32f;
+    --b3-graph-asset-line: #037457;
+    --b3-graph-hl-point: #f3a92f;
+    --b3-graph-hl-line: #4285f4;
+
+    /* 编辑器搜索颜色 */
+    --b3-protyle-search-background: #ffe955;
+    --b3-protyle-search-border-color: #f2e680;
+    --b3-protyle-search-current-background: #a5d3fe;
+
+    /* 代码片段背景 m */
+    --b3-protyle-code-background: #e7ecef;
+
+    /* 所见即所得行内元素颜色 */
+    --b3-protyle-inline-strong-color: rgb(32, 33, 36);
+    --b3-protyle-inline-em-color: rgb(32, 33, 36);
+    --b3-protyle-inline-s-color: rgb(32, 33, 36);
+    --b3-protyle-inline-link-color: #408bba;
+    --b3-protyle-inline-link-hover-color: #fa60a0;
+    --b3-protyle-inline-mark-background: transparent;
+    --b3-protyle-inline-mark-color: rgb(32, 33, 36);
+    --b3-protyle-inline-tag-background: #81a9a9;
+    --b3-protyle-inline-tag-color: #f8f9fa;
+    --b3-protyle-inline-code-color: #038296;
+    --b3-protyle-inline-code-background: #e0ecf3a6;
+    --b3-protyle-inline-blockref-color: #0e7a88;
+    --b3-protyle-inline-blockref-hover-color: #ff398b;
+
+    /* 表格 */
+    --b3-table-border-color: rgb(211, 211, 211);
+    --b3-table-th-color: #d1ecf1;
+    --b3-table-trn-color: #f7f7f7;
+    --b3-table-tr2n-color: white;
+
+    /* 高亮 */
+    --b3-menu-highlight-color: var(--b3-theme-primary);
+    --b3-menu-highlight-focus-color: var(--b3-theme-primary);
+    --b3-search-highlight: yellow;
+    --b3-pdf-selcect-hightlight: yellow;
+
+    /* 文件树背景高亮颜色 */
+    --b3-menu-highlight-background: #dde5ea;
+    --b3-tab-custom-background: #e4ebec;
+
+    /* 圆角大小 */
+    /* 默认圆角大小 */
+    --b3-border-radius-noraml: 4px;
+    /* 圆角左右两端都为半圆形 */
+    --b3-border-radius-half-round: 50px;
+    /* 圆角为圆形 */
+    --b3-border-radius-round: 50%;
+    /* 圆角为0 */
+    --b3-border-radius-none: 0px;
+    /* 图片左上角emoji背景圆角 */
+    --b3-border-radius-image-emoji: 5px 0px;
+    /* 鼠标公式编辑弹窗的圆角 */
+    --b3-border-radius-math: 0px 0px 3px 3px;
+
+    /* 边框 */
+    --b3-border-color1: #cfcece;
+    --b3-border-normal: 1px solid #cfcece;
+    --b3-border-wider: 2px solid #cfcece;
+    --b3-border-dashed: 1px dashed #cfcece;
+    --b3-border-dashed-gray: 1px dashed #80808080;
+    --b3-border-dashed-gray-wider: 2px dashed #80808080;
+    --b3-border-column: 1px solid #ffffff4d;
+    --b3-border-column-item: 1px solid #80808033;
+}
+
+/* ----------------------------------------------------root定义结束---------------------------------------------------- */
+
+/* ————————————————————所有边距初始化———————————————————— */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* ————————————————————设置界面字体大小，不包括正文，正文字体大小在编辑器那里选择———————————————————— */
+body {
+    font-size: 15.5px;
+}
+
+/* ----------------------------------------------------------设置主要背景色------------------------------------------------------- */
+/* ————————————————————左侧侧边栏和右侧侧边栏的背景颜色（有图标的那个窄列） */
+.dock {
+    background-color: white !important;
+}
+
+/* ————————————————————思源笔记最顶部栏的背景颜色和高度（设置按钮和关闭按钮所在的那一列） */
+.toolbar {
+    background-color: white !important;
+}
+
+/* ————————————————————文档树、大纲、反向链接的背景颜色 */
+.layout-tab-container:not(.fn_flex-1) {
+    background-color: var(--b3-theme-background2);
+}
+
+/* 左侧文档树边框，左侧大纲边框，右侧反向链接边框 */
+.fn__flex-1.fn__flex-column.file-tree.sy__file,
+.fn__flex-1.fn__flex-column.file-tree.sy__outline,
+.fn__flex-1.fn__flex-column.file-tree.sy__backlink {
+    border: var(--b3-border-normal);
+    box-sizing: border-box;
+    border-top: 0.05em solid transparent;
+    background:
+        linear-gradient(135deg,
+            rgba(255, 232, 232, 0.62) 0%,
+            rgba(236, 236, 255, 0.54) 19%,
+            rgba(228, 247, 236, 0.39) 54%,
+            rgba(223, 254, 224, 0.7) 77%,
+            rgba(245, 247, 249, 0.99) 100%);
+}
+
+/* ————————————————————文档树、大纲、反向链接顶部的背景颜色 */
+.block__icons {
+    background-color: var(--b3-theme-background2) !important;
+    /* border: 1px solid transparent; */
+    border: 0.05em solid transparent;
+    border-top: var(--b3-border-normal);
+    border-bottom: var(--b3-border-dashed);
+    padding: 1px 8px;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------------------------设置主要背景色 END------------------------------------------------------- */
+/* -----------------------------------------------------------取消文档树、大纲、反向链接左边的icon，感觉显示重复了 */
+.block__logo svg {
+    display: none;
+}
+
+/* ---------------------------------------------------------标题样式------------------------------------------------------------- */
+/* 一级标题居中对齐，其余标题居左对齐，采用彩虹色前6色 红橙黄绿青蓝 标题默认有圆角 */
+.protyle-wysiwyg [data-node-id].h1, .b3-typography h1 {
+    /* 一级标题居左显示，居中显示把下方left修改为center */
+    text-align: left;
+    font-size: 1.6em !important;
+    font-weight: 550;
+    position: relative;
+    z-index: 0;
+    color: var(--b3-font-color1) !important;
+    vertical-align: middle;
+
+    /* display: inline-block; */
+    /* width: fit-content; */
+}
+
+.protyle-wysiwyg [data-node-id].h2, .b3-typography h2 {
+    font-size: 1.5em !important;
+    font-weight: 550;
+    position: relative;
+    z-index: 0;
+    color: var(--b3-font-color2) !important;
+    /* display: inline-block; */
+    /* width: fit-content; */
+}
+
+.protyle-wysiwyg [data-node-id].h3, .b3-typography h3 {
+    font-size: 1.4em !important;
+    font-weight: 550;
+    position: relative;
+    z-index: 0;
+    color: var(--b3-font-color3) !important;
+    /* display: inline-block; */
+    /* width: fit-content; */
+}
+
+.protyle-wysiwyg [data-node-id].h4, .b3-typography h4 {
+    font-size: 1.3em !important;
+    font-weight: 550;
+    position: relative;
+    z-index: 0;
+    color: var(--b3-font-color4) !important;
+    /* display: inline-block; */
+    /* width: fit-content; */
+}
+
+.protyle-wysiwyg [data-node-id].h5, .b3-typography h5 {
+    font-size: 1.2em !important;
+    font-weight: 550;
+    position: relative;
+    z-index: 0;
+    color: var(--b3-font-color5) !important;
+    /* display: inline-block; */
+    /* width: fit-content; */
+}
+
+.protyle-wysiwyg [data-node-id].h6, .b3-typography h6 {
+    font-size: 1.1em !important;
+    font-weight: 550;
+    position: relative;
+    z-index: 0;
+    color: var(--b3-font-color6) !important;
+    /* display: inline-block; */
+    /* width: fit-content; */
+}
+
+
+/* --------------------------------------------------标题样式END------------------------------------------------------ */
+
+/* -------------------------------------------------区分大纲中的各级标题------------------------------------------------ */
+.file-tree ul.b3-list.b3-list--background [data-subtype="h1"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background [data-subtype="h1"] {
+    color: var(--b3-font-color1);
+}
+
+.file-tree ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background [data-subtype="h2"] {
+    color: var(--b3-font-color2);
+}
+
+.file-tree ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background [data-subtype="h3"] {
+    color: var(--b3-font-color3);
+}
+
+.file-tree ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background [data-subtype="h4"] {
+    color: var(--b3-font-color4);
+}
+
+.file-tree ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background [data-subtype="h5"] {
+    color: var(--b3-font-color5);
+}
+
+.file-tree ul.b3-list.b3-list--background [data-subtype="h6"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background [data-subtype="h6"] {
+    color: var(--b3-font-color6);
+}
+
+/* -------------------------------------------------区分大纲中的各级标题 END------------------------------------------------ */
+
+/* -------------------------------表格start------------------------------------- */
+/* 表格100%宽度 */
+.protyle-wysiwyg table,
+.b3-typography table {
+    display: table;
+    width: 100%;
+}
+
+/* 设置表头区域顶部边框，使表格更明显 */
+table thead {
+    border-top: 0.15em solid var(--b3-theme-primary) !important;
+}
+
+/*设置表格表头样式，颜色，背景，加粗，居中对齐*/
+table th {
+    font-weight: bold;
+    text-align: center;
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-hover2);
+    /* opacity: 1; */
+}
+
+/* 设置表格内部边框 */
+th, td {
+    min-width: 1em;
+    border: 0.1em solid var(--b3-table-border-color) !important;
+    border-collapse: collapse;
+    color: inherit;
+}
+
+/* 表格奇偶行不同颜色 */
+tbody tr:nth-child(2n) {
+    background-color: white;
+}
+
+tbody tr:nth-child(2n + 1) {
+    background-color: var(--b3-theme-background2);
+}
+
+/* 设置表格表头/首行不换行 */
+/* table th {
+    white-space: nowrap;
+} */
+
+/* 设置表格行悬浮高亮 */
+table tr:hover {
+    background: var(--b3-theme-hover2) !important;
+    color: var(--b3-theme-primary) !important;
+}
+
+/* -------------------------------表格end------------------------------------- */
+/* -------------------------------------------------高亮和搜索高亮----------------------------------------------- */
+.protyle-wysiwyg [data-node-id] span[data-type="search-mark"],
+mark {
+    background-color: yellow !important;
+    color: black !important;
+    border-radius: var(--b3-border-radius-noraml);
+    margin: 0px 0px;
+}
+
+/* -------------------------------------------------高亮 END----------------------------------------------- */
+/* ---------------------------------加粗------------------------------ */
+.b3-typography strong,
+.protyle-wysiwyg strong {
+    color: inherit;
+}
+
+/* --------------------------------下划线样式--------------------------- */
+/* .b3-typography u,
+.protyle-wysiwyg u {
+    text-decoration: none;
+    border-bottom: 2px solid gray;
+    padding-bottom: 1px;
+} */
+
+/* ----------------------------------------------引用---------------------------------------------- */
+/* ——————————————————————————设置引用格式———————————————————————————— */
+.protyle-wysiwyg [data-node-id].bq,
+.b3-typography blockquote {
+    min-height: 40px;
+    border-top: 3px solid #d83931;
+    border-bottom: var(--b3-border-wider);
+    color: gray;
+    background-color: var(--b3-theme-background2) !important;
+    border-left: none !important;
+    padding: 5px 20px;
+    border-radius: var(--b3-border-radius-noraml);
+    margin: 4px;
+}
+
+/* ——————————修复无序列表中因为before伪元素造成的左边线条位置错乱—————————— */
+.protyle-wysiwyg [data-node-id].li>[data-node-id].bq:before {
+    left: -18px !important;
+}
+
+/* ——————————————————————————引用前加入引号图标———————————————————————————— */
+.protyle-wysiwyg [data-node-id].bq:not([style*="color"]),
+.b3-typography blockquote:not([style*="color"]) {
+    background-image: url('src/blockquote.svg');
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    position: 10px 10px;
+    line-height: 6px !important;
+}
+
+/* ----------------------------------------------引用 END---------------------------------------------- */
+/* ------------------------------------------------块引用/引用块------------------------------------------------- */
+/* 设置引用块格式 */
+.protyle-wysiwyg [data-node-id] span[data-type='block-ref'] {
+    /* color: #202124; */
+    color: inherit;
+    padding: 0.1em 0.2em;
+    padding-bottom: 0.05em !important;
+    border-bottom: 1px solid var(--b3-theme-primary);
+    margin: 2px;
+}
+
+/* 为引用块后面增加引用图标 */
+.protyle-wysiwyg [data-node-id] span[data-type="block-ref"]::before {
+    content: "📑";
+    position: relative;
+    font-size: 80%;
+    top: -0.1em;
+    margin-right: 2px;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type="block-ref"]:hover {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-hover);
+    border-radius: 3px 3px 0 0;
+}
+
+/* 引用块悬浮时头部的背景颜色 */
+.block__popover--move>.block__icons {
+    background-color: var(--b3-theme-tm1) !important;
+    border-bottom: 2px solid var(--b3-theme-primary) !important;
+    box-shadow: var(--b3-bottom-inset-shadow);
+}
+
+/* 引用块打开时的阴影 */
+.block__popover--open {
+    box-shadow: var(--b3-dialog-shadow);
+}
+
+/* 去掉h1-h6标题上块引用的下划线，感谢二群群友123的建议 */
+.h1 span[data-type='block-ref'],
+.h2 span[data-type='block-ref'],
+.h3 span[data-type='block-ref'],
+.h4 span[data-type='block-ref'],
+.h5 span[data-type='block-ref'],
+.h6 span[data-type='block-ref'] {
+    border-bottom: 1px solid transparent !important;
+}
+
+/* ------------------------------------------------块引用 END------------------------------------------------- */
+
+/* -----------------------------------------超链接 a----------------------------------- */
+.item__main a,
+.protyle-wysiwyg [data-node-id] span[data-type='a'] {
+    /* color: var(--b3-theme-primary); */
+    color: inherit;
+    padding: 0.1em 0.2em;
+    padding-bottom: 0.05em !important;
+    margin: 2px;
+    border-bottom: 1px solid gray;
+    word-break: break-all;
+}
+
+.b3-typography a {
+    word-break: break-all;
+}
+
+
+/* ——————————给超链接（包括导入的PDF文件等）前面加入图标—————————— */
+/* .item__main a::before,
+.protyle-wysiwyg [data-node-id] span[data-type="a"]:before {
+    content: "💬";
+    margin-right: 2px;
+    font-size: 80%;
+    position: relative;
+    top: -0.1em;
+} */
+
+.item__main a:hover,
+.protyle-wysiwyg [data-node-id] span[data-type='a']:hover {
+    color: var(--b3-theme-primary);
+    /* background-color: var(--b3-theme-hover); */
+    background-color: var(--b3-theme-background-link-hover);
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid gray;
+    text-decoration: none;
+}
+
+/* ————————————————————标题上的链接去掉下划线，2群群友123的建议———————————————————— */
+.h1 span[data-type="a"],
+.h2 span[data-type="a"],
+.h3 span[data-type="a"],
+.h4 span[data-type="a"],
+.h5 span[data-type="a"],
+.h6 span[data-type="a"] {
+    border-bottom: 1px solid transparent !important;
+}
+
+/* ————————————————————正文中的超链接保持原来的颜色———————————————————— */
+.item__main a,
+.p [data-type="a"] {
+    color: var(--b3-theme-primary) !important;
+}
+
+
+/* -----------------------------------------超链接 END----------------------------------- */
+
+/* ------------------------------------------------块嵌入/嵌入块------------------------------------------------- */
+.protyle-wysiwyg [data-node-id].render-node[data-type="NodeBlockQueryEmbed"] {
+    position: relative;
+    display: block;
+    border-radius: var(--b3-border-radius-noraml);
+    padding: 5px 20px;
+    /* margin-bottom: 0px !important; */
+    margin: 4px;
+    border-bottom: var(--b3-border-wider);
+    border-top: 3px solid #245bdb;
+    color: gray;
+    background-color: var(--b3-theme-background2) !important;
+    position: relative;
+    /* box-shadow: 0px 12px 10px -8px rgba(36, 91, 219, 0.7) inset,
+        0px -6px 10px -8px rgba(128, 128, 128, 0.7) inset; */
+}
+
+/* 为嵌入块左上角添加icon图标 */
+.protyle-wysiwyg [data-node-id].render-node[data-type="NodeBlockQueryEmbed"]::before {
+    content: url(src/qr.svg);
+    position: absolute;
+    top: 3px;
+    left: 0px;
+}
+
+/* 进行SQL查询时嵌入块之间分割线颜色 */
+.render-node .protyle-wysiwyg__embed {
+    border-top: var(--b3-border-dashed-gray);
+}
+
+/* 嵌入块中的标题取消自动编号 */
+.render-node .h1>div:before,
+.render-node .h2>div:before,
+.render-node .h3>div:before,
+.render-node .h4>div:before,
+.render-node .h5>div:before,
+.render-node .h6>div:before {
+    display: none !important;
+}
+
+/* ------------------------------------------------块嵌入/嵌入块 END------------------------------------------------- */
+/* ------------------------------------------标签 tag--------------------------------------------- */
+.protyle-wysiwyg [data-node-id] span[data-type='tag']:not(:empty) {
+    position: relative;
+    color: var(--b3-theme-hover);
+    background-color: var(--b3-theme-primary);
+    border-radius: var(--b3-border-radius-half-round);
+    margin: 0px 2px;
+    padding: 0px 6px;
+}
+
+/* ————————————————————标签#号———————————————————— */
+.protyle-wysiwyg [data-node-id] span[data-type='tag']:not(:empty)::before {
+    content: "★ ";
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='tag']:hover {
+    color: gray;
+    background-color: var(--b3-theme-background-gray);
+}
+
+/* ————————————————————修改以下内容的标签样式———————————————————— */
+/* 判断 */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="判断"]:not(:empty) {
+    color: white;
+    background-color: red;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="判断"]:not(:empty)::before {
+    content: "√ ";
+}
+
+/* 填空 */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="填空"]:not(:empty) {
+    color: white;
+    background-color: blue;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="填空"]:not(:empty)::before {
+    content: "__ ";
+}
+
+/* 选择 */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="选择"]:not(:empty) {
+    color: white;
+    background-color: green;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="选择"]:not(:empty)::before {
+    content: "A ";
+    font-size: 1em;
+    font-family: "微软雅黑";
+}
+
+/* 排序 */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="排序"]:not(:empty) {
+    color: white;
+    background-color: purple;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="排序"]:not(:empty)::before {
+    content: "① ";
+    /* font-size: 1em; */
+    font-family: "微软雅黑";
+    /* top: 5px; */
+    /* vertical-align: middle; */
+}
+
+/* 地理 */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="地理"]:not(:empty)::before {
+    content: "✈ ";
+    font-family: "宋体";
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="地理"]:not(:empty) {
+    color: inherit;
+    background-color: skyblue;
+}
+
+/* ————————————————————给头图上方的标签设置一样的样式，但是不修改颜色———————————————————— */
+.protyle-background__tags .item {
+    border-radius: var(--b3-border-radius-half-round);
+    margin: 4px 8px 2px 0px;
+    cursor: pointer;
+    font-size: 90%;
+    padding: 0px 8px !important;
+    line-height: 1.625;
+    border: var(--b3-border-dashed-gray);
+}
+
+.protyle-background__tags .item:before {
+    content: "★ ";
+}
+
+/* ------------------------------------------标签 END--------------------------------------------- */
+/* --------------------------------------------图片img----------------------------------------------- */
+.protyle-wysiwyg img:not(img.emoji),
+.b3-typography img:not(img.emoji) {
+    cursor: pointer;
+    border: 0.05em solid #fafafa;
+    border-radius: var(--b3-border-radius-noraml);
+    text-align: left;
+    box-shadow: var(--b3-point-shadow);
+    position: relative;
+    /* transition: var(--b3-transition); */
+    width: auto;
+}
+
+/* ——————————————————————调整网络图片左上角的图标格式—————————————————————————— */
+.protyle-wysiwyg [data-node-id] .img__net {
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    color: transparent;
+    background-color: var(--b3-theme-background-gray);
+    border-top: 2px solid #fafafa !important;
+    border-left: 2px solid #fafafa !important;
+    border-radius: 5px 0px;
+    border-radius: var(--b3-border-radius-image-emoji);
+    box-shadow: 2px 2px 5px 2px #0000004d;
+}
+
+.protyle-wysiwyg [data-node-id] .img__net::before {
+    content: "🔍";
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    color: var(--b3-theme-primary);
+    font-size: 10px;
+}
+
+/* ————————————————————设置图片右上角按钮背景颜色———————————————————— */
+.protyle-icons {
+    background-color: var(--b3-theme-background2);
+    top: 7px;
+    right: 4px;
+}
+
+/* --------------------------------------------图片 END----------------------------------------------- */
+/* ----------------------------------无序列表和有序列表前面的符号--------------------------------------- */
+/* -------------------------列表悬浮------------------------ */
+/* 大圆背景 */
+.protyle-wysiwyg [data-node-id].li>.protyle-action:hover:after {
+    background-color: var(--b3-font-color8) !important;
+    border-radius: var(--b3-border-radius-half-round);
+}
+
+/* 小圆点颜色 */
+.protyle-wysiwyg [data-node-id].li>.protyle-action:hover {
+    color: gray !important;
+}
+
+/* -------------------------列表悬浮 END------------------------ */
+/* -------------------------列表折叠------------------------ */
+/* 大圆背景 */
+.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action:after {
+    background-color: var(--b3-theme-tm1) !important;
+    border-radius: var(--b3-border-radius-half-round);
+}
+
+/* 小圆点颜色 */
+.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action {
+    color: var(--b3-theme-primary) !important;
+}
+
+/* 修改集市里边无序列表前小圆点颜色 */
+::marker {
+    color: rgba(128, 128, 128, 0.7);
+}
+
+/* 调整集市里边文字行高，大一点看着好看 */
+.item__readme.b3-typography {
+    line-height: 2;
+    padding: 5px;
+    text-align: left;
+}
+
+/* ——————————————————————去除无序列表底部外边距———————————————————— */
+.protyle-wysiwyg [data-node-id].li>[data-node-id] {
+    margin-bottom: 0px;
+}
+
+/* ————————————————————减小前面符号·的大小———————————————————— */
+.list[data-node-id][data-type="NodeList"] .protyle-action>svg {
+    width: 11px;
+}
+
+/* -------------------------列表折叠 END------------------------ */
+/* ----------------------------------列表 END--------------------------------------- */
+/* ---------------------—---------------------复选框（待办事项）------------------------------------------------ */
+/* ————————————————————————————给默认的待办事项前的图标和悬浮背景颜色设置为无—————————————————————————————— */
+.protyle-wysiwyg [data-node-id].li>.protyle-action--task svg {
+    opacity: 0;
+}
+
+.protyle-wysiwyg [data-node-id].li>.protyle-action--task:hover:after {
+    background-color: transparent !important;
+    opacity: 0 !important;
+}
+
+/* ————————————————————————————未完成事项的背景颜色———————————————————————————————————————— */
+.protyle-wysiwyg .protyle-action--task,
+.b3-typography .protyle-task {
+    content: url(src/dui.svg);
+    width: 1.2em;
+    height: 1.2em;
+    top: 0.4em !important;
+}
+
+/* ————————————————————————————————————————复选框选中———————————————————————————————— */
+.protyle-task--done>.protyle-action--task,
+.b3-typography .protyle-task--done {
+    content: url(src/dui-c.svg);
+}
+
+/* —————————————————————完成的待办事项删除线样式和颜色（包括字体样式）——————————————————————— */
+.li.protyle-task--done .p {
+    text-decoration: line-through;
+    color: var(--b3-theme-primary);
+}
+
+/* 设置待办事项中的更多样式 */
+.li.protyle-task--done .p strong {
+    color: var(--b3-theme-primary) !important;
+    background-color: transparent !important;
+}
+
+/* 无序列表转表格中的待办事项符号位置调整 */
+.list[custom-f="bg"]>div.protyle-action.protyle-action--task {
+    position: relative;
+    top: 1em !important;
+}
+
+.list[data-node-id][data-type="NodeList"][custom-f="bg"] .protyle-action {
+    top: 50% !important;
+}
+
+/* ---------------------—---------------------复选框（待办事项）END------------------------------------------------ */
+/* -------------------------------------------------代码块样式--------------------------------------------------- */
+.code-block {
+    margin: 4px !important;
+}
+
+/* 代码块主体部分设置 */
+.protyle-reset .hljs,
+.protyle-wysiwyg .hljs, .b3-typography .hljs {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    padding-left: 16px;
+    font-family: var(--b3-font-family-code);
+    background-size: 20px 20px;
+    background-image: none !important;
+    background: transparent;
+    /* background-color: var(--b3-theme-background2); */
+    /* z-index: -1; */
+}
+
+/* 代码块上方部分设置 */
+.protyle-wysiwyg .code-block,
+.b3-typography .code-block {
+    position: relative;
+    display: block;
+    border-radius: var(--b3-border-radius-noraml);
+    padding-top: 32px !important;
+    box-shadow: 0px 0px 2px 0px #041b1538;
+    border-bottom: var(--b3-border-wider);
+    border-top: 3px solid #2ea121;
+    background-color: var(--b3-theme-background2) !important;
+    /* z-index: -1; */
+}
+
+/* 设置顶部三个mac按钮样式 */
+.code-block::after {
+    content: ' ';
+    position: absolute;
+    background: #fa625c;
+    box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
+    border-radius: var(--b3-border-radius-round);
+    top: 10px;
+    left: 15px;
+    height: 12px;
+    width: 12px;
+    z-index: 1;
+}
+
+/*  ————————————————————————————————————代码块行数——————————————————————————————————*/
+.protyle-linenumber__rows {
+    margin-top: 31px !important;
+    background-color: var(--b3-theme-background2);
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+/* ————————————————————————————————————代码块行数和代码之间的竖线——————————————————————— */
+.protyle-linenumber__rows::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: calc(100% - 10px);
+    background-color: var(--b3-border-color1);
+    left: 49px !important;
+}
+
+/* ——————————————————————————————————一直显示代码块右上角的代码语言和复制按钮—————————————————————————————— */
+.code-block .protyle-icons {
+    opacity: 1;
+}
+
+
+/* ————————————————————————————————集市里边代码块的主题—————————————————————————————— */
+code.hljs {
+    background-color: var(--b3-theme-background2) !important;
+    border-top: 3px solid #2ea121;
+    border-bottom: var(--b3-border-wider);
+    box-shadow: var(--b3-point-shadow);
+}
+
+/* -------------------------------------------------代码块样式 END--------------------------------------------------- */
+/* --------------------------------------------------警告 error----------------------------------------------- */
+.b3-snackbar--error {
+    background-color: var(--b3-theme-error);
+    color: var(--b3-theme-on-error);
+}
+
+.b3-snackbar__content {
+    line-height: 20px;
+    border-radius: var(--b3-border-radius-noraml);
+    padding: 8px 16px;
+    color: #fff;
+    font-size: inherit;
+    background-color: var(--b3-theme-primary);
+    box-sizing: border-box;
+    transition: transform 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms;
+    transform: scale(0.8);
+    top: 16px;
+    position: absolute;
+    word-break: break-word;
+    max-width: 80vw;
+}
+
+.b3-snackbar__close {
+    position: absolute;
+    color: #fff;
+    font-size: 50%;
+    padding: 4px;
+    background: #ec8d8deb;
+    border-radius: var(--b3-border-radius-half-round);
+    cursor: pointer;
+    top: 2px;
+}
+
+.b3-snackbar__content svg:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* --------------------------------------------------警告 END----------------------------------------------- */
+/* --------------------------------------------------标签页 Tab--------------------------------------------- */
+/* ————————————————————————标签页样式——————————————————————————*/
+.layout-tab-bar .item {
+    padding: 1px 4px 1px 14px;
+    margin: 0px;
+    border: var(--b3-border-normal);
+    border-collapse: collapse !important;
+    border-radius: var(--b3-border-radius-none) !important;
+    background-color: var(--b3-font-background8);
+    box-sizing: border-box;
+}
+
+/* ——————————————————————设置文字最小宽度，标签过多时才能看清楚文字—————————————————————— */
+.layout-tab-bar .item__text {
+    width: 6em;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    display: inline;
+}
+
+/* ——————————————————————————选中的标签页—————————————————————— */
+.layout-tab-bar .item--focus {
+    background-color: white !important;
+    border: var(--b3-border-normal);
+    border-top: 0.05em solid transparent !important;
+}
+
+/* ————————————————————————标签页后面的背景—————————————————————— */
+/* .layout-tab-bar {
+    background-color: #d1ecf1 !important;
+}
+.layout-tab-bar .item:hover:not(.item--focus) {
+    background-color: #f8f9fa;
+} */
+/* --------------------------------------------------标签页 END--------------------------------------------- */
+/* -------------------------------------------------面包屑导航样式-------------------------------------------- */
+.protyle-breadcrumb {
+    color: gray;
+    background-color: var(--b3-theme-background2);
+    font-size: 14px !important;
+    height: 26px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.protyle-breadcrumb__item svg {
+    height: 14px;
+    width: 14px;
+}
+
+/* -------------------------------------------------面包屑导航样式 END-------------------------------------------- */
+/* --------------------------------------------------鼠标样式----------------------------------------------- */
+/* ——————————————————————鼠标光标选中文本样式———————————————————————— */
+*:not(.pdfViewer)::selection {
+    background-color: var(--b3-theme-primary);
+    color: white;
+}
+
+/* ————————————————————————鼠标划选区域————————————————————————————*/
+.protyle-select {
+    /* background-color: var(--b3-theme-tm1) !important; */
+    background-color: transparent !important;
+}
+
+
+/* ————————————————————————————选中块—————————————————————————————— */
+.protyle-wysiwyg--select, .protyle-wysiwyg--select .hljs {
+    background-color: var(--b3-theme-hover2) !important;
+    /* background-color: red !important; */
+}
+
+/* --------------------------------------------------鼠标样式 END----------------------------------------------- */
+/* ----------------------------------------------------调整超级块的块间距------------------------------------------ */
+/* ————————————————————————————————————大超级块，不用设置边框—————————————————————————————— */
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* —————————————————————————————————————次超级块大小—————————————————————————————————————— */
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] .sb {
+    border: var(--b3-border-dashed-gray-wider);
+    border-radius: var(--b3-border-radius-none);
+    box-sizing: border-box;
+    margin: 0.1em 0 0.1em 0.1em;
+}
+
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] .sb:nth-last-child(2) {
+    margin-right: 0.1em;
+}
+
+/* ——————————————————————————————————————每个子超级块—————————————————————————————————————— */
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div {
+    border: 0.1em dashed rgba(128, 128, 128, 0.5);
+    border-radius: var(--b3-border-radius-none);
+    box-sizing: border-box;
+    margin: 0.1em 0 0.1em 0.1em;
+    /* background-color: var(--b3-theme-background); */
+    /* background-color: var(--b3-theme-background); */
+}
+
+/* 最后一个子超级块不设置右边距 */
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div:nth-last-child(2) {
+    margin-right: 0.1em;
+}
+
+/* 鼠标悬浮时变色 */
+/* .protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] .sb:hover,
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div:hover {
+    border-color: var(--b3-theme-primary);
+    border-style: solid;
+} */
+
+/* 取消显示超级块中的标题衬底 */
+div.sb div.h1::after,
+div.sb div.h2::after,
+div.sb div.h3::after,
+div.sb div.h4::after,
+div.sb div.h5::after,
+div.sb div.h6::after {
+    display: none !important;
+}
+
+/* 取消显示超级块中的自动编号 */
+div.sb .h1>::before,
+div.sb .h2>::before,
+div.sb .h3>::before,
+div.sb .h4>::before,
+div.sb .h5>::before,
+div.sb .h6>::before {
+    display: none !important;
+}
+
+/* ----------------------------------------------------调整超级块的块间距 END------------------------------------------ */
+/* --------------------------------------------------鼠标选中文本后弹出的工具栏样式------------------------------------- */
+.protyle-toolbar {
+    background-color: var(--b3-theme-background2);
+    box-shadow: var(--b3-dialog-shadow);
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+.protyle-toolbar__item {
+    color: var(--b3-font-color-gray);
+}
+
+.protyle-toolbar__item:hover:not(.protyle-toolbar__item:focus) {
+    color: var(--b3-font-color-hover);
+    background-color: var(--b3-theme-hover-gray);
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+.protyle-toolbar__item--current {
+    color: var(--b3-theme-primary) !important;
+    background-color: var(--b3-theme-tm1) !important;
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+/* --------------------------------------------------鼠标选中文本后弹出的工具栏样式 END------------------------------------- */
+/* ---------------------------------------------------键盘按键kbd和行内代码设置一样的格式--------------------------------------------- */
+.b3-typography code:not(.hljs), .protyle-wysiwyg code:not(.hljs) {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-background2);
+    border: 0.05em solid #cfcece;
+    border-radius: var(--b3-border-radius-half-round);
+}
+
+/* 键盘kbd样式 */
+.b3-typography kbd, .protyle-wysiwyg kbd {
+    border: 0.1em solid rgba(128, 128, 128, 0.2);
+    border-bottom: 0.1em solid gray !important;
+    border-radius: var(--b3-border-radius-noraml);
+    color: gray;
+    background-color: var(--b3-theme-background2);
+    font-family: var(--b3-font-family-code);
+}
+
+/* ---------------------------------------------------键盘按键 END--------------------------------------------- */
+/* ------------------------------------------------更改空行提示----------------------------------------- */
+.protyle-wysiwyg [data-node-id]:not(.code-block)>[spellcheck="false"]:focus:empty:after {
+    content: "输入内容" !important;
+    color: var(--b3-font-color-empty);
+}
+
+.protyle-wysiwyg [data-node-id] [spellcheck="false"]:empty:after {
+    color: inherit;
+    opacity: 0.5;
+}
+
+/* 空列表出现提示 */
+.protyle-wysiwyg [data-subtype="t"]>.li>.p:nth-of-type(2)>[spellcheck="false"]:empty:after {
+    content: "待办事项";
+    color: var(--b3-font-color-empty);
+}
+
+.protyle-wysiwyg [data-subtype="u"]>.li>.p:nth-of-type(2)>[spellcheck="false"]:empty:after,
+.protyle-wysiwyg [data-subtype="o"]>.li>.p:nth-of-type(2)>[spellcheck="false"]:empty:after {
+    content: "列表";
+    color: var(--b3-font-color-empty);
+}
+
+/* ------------------------------------------------更改空行提示 END----------------------------------------- */
+/* ----------------------------------------------------块添加圆角------------------------------------------- */
+.protyle-wysiwyg [data-node-id] {
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+/* ----------------------------------------------------块添加圆角 END------------------------------------------- */
+/* ------------------------------------------------------文档树--------------------------------------- */
+/* ————————————————————————————文件树文档图标悬浮放大———————————————————————— */
+.b3-list--files .b3-list-item__icon {
+    transition: all 0.1s ease-in-out;
+}
+
+.b3-list--files .b3-list-item__icon:hover {
+    transform: scale(1.2);
+    transition: all 0.1s ease-in-out;
+}
+
+/* ————————————————————————————dock栏和顶部图标放大动效—————————————————————— */
+.dock--vertical .dock__item:hover svg,
+.toolbar__item:hover svg {
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
+}
+
+.block__icon:hover svg {
+    transform: scale(0.9) !important;
+}
+
+.dock--vertical .dock__item svg,
+.toolbar__item svg,
+.block__icon svg {
+    transition: all 0.1s ease-in-out;
+}
+
+/* ————————————————————————文档树区分有子文档和无子文档的文档—————————————————————— */
+.b3-list-item.b3-list-item--hide-action .b3-list-item__toggle.fn__hidden::before {
+    content: "·";
+    display: block;
+    position: absolute;
+    visibility: visible;
+    transition: var(--b3-transition);
+    margin-bottom: 2px;
+}
+
+/* ——————————————————————————————取消默认的隐藏效果———————————————————————— */
+.file-tree--leave .b3-list-item__graphic--arrow:not(.fn__hidden) {
+    opacity: 1;
+}
+
+/* ------------------------------------------------------文档树 END--------------------------------------- */
+/* ——————————————————————————————文档树条目前面图标的大小—————————————————————————————— */
+.b3-list-item__icon svg, .b3-list-item__icon img {
+    float: left;
+    margin: 6px 0;
+    vertical-align: middle !important;
+    color: var(--b3-theme-on-surface);
+}
+
+/* ——————————————————————————————点击文档树emoji不弹出修改窗口—————————————————————————— */
+span.b3-list-item__icon.b3-tooltips.b3-tooltips__n {
+    pointer-events: none;
+}
+
+/* ——————————————————————————————增大emoji图标大小—————————————————————————————— */
+.b3-list-item__icon svg,
+.b3-list-item__icon img {
+    height: 18px;
+    width: 18px;
+    position: relative;
+    top: -1px;
+}
+
+/* -----------------------------------------------------------文档树条目------------------------------------------------- */
+/* ------------------------------------文档树文字设置为灰色------------------------------- */
+.b3-list-item__text {
+    color: gray;
+}
+
+/* -----------------------------------文档树条目hover高亮-------------------------------- */
+.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
+    color: var(--b3-font-color-hover) !important;
+    background-color: var(--b3-theme-hover-gray);
+}
+
+.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) .b3-list-item__text {
+    color: var(--b3-font-color-hover) !important;
+}
+
+.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) .b3-list-item__icon svg {
+    color: var(--b3-font-color-hover) !important;
+}
+
+/* -----------------------------文档树条目focus高亮,针对背景------------------------------- */
+.b3-list--background .b3-list-item--focus {
+    background-color: var(--b3-theme-hover) !important;
+}
+
+/* -----------------------------文档树条目focus高亮,针对文字和前面图标------------------------------- */
+.b3-list--background .b3-list-item--focus .b3-list-item__text {
+    color: var(--b3-theme-primary) !important;
+}
+
+.b3-list--background .b3-list-item--focus .b3-list-item__graphic {
+    color: var(--b3-theme-primary) !important;
+}
+
+.b3-list--background .b3-list-item--focus .b3-list-item__icon svg {
+    color: var(--b3-theme-primary) !important;
+}
+
+/* -----------------------------------------------------------文档树条目 END------------------------------------------------- */
+/* ----------------------------------------修改文档树新建按钮的样式----------------------------------------- */
+/* 隐藏文档树后面的引用计数 */
+span.popover__block.counter.b3-tooltips.b3-tooltips__nw {
+    display: none;
+}
+
+/* 隐藏大纲后面的引用计数 */
+.fn__flex-1.fn__flex-column.file-tree.sy__outline span.counter {
+    display: none;
+}
+
+/* ————————————————————更改新建按钮样式———————————————————— */
+/* 隐藏原来的新建按钮的样式 */
+span.b3-list-item__action.b3-tooltips[data-type="new"] svg {
+    visibility: hidden;
+    color: gray;
+}
+
+/* 增加新的样式 */
+span.b3-list-item__action.b3-tooltips[data-type="new"] {
+    background-image: url(src/new.svg);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    top: 4px;
+}
+
+span.b3-list-item__action.b3-tooltips[data-type="new"]:hover {
+    background-image: url(src/new-c.svg);
+}
+
+/* ————————————————————更改更多按钮样式———————————————————— */
+/* 隐藏原来的更多按钮的样式 */
+span.b3-list-item__action.b3-tooltips[data-type="more-root"] svg,
+span.b3-list-item__action.b3-tooltips[data-type="more-file"] svg {
+    visibility: hidden;
+}
+
+/* 增加新的样式 */
+span.b3-list-item__action.b3-tooltips[data-type="more-root"],
+span.b3-list-item__action.b3-tooltips[data-type="more-file"] {
+    background-image: url(src/new-file.svg);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    top: 4px;
+}
+
+span.b3-list-item__action.b3-tooltips[data-type="more-root"]:hover,
+span.b3-list-item__action.b3-tooltips[data-type="more-file"]:hover {
+    background-image: url(src/new-file-c.svg);
+}
+
+/* ----------------------------------------修改文档树新建按钮的样式 END----------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------pdf双链-------------------------------------------------------- */
+.textLayer,
+.pdf__resize {
+    mix-blend-mode: darken;
+}
+
+/* ————————————————————修改PDF双链样式———————————————————— */
+.protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref'] {
+    color: gray;
+    background-color: var(--b3-theme-background-gray);
+    display: inline-block;
+    position: relative;
+    left: 1px;
+    top: 1px;
+    background-image: url('src/blockquote.svg');
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    padding: 1px 10px 1px 15px;
+    border-radius: var(--b3-border-radius-noraml);
+    text-align: justify;
+    margin: 4px;
+}
+
+/* ————————————————————给PDF双链后边增加emoji图标———————————————————— */
+.protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref']::before {
+    display: none;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref']::after {
+    content: " 🔗";
+    font-size: 12px;
+    /* align-items: center; */
+    vertical-align: 2px;
+}
+
+/* ————————————————————鼠标悬浮时更改PDF双链样式———————————————————— */
+.protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref']:hover {
+    color: var(--b3-font-color4);
+    background-color: var(--b3-font-background4);
+    background-image: url('src/bq-c.svg');
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref']:hover:after {
+    content: " 🔎";
+}
+
+/* ——————————————————————pdf搜索高亮———————————————————— */
+.textLayer .highlight.selected {
+    background-color: var(--b3-search-highlight);
+}
+
+/* ——————————————————————PDF搜索候选词高亮———————————————————— */
+.textLayer .highlight {
+    background-color: var(--b3-font-background1);
+}
+
+/* ————————————————————pdf光标选中文本样式———————————————————— */
+.pdf__outer ::selection {
+    background-color: var(--b3-pdf-selcect-hightlight);
+    color: transparent !important;
+}
+
+/* ————————————————————PDF标注弹出项目———————————————————— */
+.pdf__util.b3-menu .b3-color__square {
+    height: 25px;
+    width: 25px;
+    border-radius: var(--b3-border-radius-none);
+}
+
+/* ————————————————————PDF标注弹出项目鼠标悬浮时的样式———————————————————— */
+.pdf__util.b3-menu .b3-color__square:hover {
+    border: 2px solid gray;
+}
+
+/* ——————————————————————————————————————给PDF标注下方加一条横线—————————————————————————————————————————— */
+/* ————————————————————给横线设置统一的格式———————————————————— */
+.pdf__rect.popover__block>div:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px !important;
+    height: 100%;
+    width: 100%;
+}
+
+/* ————————————————————1红色———————————————————— */
+.pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background1)"]:before {
+    background-color: var(--b3-pdf-background1);
+    border-bottom: 2px solid var(--b3-font-color1);
+}
+
+/* ————————————————————2橙色———————————————————— */
+.pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background2)"]:before {
+    background-color: var(--b3-pdf-background2);
+    border-bottom: 2px solid var(--b3-font-color2);
+}
+
+/* ————————————————————3黄色———————————————————— */
+.pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background3)"]:before {
+    background-color: var(--b3-pdf-background3);
+    border-bottom: 2px solid var(--b3-font-color3);
+}
+
+/* ————————————————————4绿色———————————————————— */
+.pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background4)"]:before {
+    background-color: var(--b3-pdf-background4);
+    border-bottom: 2px solid var(--b3-font-color4);
+}
+
+/* ————————————————————5青色———————————————————— */
+.pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background5)"]:before {
+    background-color: var(--b3-pdf-background5);
+    border-bottom: 2px solid var(--b3-font-color5);
+}
+
+/* ————————————————————6蓝色———————————————————— */
+.pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background6)"]:before {
+    background-color: var(--b3-pdf-background6);
+    border-bottom: 2px solid var(--b3-font-color6);
+}
+
+/* ————————————————————7紫色———————————————————— */
+.pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background7)"]:before {
+    background-color: var(--b3-pdf-background7);
+    border-bottom: 2px solid var(--b3-font-color7);
+}
+
+/* ————————————————————PDF搜索栏设置—————————————————— */
+.findbar {
+    padding: 5px 8px;
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+/* ————————————————————PDF鼠标悬浮时无双链的标注不显示链接弹窗———————————————————— */
+.block__popover--open[data-oid="undefined"] {
+    display: none;
+    box-shadow: var(--b3-point-shadow);
+}
+
+/* ————————————————————调整弹窗的阴影———————————————————— */
+.block__popover--open {
+    box-shadow: var(--b3-point-shadow);
+}
+
+/* ------------------------------------------------------------pdf双链 END-------------------------------------------------------- */
+/* ------------------------------------------------------ 折叠样式 Start-------------------------------------------------------- */
+.protyle-wysiwyg [data-node-id][fold="1"]:not(.li, .sb) {
+    overflow: visible !important;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].list .li:not(:first-child) {
+    display: none;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeIFrame"],
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeWidget"],
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeVideo"],
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeAudio"],
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mindmap"],
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"],
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="echarts"],
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="flowchart"],
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="plantuml"],
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="graphviz"],
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="abc"] {
+    text-align: left;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeBlockQueryEmbed"] div,
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeTable"] table tbody,
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeMathBlock"] div,
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeIFrame"] div,
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeWidget"] div,
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeVideo"] div,
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeAudio"] div,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mindmap"] div,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"] div,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="echarts"] div,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="flowchart"] div,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="plantuml"] div,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="graphviz"] div,
+.protyle-wysiwyg [data-node-id][fold="1"].p .img span,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="abc"] div,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="abc"] span {
+    display: none;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeMathBlock"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeMathBlock"] div:first-child:before {
+    content: "Math Block";
+}
+
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeIFrame"] div:first-child:before,
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeIFrame"]::before {
+    content: "IFrame";
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeWidget"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeWidget"] div:first-child:before {
+    content: "Widget";
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeVideo"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeVideo"] div:first-child:before {
+    content: "Video";
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="plantuml"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="plantuml"] div:first-child:before {
+    content: "Plantuml";
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="flowchart"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="flowchart"] div:first-child:before {
+    content: "Flowchart";
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="echarts"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="echarts"] div:first-child:before {
+    content: "Echarts";
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="graphviz"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="graphviz"] div:first-child:before {
+    content: "Graphviz";
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="abc"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="abc"] div:first-child:before {
+    content: "Music";
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeAudio"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeAudio"] div:first-child:before {
+    content: "Audio";
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mindmap"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mindmap"] div:first-child:before {
+    content: "Mind Map";
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"] div:first-child:before {
+    content: "Mermaid";
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="gantt"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="gantt"] div:first-child:before {
+    content: "Gannt";
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].p .img::before {
+    content: "[Image]";
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].sb {
+    line-height: inherit;
+    height: 1.5em;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"]:not(.sb, .li) [contenteditable="true"] {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    /* line-height: 1.2; */
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].h3 [contenteditable="true"] {
+    display: -webkit-box !important;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"]:not(.li, .code-block)::after {
+    content: ".";
+    display: block;
+    position: absolute;
+    visibility: visible !important;
+    overflow: visible !important;
+    /* background-color: rgb(241, 16, 16); */
+    background-image: url(src/fold.svg) !important;
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border-radius: var(--b3-border-radius-round);
+    top: 0.3em;
+    left: -1.5em;
+    font-size: 0.6em;
+    line-height: 2em;
+    color: transparent;
+    width: 2.5em;
+    z-index: 1;
+    transition: opacity 0.2s ease;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].p::after {
+    left: -2em;
+    top: 0.4em;
+    font-size: 0.7em;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeBlockQueryEmbed"]::after {
+    top: 0.5rem;
+    left: -2em
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].list::after {
+    left: -2em;
+    top: 1em;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeMathBlock"]::after {
+    font-size: 0.7em;
+    top: 0.5em;
+    left: -1.7em;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeWidget"]::after,
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeIFrame"]::after,
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeVideo"]::after,
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeAudio"]::after,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mindmap"]::after,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"]::after,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="echarts"]::after,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="flowchart"]::after,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="plantuml"]::after,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="graphviz"]::after,
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="abc"]::after {
+    left: -2.35em;
+    top: 0.5em;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].protyle-wysiwyg--hl::after,
+.protyle-wysiwyg [data-node-id][fold="1"]:hover::after {
+    display: none;
+    transition: display 0.2s ease;
+}
+
+/* ——————————————————折叠后标题去掉标题下方衬底———————————————————— */
+.protyle-wysiwyg [data-node-id][fold="1"].h1:after {
+    display: none;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].h2:after {
+    display: none;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].h3:after {
+    display: none;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].h4:after {
+    display: none;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].h5:after {
+    display: none;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].h6:after {
+    display: none;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeHeading"] {
+    line-height: 1.2em;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeHeading"]:after {
+    background-size: 1.5rem;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].bq div,
+.protyle-wysiwyg [data-node-id][fold="1"].p div[contenteditable="true"] {
+    display: none;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].bq {
+    border-width: 0px !important;
+    box-shadow: none !important;
+    background-color: unset;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].bq>div:first-child {
+    display: block;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].bq>div:first-child * {
+    display: none;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].bq>div:first-child:before {
+    content: "Blockquote";
+    font-size: 1rem;
+    margin-left: -0.8em;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].bq::after {
+    top: 0.8em;
+    left: -2em;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].p::before {
+    content: "Text";
+}
+
+.protyle-wysiwyg .li [data-node-id][fold="1"].p::before {
+    content: "";
+}
+
+.protyle-wysiwyg .li [data-node-id][fold="1"].p div[contenteditable="true"] {
+    display: block;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].list::after {
+    top: 1.1em;
+    left: -2.2em;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].table::after {
+    top: 1.1em;
+    left: -2.2em;
+}
+
+/* 代码块折叠 */
+.protyle-wysiwyg [data-node-id][fold="1"]:not(.li).code-block {
+    line-height: 1.625;
+    height: 1px;
+    opacity: 1 !important;
+    font-size: inherit !important;
+    overflow: visible !important;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"]:not(.li).code-block .hljs,
+.protyle-wysiwyg [data-node-id][fold="1"]:not(.li).code-block .protyle-linenumber__rows {
+    overflow: hidden !important;
+    display: none;
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"]:not(.li).code-block::after {
+    display: block;
+    border-radius: var(--b3-border-radius-none);
+}
+
+/* 列表折叠优化 */
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeMathBlock"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeIFrame"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeWidget"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeVideo"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeAudio"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mindmap"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="echarts"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="flowchart"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="plantuml"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="graphviz"]::before,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="abc"]::before {
+    content: "" !important;
+}
+
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeMathBlock"] div:first-child,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeIFrame"] div:first-child,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeWidget"] div:first-child,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeVideo"] div:first-child,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeAudio"] div:first-child,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mindmap"]>div:first-child,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"]>div:first-child,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="echarts"]>div:first-child,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="flowchart"]>div:first-child,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="plantuml"]>div:first-child,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="graphviz"]>div:first-child,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="abc"]>div:first-child {
+    display: block;
+}
+
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeMathBlock"] div *,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeIFrame"] div *,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeWidget"] div *,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeVideo"] div *,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-type="NodeAudio"] div *,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mindmap"] div *,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="mermaid"] div *,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="echarts"] div *,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="flowchart"] div *,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="plantuml"] div *,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="graphviz"] div *,
+.protyle-wysiwyg .li [data-node-id][fold="1"][data-subtype="abc"] div * {
+    display: none;
+}
+
+/* -----------------------------------------------------折叠优化 End------------------------------------------------------------ */
+/* ---------------------------左上方点击更多按钮弹出的选择菜单相关设置----------------------- */
+.b3-menu, .b3-menu .b3-menu__submenu {
+    border-radius: var(--b3-border-radius-noraml);
+    /* padding: 6px 6px 6px; */
+    min-width: 200px !important;
+    background-color: var(--b3-theme-background2);
+    padding: 4px;
+}
+
+.b3-menu .b3-menu__submenu {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px 6px 5px;
+}
+
+/* 鼠标悬浮都是圆角 */
+button.b3-menu__item:hover {
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+/* --------------------------------------------------“更多”按钮...hover时的背景颜色------------------------------------------------ */
+.b3-menu__item:hover:not(.b3-menu__item--readonly):not(.b3-menu__item--custom), .b3-menu__item--current,
+.b3-menu__icon--current {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-tm1);
+}
+
+.b3-menu__item:hover .b3-menu__icon {
+    color: var(--b3-theme-primary);
+}
+
+/* ------------------给“更多”按钮...弹出的小面板设置和文档树一样的背景色 ------------*/
+/* 给“更多”按钮弹出的面板设置上下的内边距 */
+/* .b3-menu, .b3-menu .b3-menu__submenu {
+    background-color: var(--b3-theme-background2);
+    padding: 5px 0px;
+} */
+
+/* 给每个条目设置更高的行高 */
+.b3-menu .b3-menu__item {
+    background-color: var(--b3-theme-background2);
+    line-height: 35px !important;
+}
+
+/* --------------------------------------------------“更多”按钮...hover时的背景颜色 END--------------------------------------- */
+/* ——————————————————————————————————————————分割线—————————————————————————————————————————————— */
+/* ——————————去除默认的分割线样式—————————— */
+.protyle-wysiwyg [data-node-id].hr>div {
+    border-bottom: none;
+    /* border-bottom: 0.1em solid rgba(128, 128, 128, 0.5); */
+}
+
+/* ——————————给分割线添加渐变颜色—————————— */
+.hr:after {
+    position: absolute;
+    top: 0.2em;
+    left: 0px;
+    content: "";
+    height: 0.1em !important;
+    width: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(125deg, #F44336, #E91E63, #9C27B0, #3F51B5, #2196F3);
+    background-size: 400%;
+    animation: bganimation 10s infinite;
+    border-radius: var(--b3-border-radius-none) !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes bganimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ——————————————————————————————————————————分割线 END—————————————————————————————————————————————— */
+/* ---------------------------------------自定义13种背景样式，前7种为7种彩虹色----------------------------------------- */
+/* ———————————————为所有的字体样式设置统一的圆角，看起来更好看——————————————————— */
+.b3-typography strong, .protyle-wysiwyg strong {
+    /* padding: 1px 0px !important; */
+    margin: 0px 0px !important;
+    font-weight: 600 !important;
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+/* ———————————————自定义13种背景样式，前7种为彩虹色—————————————————— */
+strong[style="background-color: var(--b3-font-background1);"] {
+    color: var(--b3-font-color1);
+}
+
+strong[style="background-color: var(--b3-font-background2);"] {
+    color: var(--b3-font-color2);
+}
+
+strong[style="background-color: var(--b3-font-background3);"] {
+    color: var(--b3-font-color3);
+}
+
+strong[style="background-color: var(--b3-font-background4);"] {
+    color: var(--b3-font-color4);
+}
+
+strong[style="background-color: var(--b3-font-background5);"] {
+    color: var(--b3-font-color5);
+}
+
+strong[style="background-color: var(--b3-font-background6);"] {
+    color: var(--b3-font-color6);
+}
+
+strong[style="background-color: var(--b3-font-background7);"] {
+    color: var(--b3-font-color7);
+}
+
+strong[style="background-color: var(--b3-font-background8);"] {
+    color: var(--b3-font-color8);
+}
+
+strong[style="background-color: var(--b3-font-background9);"] {
+    color: var(--b3-font-color9);
+}
+
+strong[style="background-color: var(--b3-font-background10);"] {
+    color: var(--b3-font-color10);
+}
+
+strong[style="background-color: var(--b3-font-background11);"] {
+    color: var(--b3-font-color11);
+}
+
+strong[style="background-color: var(--b3-font-background12);"] {
+    color: var(--b3-font-color12);
+}
+
+/* 设置第13个背景色为挖空效果 */
+strong[style="background-color: var(--b3-font-background13);"] {
+    color: transparent !important;
+    background-color: transparent !important;
+    border-bottom: 2px solid gray !important;
+    border-radius: var(--b3-border-radius-none) !important;
+    /* padding: 2px 0px !important; */
+    font-weight: 400 !important;
+    transition: color 0.1s ease-in-out;
+}
+
+strong[style="background-color: var(--b3-font-background13);"]:hover {
+    color: inherit !important;
+}
+
+/* ———————————————自定义13种背景样式，前7种为彩虹色 END—————————————————— */
+/* ---------------------------------------自定义13种背景样式，前7种为7种彩虹色 END----------------------------------------- */
+/* ——————————————————————————文档标题样式—————————————————————————— */
+.protyle-title__input {
+    background-color: transparent;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+/* ---------------------------设置页面格子背景-------------------------------------------------------- */
+/* 格子背景（适合light主题，其他主题需要重新设置颜色 */
+.protyle-content {
+    background-image:
+        linear-gradient(90deg, rgba(60, 10, 30, 0.05) 2%, transparent 0px),
+        linear-gradient(1turn, rgba(148, 35, 80, 0.05) 2%, transparent 0px);
+    background-size: 30px 30px;
+    background-position: 50% center;
+    /* 可以决定格子背景是否跟着正文一起滚动 */
+    /* background-attachment: local; */
+    /* 页面平滑滚动，不再傻快傻快 */
+    /* scroll-behavior: smooth; */
+    text-align: justify;
+}
+
+
+/* .protyle-content {
+    background-color: #faf8df !important;
+} */
+
+/* 对README文件也设置格子背景 */
+.config-bazaar__readme .item__main {
+    background-image:
+        linear-gradient(90deg, rgba(60, 10, 30, 0.06) 2%, transparent 0px),
+        linear-gradient(1turn, rgba(60, 10, 30, 0.06) 2%, transparent 0px);
+    background-size: 30px 30px;
+    background-position: 50% center;
+    text-align: justify;
+    border: 0.05em solid rgba(207, 206, 206, 0.3);
+}
+
+/* 圆点背景 */
+/* .protyle-content {
+    background: white;
+    background-image:
+       linear-gradient(white 28px,transparent 0),
+       linear-gradient(90deg,rgba(60, 10, 30, 0.3) 2px,transparent 0);
+    background-size:30px 30px,30px 30px;
+    background-attachment: local;
+} */
+/* 横线背景 */
+/* .protyle-content {
+    background-image: linear-gradient(
+        1turn, rgba(60, 10, 30, 0.09) 2%, transparent 0px);
+            background-size: 40px 40px !important;
+            background-position: 50% center;
+} */
+/* ---------------------------设置页面格子背景END----------------------------------------------------- */
+/* -------------------------------无序列表前的小竖线颜色-------------------------------------------- */
+.protyle-wysiwyg [data-node-id].li>[data-node-id]:before {
+    content: "";
+    position: absolute;
+    border-left: var(--b3-border-wider);
+    top: 4px;
+    left: -18px;
+    z-index: 3;
+}
+
+/* ---------------------给有颜色背景的块设置前面无序列表的样式---------------- */
+.list[style*="background-color: var(--b3-font-background"] .li>:before {
+    border-color: #00000033 !important;
+}
+
+/* -------------------------------无序列表前的小竖线颜色 END-------------------------------------------- */
+/* ------------------------------------------------------------按钮样式----------------------------------------------------------- */
+/* ————————————————————按钮默认样式———————————————————— */
+.b3-button--text,
+.b3-button--cancel,
+.b3-button--outline {
+    border-radius: var(--b3-border-radius-noraml);
+    background-color: transparent;
+    color: var(--b3-theme-primary);
+    border: 0.05em solid var(--b3-theme-primary);
+    box-sizing: border-box;
+}
+
+/* ————————————————————鼠标悬浮时按钮样式———————————————————— */
+.b3-button--text:hover,
+.b3-button--text:focus,
+.b3-button--cancel:hover,
+.b3-button--cancel:focus,
+.b3-button--outline:hover,
+.b3-button--outline:focus {
+    transition: all 0.1s ease-in-out;
+    color: white;
+    border: 1px solid var(--b3-theme-primary);
+    background-color: var(--b3-theme-primary);
+    box-sizing: border-box;
+}
+
+/* -------------------------------------------------------按钮样式 END------------------------------------------------------- */
+/* ---------------------------------------------------------设置界面--------------------------------------------------------- */
+.b3-list-item--big {
+    color: gray;
+    font-size: 1em;
+}
+
+.b3-dialog__container .b3-list--background .b3-list-item--focus {
+    background-color: var(--b3-theme-hover) !important;
+    font-size: 1em !important;
+}
+
+.b3-switch:checked:after {
+    background-color: white;
+}
+
+.b3-text-filed, .pcr-app .pcr-interaction .pcr-result {
+    color: gray;
+}
+
+.b3-tab-container .b3-select {
+    background-color: var(--b3-theme-background2);
+    color: gray;
+}
+
+.b3-text-filed, .pcr-app .pcr-interaction .pcr-result {
+    color: gray;
+    /* border: 2px solid rgba(128, 128, 128, 0.767); */
+    border: 0.05em solid rgba(128, 128, 128, 0.767);
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+.b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
+    color: var(--b3-theme-primary) !important;
+}
+
+/* ----------------------------------------------------设置界面 END -------------------------------------------------*/
+/* ————————————————————为设置界面输入框设置样式———————————————————— */
+.b3-tab-container .b3-select {
+    color: gray;
+    background-color: var(--b3-theme-hover-gray);
+    border-bottom: 2px solid gray !important;
+    box-shadow: none;
+}
+
+.b3-tab-container .b3-select:hover {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-tm2);
+    border-bottom: 2px solid var(--b3-theme-primary) !important;
+}
+
+/* -----------------------------------------设置面板关闭按钮设置-------------------------------------------- */
+.b3-dialog__container .b3-dialog__close {
+    color: gray;
+    font-size: 50%;
+    cursor: pointer;
+    background: white;
+    border-radius: var(--b3-border-radius-half-round);
+    padding: 4px;
+    margin-left: 22px;
+    height: 13px;
+    width: 13px;
+    transition: all .1s;
+    transform: scale(1.1);
+}
+
+.b3-dialog__container .b3-dialog__close:hover {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-hover);
+    transform: rotate(180deg);
+}
+
+/* -----------------------------------------设置面板关闭按钮设置 END-------------------------------------------- */
+/* ————————————————————设置shift+鼠标左键弹出的属性窗口中输入框的背景颜色和底边框—————————————————— */
+.b3-text-filed, .pcr-app .pcr-interaction .pcr-result {
+    border-bottom: 2px solid inherit;
+    box-sizing: border-box !important;
+}
+
+.b3-text-filed:hover, .pcr-app .pcr-interaction .pcr-result:hover {
+    border-bottom: 1px solid #202124 !important;
+    color: var(--b3-font-color-hover);
+    background-color: var(--b3-theme-hover-gray);
+    box-shadow: none;
+}
+
+.b3-text-filed:focus, .pcr-app .pcr-interaction .pcr-result:focus {
+    border-bottom: 1px solid var(--b3-theme-primary) !important;
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-tm2);
+    box-shadow: none;
+}
+
+/* ————————————————————设置shift+鼠标左键弹出的属性窗口中输入框的背景颜色和底边框—————————————————— */
+/* ----------------------------------------------------搜索栏------------------------------------------------- */
+.search__header .b3-text-filed--text {
+    background-color: var(--b3-theme-hover2);
+    color: var(--b3-theme-primary);
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--b3-theme-primary);
+}
+
+.b3-form__icon.search__header {
+    background-color: var(--b3-theme-hover2);
+}
+
+#dockright {
+    border-left: var(--b3-border-wider);
+}
+
+/* ---------------------------------------修改文字更多样式中的字体效果----------------------------------------- */
+/* ———————————————修改字体样式和下划线—————————————————— */
+strong[style="color: var(--b3-font-color9);"] {
+    font-family: "宋体" !important;
+    color: inherit !important;
+}
+
+strong[style="color: var(--b3-font-color10);"] {
+    font-family: "楷体" !important;
+    color: inherit !important;
+}
+
+strong[style="color: var(--b3-font-color11);"] {
+    font-family: "微软雅黑" !important;
+    color: inherit !important;
+}
+
+strong[style="color: var(--b3-font-color12);"] {
+    text-decoration: underline dashed gray;
+    text-underline-offset: 4px;
+    color: inherit !important;
+}
+
+strong[style="color: var(--b3-font-color13);"] {
+    text-decoration: underline wavy gray;
+    text-underline-offset: 3px;
+    color: inherit !important;
+}
+
+/* ---------------------------------------修改文字更多样式中的字体效果 END----------------------------------------- */
+/* --------------------------为更多样式中的字体增加文字提示---------------------- */
+/* ——————————————————————设置边框大小—————————————————————— */
+.b3-color__square {
+    height: 23px;
+    width: 23px;
+    border-radius: var(--b3-border-radius-noraml);
+    box-shadow: none;
+    border: var(--b3-border-normal);
+}
+
+/* ——————————————————————为样式中13种字体设置格式—————————————————————— */
+/* 设置统一的字体样式 */
+.b3-color__square[data-type="color"] {
+    position: relative;
+    z-index: 2;
+    background-color: transparent !important;
+}
+
+.b3-color__square[data-type="color"][style*="background-color:var(--b3-font-"]:before {
+    display: inline-block;
+    position: absolute;
+    font-family: "微软雅黑";
+    font-weight: 600;
+    font-size: 1.3em;
+    left: center;
+    top: center;
+    z-index: -1;
+}
+
+/* 设置文字介绍 */
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color1)"]:before {
+    content: "红";
+    color: var(--b3-font-color1);
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color2)"]:before {
+    content: "橙";
+    color: var(--b3-font-color2);
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color3)"]:before {
+    content: "黄";
+    color: var(--b3-font-color3);
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color4)"]:before {
+    content: "绿";
+    color: var(--b3-font-color4);
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color5)"]:before {
+    content: "青";
+    color: var(--b3-font-color5);
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color6)"]:before {
+    content: "蓝";
+    color: var(--b3-font-color6);
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color7)"]:before {
+    content: "紫";
+    color: var(--b3-font-color7);
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color8)"]:before {
+    content: "灰";
+    color: var(--b3-font-color8);
+}
+
+/* 设置字体样式 */
+.p[data-type="NodeParagraph"][style="background-color: var(--b3-font-color9);"],
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color9)"]:before {
+    content: "宋";
+    font-family: "宋体";
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color10)"]:before {
+    content: "楷";
+    font-family: "楷体";
+    font-size: 1.4em;
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color11)"]:before {
+    content: "黑";
+    font-family: "微软雅黑";
+}
+
+/* 设置曲线样式 */
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color12)"]:before {
+    content: "虚";
+    text-decoration: underline dashed black;
+    text-underline-offset: 3px;
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color13)"]:before {
+    content: "曲";
+    text-decoration: underline wavy black;
+    text-underline-offset: 2px;
+}
+
+/* ——————————————————————为样式中13种背景设置格式—————————————————————— */
+/* 设置统一的背景样式 */
+.b3-color__square[data-type="backgroundColor"] {
+    position: relative;
+    z-index: 2;
+}
+
+.b3-color__square[data-type="backgroundColor"][style*="background-color:var(--b3-font-"]:before {
+    display: inline-block;
+    position: absolute;
+    font-family: "微软雅黑";
+    font-weight: 600;
+    font-size: 1.3em;
+    left: center;
+    top: center;
+    z-index: -1;
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background1)"]:before {
+    content: "红";
+    color: var(--b3-font-color1);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background2)"]:before {
+    content: "橙";
+    color: var(--b3-font-color2);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background3)"]:before {
+    content: "黄";
+    color: var(--b3-font-color3);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background4)"]:before {
+    content: "绿";
+    color: var(--b3-font-color4);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background5)"]:before {
+    content: "青";
+    color: var(--b3-font-color5);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background6)"]:before {
+    content: "蓝";
+    color: var(--b3-font-color6);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background7)"]:before {
+    content: "紫";
+    color: var(--b3-font-color7);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background8)"]:before {
+    content: "灰";
+    color: var(--b3-font-color8);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background9)"]:before {
+    content: "红";
+    color: var(--b3-font-color9);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background10)"]:before {
+    content: "黄";
+    color: var(--b3-font-color10);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background11)"]:before {
+    content: "蓝";
+    color: var(--b3-font-color11);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background12)"]:before {
+    content: "绿";
+    color: var(--b3-font-color12);
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background13)"]:before {
+    content: "空";
+    color: transparent;
+    border-bottom: 2px solid black !important;
+    box-sizing: border-box;
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background13)"]:hover:before {
+    color: black;
+}
+
+/* ————————————————————设置PDF标注的格式———————————————————— */
+button.b3-color__square[style*="background-color:var(--b3-pdf"] {
+    border-radius: var(--b3-border-radius-noraml) !important;
+    border: var(--b3-border-normal) !important;
+}
+
+/* ————————————————————设置PDF标注的相关文字———————————————————— */
+button.b3-color__square[style*="background-color:var(--b3-pdf-background"]::before {
+    color: #202124;
+    font-family: "Microsoft YaHei";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background1)"]::before {
+    content: "红";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background2)"]::before {
+    content: "橙";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background3)"]::before {
+    content: "黄";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background4)"]::before {
+    content: "绿";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background5)"]::before {
+    content: "青";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background6)"]::before {
+    content: "蓝";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background7)"]::before {
+    content: "紫";
+}
+
+/* -------------------------------------------------公式相关设置--------------------------------------------- */
+/* 更改公式字体 */
+/* .katex {
+    text-align: left;
+    font-family: 'Times New Roman', "屏显臻宋" !important;
+} */
+
+/* 公式居左对齐 */
+/* .b3-typography .katex-display>.katex>.katex-html, .protyle-wysiwyg .katex-display>.katex>.katex-html {
+    text-align: left;
+} */
+
+/* -------------------------------------------------公式相关设置--------------------------------------------- */
+/* ---------------------------------------------------------头图相关设置--------------------------------------------------------- */
+/* ————————————————————给头图emoji下方增加一点距离，否则icon和提示文字会遮挡文档文字———————————————————— */
+.protyle-background {
+    border-bottom: 20px solid transparent !important
+}
+
+/* ————————————————————修改icon和提示文字的背景颜色———————————————————— */
+.protyle-background__iconw .protyle-icons {
+    background-color: transparent;
+    height: 24px !important;
+    opacity: 0;
+    top: 84px;
+    position: absolute;
+    left: 0px;
+    margin: 0;
+}
+
+/* ————————————————————设置icon和提示文字的宽度———————————————————————— */
+.protyle-background__iconw {
+    width: 50%;
+}
+
+/* ————————————————————修改图标/icon颜色———————————————————— */
+.protyle-background__iconw .protyle-icons .b3-tooltips {
+    display: inline-flex;
+    height: 28px;
+    border-radius: var(--b3-border-radius-noraml);
+    padding: 0 8px 0 6px;
+    color: var(--b3-font-color-gray);
+    background-color: transparent;
+}
+
+/* ————————————————————鼠标悬浮时单个icon和提示文字的背景颜色—————————————————————— */
+.protyle-background__iconw .protyle-icons .b3-tooltips:hover {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-tm1);
+}
+
+.protyle-background__iconw .protyle-icons .b3-tooltips:hover:after {
+    color: var(--b3-theme-primary);
+}
+
+/* ————————————————————设置icon的大小———————————————————— */
+.protyle-background__iconw .protyle-icons .b3-tooltips svg {
+    height: 14px;
+    padding: 7px 6px 0 0;
+    display: inline-flex;
+}
+
+/* ————————————————————修改提示文字颜色———————————————————— */
+.protyle-background__iconw .protyle-icons .b3-tooltips::after {
+    display: inline-flex;
+    height: 28px;
+    font-size: 14px;
+    line-height: 28px;
+    transform: none;
+    transition: none;
+    opacity: 1;
+    color: var(--b3-font-color-gray-tm);
+    background-color: transparent;
+    position: static;
+    margin: 0;
+    padding: 0;
+}
+
+/* ————————————————————直接设置emoji大小———————————————————— */
+.protyle-background .protyle-background__icon svg {
+    width: 78px;
+    height: 78px;
+}
+
+/* ————————————————————设置win10默认emoji的大小（如果设置了的话）———————————————————— */
+.protyle-background__icon {
+    font-size: 54px !important;
+    line-height: 78px !important;
+    text-align: center;
+    width: 78px !important;
+    height: 78px !important;
+}
+
+/* 调整头图下方自定义表情的圆角大小 */
+.protyle-background__icon img {
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+/* ——————————————————————鼠标悬浮时emoji下方的背景，一般为透明，注释掉也可———————————————————————— */
+.protyle-background .protyle-background__icon:hover {
+    background-color: var(--b3-theme-tm1);
+}
+
+/* ————————————————————取消单个icon和提示文本下方的箭头———————————————————— */
+.protyle-background .protyle-icons .b3-tooltips::before {
+    border: none
+}
+
+/* --------------------------------------设置emoji下方的3个icon和提示文字 END-------------------------------------- */
+/* -------------------------------------------------头图图片设置------------------------------------------------- */
+/*————————————————————头图选项(上传，链接，随机，移动，删除）的背景颜色和位置————————————————————*/
+.protyle-background__img .protyle-icons {
+    background-color: var(--b3-theme-background);
+    color: inherit;
+    box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+/* ——————————————————————提示文字的背景颜色设置(每个icon和文字）—————————————————————————————— */
+.protyle-background__img .protyle-icons .b3-tooltips {
+    display: inline-flex;
+    height: 28px;
+    padding: 0 10px 0 6px;
+    color: inherit;
+    box-shadow: rgba(15, 15, 15, 0.1) 1px 0px 0px;
+}
+
+/* —————————————————————设置前面icon的大小（每个icon）———————————————————————————— */
+.protyle-background__img .protyle-icons .b3-tooltips svg {
+    display: inline-flex;
+    width: 12px;
+    height: 12px;
+    padding: 8px 6px 0 2px;
+}
+
+/* ————————————————————设置每个icon后面提示文字的格式———————————————————————————— */
+.protyle-background__img .protyle-icons .b3-tooltips::after {
+    display: inline-flex;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    transform: none;
+    transition: none;
+    opacity: 1;
+    color: var(--b3-theme-on-surface);
+    background-color: transparent;
+    position: static;
+    margin: 0;
+    padding: 0;
+}
+
+/* ————————————————————鼠标在每个icon和提示文字上悬浮时改变颜色—————————————————— */
+/* 改变背景和icon的颜色 */
+.protyle-background__img .protyle-icons .b3-tooltips:hover {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-tm1);
+}
+
+/* 改变文字的颜色 */
+.protyle-background__img .protyle-icons .b3-tooltips:hover:after {
+    color: var(--b3-theme-primary);
+}
+
+/* ————————————————————修改拖动图片时按钮的颜色—————————————————————— */
+.protyle-icons>span {
+    color: inherit;
+}
+
+.protyle-icons>span:hover {
+    color: var(--b3-theme-primary) !important;
+    background-color: var(--b3-theme-tm1);
+}
+
+/* ————————————————————题头图下方设置虚线边框———————————————————— */
+.protyle-background__img {
+    border-bottom: var(--b3-border-dashed);
+    background-color: var(--b3-theme-background);
+}
+
+/* ————————————————————修复头图中上传按钮的点击范围———————————————————— */
+.protyle-icons input[type="file"] {
+    width: 60px !important;
+}
+
+/* ------------------------------------------------------头图相关设置 END---------------------------------------------------------- */
+/* --------------------------------将'/'弹出的选择窗口分为4栏，便于直观进行选择（分栏）---------------------------------------- */
+.b3-menu.b3-list.b3-list--background {
+    column-count: 4;
+    column-gap: 5px;
+    min-width: 50vw !important;
+    /* 设置最大高度 */
+    max-height: 480px !important;
+    border: var(--b3-border-column);
+    padding: 4px;
+}
+
+/* 设置项目之间的分割线颜色 */
+.b3-menu.b3-list.b3-list--background .b3-menu__separator {
+    background-color: var(--b3-theme-primary);
+    height: 0.05em;
+}
+
+/* ————————————————————将每个项目的文字和图标大小设置更小点———————————————————— */
+/* 设置文字颜色 */
+button.b3-list-item.b3-list-item--two.fn__block {
+    font-size: 90%;
+    border: var(--b3-border-column-item);
+    box-sizing: border-box;
+    vertical-align: middle;
+    padding: 2px 8px !important;
+    margin-bottom: 0.1em;
+    overflow: hidden !important;
+}
+
+/* 设置图标颜色 */
+button.b3-list-item.b3-list-item--two.fn__block .b3-list-item__graphic {
+    color: gray;
+}
+
+/* 鼠标悬浮时更改图标颜色 */
+button.b3-list-item.b3-list-item--two.fn__block:hover .b3-list-item__graphic {
+    color: var(--b3-font-color-hover);
+}
+
+/* 设置文本颜色 */
+button.b3-list-item.b3-list-item--two.fn__block .b3-list-item__text {
+    vertical-align: middle;
+}
+
+/* 快捷键大小 */
+button.b3-list-item.b3-list-item--two.fn__block .b3-menu__accelerator {
+    font-size: 80%;
+    color: var(--b3-font-color-gray-tm);
+    font-weight: bold;
+    font-family: var(--b3-font-family-code);
+}
+
+/* ————————————————————将每个项目的文字和图标大小设置更小点 END———————————————————— */
+/* 鼠标悬浮 */
+button.b3-list-item.b3-list-item--two.fn__block:hover {
+    font-size: 90% !important;
+}
+
+/* 快捷键大小 */
+.b3-menu__accelerator {
+    height: 28px;
+    font-size: 80%;
+    font-family: var(--b3-font-family-code);
+}
+
+/* [[调出引用块时候底部文件路径设置 */
+.b3-list-item--two .b3-list-item__meta {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5em;
+    color: var(--b3-theme-primary);
+}
+
+/* 设置新建文档栏目的行高 */
+button.b3-list-item.b3-list-item--two.fn__block[data-value*="((newFile"] {
+    line-height: 46px !important;
+}
+
+/* ————————————————————给新建文档栏目特殊标注———————————————————— */
+button.b3-list-item.b3-list-item--two.fn__block[data-value="%E2%80%8B"],
+button.b3-list-item.b3-list-item--two.fn__block[data-value="%E2%80%8B4"] {
+    background-color: var(--b3-theme-tm1) !important;
+}
+
+button.b3-list-item.b3-list-item--two.fn__block[data-value="%E2%80%8B"] .b3-list-item__text,
+button.b3-list-item.b3-list-item--two.fn__block[data-value="%E2%80%8B4"] .b3-list-item__text {
+    color: var(--b3-theme-primary) !important;
+}
+
+button.b3-list-item.b3-list-item--two.fn__block[data-value="%E2%80%8B"] .b3-list-item__graphic,
+button.b3-list-item.b3-list-item--two.fn__block[data-value="%E2%80%8B4"] .b3-list-item__graphic {
+    color: var(--b3-theme-primary) !important;
+}
+
+/* ————————————————————调整挂件和模板窗口的分栏效果，仍旧分为4栏—————————————————————————————— */
+.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList) {
+    column-count: 4;
+    column-gap: 5px;
+    min-width: 50vw !important;
+    font-size: 90%;
+    /* border: 0.2em solid #ffffff4d; */
+    border: 0.05em solid #ffffff4d;
+}
+
+
+/* ————————————————————设置挂件和模板窗口每个项目的宽度———————————————————— */
+.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList) .b3-list-item {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ————————————————————调整emoji窗口的选择效果，向右拉动滚动条查看所有emoji———————————————————— */
+/* 控制整个表情面板是左右滑动而不是上下滑动 */
+.b3-menu.b3-list.b3-list--background .emojis__panel {
+    overflow: inherit !important;
+}
+
+/* 控制表情的内容能够正常显示而不是折叠 */
+.b3-menu.b3-list.b3-list--background .emojis__content {
+    display: block !important;
+}
+
+/* 去掉模板搜索中的空隙，修复bug */
+.protyle-util .b3-list-item {
+    padding: 0px;
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+.b3-list.fn__flex-1.b3-list--background {
+    padding: 4px 8px;
+}
+
+/* --------------------------------将'/'弹出的选择窗口分为4栏 END-------------------------------------------------- */
+/* -----------------------------------------------------------小细节----------------------------------------------------- */
+/* ————————————————————设置数学公式块等编辑器左上角和右上角为直角———————————————————— */
+textarea.b3-text-filed.b3-text-filed--text.fn__block {
+    border-radius: var(--b3-border-radius-math);
+}
+
+/* 调整内容中标题左侧文档图标大小 */
+.protyle-title.protyle-wysiwyg--attr span svg {
+    height: 20px;
+    width: 20px;
+    float: left;
+}
+
+/* 块标提示不被窗口线遮挡 */
+.protyle-gutters {
+    z-index: 3;
+}
+
+/* ————————————————————给markmap挂件增加边框———————————————————— */
+iframe[data-src="http://127.0.0.1:6806/widgets/cc-markmap"] {
+    outline: var(--b3-border-dashed-gray-wider);
+    background-color: var(--b3-theme-background);
+}
+
+/* —————————————————————设置上标和下标的颜色———————————————————— */
+sub, sup {
+    color: blue;
+}
+
+
+
+/* ————————————————————设置滚动条样式——————————————————__ */
+::-webkit-scrollbar-thumb {
+    background-color: var(--b3-scroll-color);
+    border-radius: var(--b3-border-radius-half-round);
+}
+
+/* ————————————————————修改滚动条宽度———————————————————— */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* ————————————————————大纲等文字显示主题色———————————————————— */
+.block__logo {
+    font-weight: 600;
+    color: var(--b3-menu-highlight-focus-color);
+}
+
+/* ————————————————————去掉软件的边框线———————————————————— */
+body.body--win32 {
+    border: none !important;
+}
+
+/* ————————————————————账号-续订价格那里的设置———————————————————— */
+.config-account__center--text .b3-button--outline:hover {
+    color: inherit;
+    background-color: inherit;
+}
+
+/* ————————————————————表单设置不能拖拽缩放———————————————————— */
+textarea.b3-text-filed.fn__flex-1 {
+    border: 1px solid transparent;
+    resize: none;
+}
+
+/* 取消集市里边主题预览图鼠标悬浮 */
+.b3-card:hover {
+    background-color: inherit !important;
+    box-shadow: var(--b3-point-shadow) !important;
+    transform: none !important;
+}
+
+
+/* 修改文档标题右侧的引用计数样式 */
+.counter, .protyle-attr--refcount {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-background);
+    border: var(--b3-border-normal);
+    border-radius: 2px;
+    padding: 0.1em;
+    min-width: 1em;
+    text-align: center;
+}
+
+.counter, .protyle-attr--refcount:hover {
+    color: white;
+    background-color: var(--b3-theme-primary);
+    border-color: transparent;
+}
+
+/* 禁止编辑 */
+.protyle-wysiwyg[custom-f~=no] {
+    pointer-events: none;
+}
+
+
+/* .protyle-wysiwyg:read-only {
+    text-align: justify;
+} */
