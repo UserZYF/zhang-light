@@ -1,3 +1,5 @@
+
+
 # zhang-light主题
 
 ### 灵感来源
@@ -106,6 +108,29 @@
 - 将自动编号等CSS片段设置为额外加载的挂件，可以在主题文件夹里直接删除文件，不用修改代码
 - 优化了一点细节
 
+##### 0.51
+
+- 去掉超级块中的标题下方圆角矩形衬底和自动编号
+
+- 减小无序列表前面的符号
+
+- 优化文档右侧引用数字的样式，加上衬底和边框
+
+- 给文档树和大纲增加渐变的背景
+
+- 给标题设置弹幕时标题下方圆角矩形会消失
+
+- 将自定义属性相关代码放到`style`文件夹中
+
+  - | 分类                      | 含义                   |
+    | ------------------------- | ---------------------- |
+    | auto-number.css           | 自动编号               |
+    | h1-h6-z-index.css         | 标题下方的圆角矩形衬底 |
+    | link-icon.css             | 网址链接前面的图标     |
+    | link-icon-color.css       | 网址链接文字的颜色     |
+    | custom-function-for-block | 块的自定义属性         |
+    | custom-function-for-file  | 文档的自定义属性       |
+
 ### 🎈修复bug
 
 #### 0.2版本
@@ -132,6 +157,15 @@
 
 - 修复字号20时，待办事项前符号偏上的问题（群友反馈）
 - 修复模板选择里，会有空白位置出现的问题（GitHub上的反馈）
+
+##### 0.51版本
+
+- 修复行内代码和键盘不显示光标的问题
+- 修复挂件名称过长时分行显示的问题
+- 修复超级块横排时选中不明显的问题
+- 修复1.1-2倍字体自定义属性失效的问题
+- 修复嵌入块内含有标题自动编号的问题
+- 修复云空间显示错乱的问题
 
 ### 下步计划
 
@@ -294,9 +328,15 @@
 
 ---
 
-#### 修改CSS永久删除自动编号等
+#### 取消自动编号功能
 
-1. 打开`zhang-light`主题文件夹
-2. 找到`style`文件夹，删除其中的`auto-number.css`文件
-3. 重启思源笔记即可
-4. 如果没有立即生效，可以在开发者工具里边运行`window.location.reload()`即可
+<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=682407868&bvid=BV1gU4y1d72V&cid=555904786" data-src=""></video>
+
+#### 插入公式，图片，视频
+
+<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=509971809&bvid=BV1tu411q7GK&cid=555968610" data-src=""></video>
+
+#### 主题-模板-挂件的教程
+
+<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=809998824&bvid=BV1p34y1b7ni&cid=554981214" data-src=""></video>
+
