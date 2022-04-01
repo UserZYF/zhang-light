@@ -1,9 +1,19 @@
-@import url(style/auto-number.css);
-@import url(style/h1-h6-z-index.css);
-@import url(style/link-icon.css);
-@import url(style/link-icon-color.css);
-@import url(style/custom-function-for-block.css);
-@import url(style/custom-function-for-file.css);
+/* 引入自动编号相关代码 */
+@import url("style/auto-number.css");
+/* 引入标题下圆角矩形相关代码 */
+@import url("style/h1-h6-z-index.css");
+/* 引入网址链接前的图标相关代码 */
+@import url("style/link-icon.css");
+/* 给网址链接设置颜色 */
+@import url("style/link-icon-color.css");
+/* 块的自定义属性 */
+@import url("style/custom-function-for-block.css");
+/* 文档的自定义属性 */
+@import url("style/custom-function-for-file.css");
+/* 搜索界面左右排版 */
+@import url("style/CtrlP.css");
+/* 引入大家的自定义配置，放到theme文件夹下，名称为custom-self.css */
+@import url("../custom-self.css");
 
 :root {
     /* 主色 */
@@ -84,10 +94,10 @@
     --b3-card-warning-color: #5f6368;
     --b3-card-info-color: #5f6368;
     --b3-card-success-color: #5f6368;
-    /* --b3-card-error-background:   #fbdddf;
-    --b3-card-warning-background: #fedb89;
-    --b3-card-info-background:    #bacefd;
-    --b3-card-success-background: #b7edb1; */
+    /* --b3-card-error-color: var(--b3-font-color1);
+    --b3-card-warning-color: var(--b3-font-color3);
+    --b3-card-info-color: var(--b3-font-color6);
+    --b3-card-success-color: var(--b3-font-color4); */
     --b3-card-error-background: #fce7e9;
     --b3-card-warning-background: #fee6ac;
     --b3-card-info-background: #cfddfe;
@@ -200,8 +210,8 @@
     --b3-protyle-inline-mark-color: rgb(32, 33, 36);
     --b3-protyle-inline-tag-background: #81a9a9;
     --b3-protyle-inline-tag-color: #f8f9fa;
-    --b3-protyle-inline-code-color: #038296;
-    --b3-protyle-inline-code-background: #e0ecf3a6;
+    --b3-protyle-inline-code-color: var(--b3-theme-primary);
+    --b3-protyle-inline-code-background: var(--b3-theme-hover2);
     --b3-protyle-inline-blockref-color: #0e7a88;
     --b3-protyle-inline-blockref-hover-color: #ff398b;
 
@@ -247,7 +257,6 @@
 }
 
 /* ----------------------------------------------------root定义结束---------------------------------------------------- */
-
 /* ————————————————————所有边距初始化———————————————————— */
 * {
     margin: 0px;
@@ -275,19 +284,26 @@ body {
     background-color: var(--b3-theme-background2);
 }
 
-/* 左侧文档树边框，左侧大纲边框，右侧反向链接边框 */
+/* 左侧文档树边框，左侧大纲边框，右侧反向链接边框 大纲 渐变色 */
 .fn__flex-1.fn__flex-column.file-tree.sy__file,
 .fn__flex-1.fn__flex-column.file-tree.sy__outline,
 .fn__flex-1.fn__flex-column.file-tree.sy__backlink {
     border: var(--b3-border-normal);
     box-sizing: border-box;
     border-top: 0.05em solid transparent;
-    background:
+    /* background:
         linear-gradient(135deg,
             rgba(255, 232, 232, 0.62) 0%,
             rgba(236, 236, 255, 0.54) 19%,
             rgba(228, 247, 236, 0.39) 54%,
             rgba(223, 254, 224, 0.7) 77%,
+            rgba(245, 247, 249, 0.99) 100%); */
+    background:
+        linear-gradient(135deg,
+            rgba(255, 232, 232, 0.62) 0%,
+            rgba(236, 236, 255, 0.54) 25%,
+            rgba(228, 247, 236, 0.3) 50%,
+            rgba(223, 254, 224, 0.2) 75%,
             rgba(245, 247, 249, 0.99) 100%);
 }
 
@@ -302,6 +318,8 @@ body {
     box-sizing: border-box;
 }
 
+
+
 /* ----------------------------------------------------------设置主要背景色 END------------------------------------------------------- */
 /* -----------------------------------------------------------取消文档树、大纲、反向链接左边的icon，感觉显示重复了 */
 .block__logo svg {
@@ -309,71 +327,73 @@ body {
 }
 
 /* ---------------------------------------------------------标题样式------------------------------------------------------------- */
-/* 一级标题居中对齐，其余标题居左对齐，采用彩虹色前6色 红橙黄绿青蓝 标题默认有圆角 */
-.protyle-wysiwyg [data-node-id].h1, .b3-typography h1 {
-    /* 一级标题居左显示，居中显示把下方left修改为center */
+/* 标题居左对齐，采用彩虹色前6色 红橙黄绿青蓝 */
+.protyle-wysiwyg [data-node-id].h1,
+.b3-typography h1 {
     text-align: left;
     font-size: 1.6em !important;
     font-weight: 550;
     position: relative;
     z-index: 0;
-    color: var(--b3-font-color1) !important;
+    color: var(--b3-font-color1);
     vertical-align: middle;
-
-    /* display: inline-block; */
-    /* width: fit-content; */
+    margin-top: 36px;
 }
 
-.protyle-wysiwyg [data-node-id].h2, .b3-typography h2 {
+.protyle-wysiwyg [data-node-id].h2,
+.b3-typography h2 {
     font-size: 1.5em !important;
     font-weight: 550;
     position: relative;
     z-index: 0;
-    color: var(--b3-font-color2) !important;
-    /* display: inline-block; */
-    /* width: fit-content; */
+    color: var(--b3-font-color2);
+    margin-top: 30px;
 }
 
-.protyle-wysiwyg [data-node-id].h3, .b3-typography h3 {
+.protyle-wysiwyg [data-node-id].h3,
+.b3-typography h3 {
     font-size: 1.4em !important;
     font-weight: 550;
     position: relative;
     z-index: 0;
-    color: var(--b3-font-color3) !important;
-    /* display: inline-block; */
-    /* width: fit-content; */
+    color: var(--b3-font-color3);
+    margin-top: 24px;
 }
 
-.protyle-wysiwyg [data-node-id].h4, .b3-typography h4 {
+.protyle-wysiwyg [data-node-id].h4,
+.b3-typography h4 {
     font-size: 1.3em !important;
     font-weight: 550;
     position: relative;
     z-index: 0;
-    color: var(--b3-font-color4) !important;
-    /* display: inline-block; */
-    /* width: fit-content; */
+    color: var(--b3-font-color4);
+    margin-top: 18px;
 }
 
-.protyle-wysiwyg [data-node-id].h5, .b3-typography h5 {
+.protyle-wysiwyg [data-node-id].h5,
+.b3-typography h5 {
     font-size: 1.2em !important;
     font-weight: 550;
     position: relative;
     z-index: 0;
-    color: var(--b3-font-color5) !important;
-    /* display: inline-block; */
-    /* width: fit-content; */
+    color: var(--b3-font-color5);
+    margin-top: 12px;
 }
 
-.protyle-wysiwyg [data-node-id].h6, .b3-typography h6 {
+.protyle-wysiwyg [data-node-id].h6,
+.b3-typography h6 {
     font-size: 1.1em !important;
     font-weight: 550;
     position: relative;
     z-index: 0;
-    color: var(--b3-font-color6) !important;
-    /* display: inline-block; */
-    /* width: fit-content; */
+    color: var(--b3-font-color6);
+    margin-top: 6px;
 }
 
+/* 设置6级标题高度 */
+.protyle-wysiwyg [data-node-id].h6 {
+    height: 22px;
+}
 
 /* --------------------------------------------------标题样式END------------------------------------------------------ */
 
@@ -419,12 +439,12 @@ body {
 }
 
 /* 设置表头区域顶部边框，使表格更明显 */
-table thead {
+.protyle-wysiwyg table thead {
     border-top: 0.15em solid var(--b3-theme-primary) !important;
 }
 
 /*设置表格表头样式，颜色，背景，加粗，居中对齐*/
-table th {
+.protyle-wysiwyg table th {
     font-weight: bold;
     text-align: center;
     color: var(--b3-theme-primary);
@@ -441,11 +461,11 @@ th, td {
 }
 
 /* 表格奇偶行不同颜色 */
-tbody tr:nth-child(2n) {
+.protyle-wysiwyg tbody tr:nth-child(2n) {
     background-color: white;
 }
 
-tbody tr:nth-child(2n + 1) {
+.protyle-wysiwyg tbody tr:nth-child(2n + 1) {
     background-color: var(--b3-theme-background2);
 }
 
@@ -515,6 +535,8 @@ mark {
     line-height: 6px !important;
 }
 
+
+
 /* ----------------------------------------------引用 END---------------------------------------------- */
 /* ------------------------------------------------块引用/引用块------------------------------------------------- */
 /* 设置引用块格式 */
@@ -534,6 +556,10 @@ mark {
     font-size: 80%;
     top: -0.1em;
     margin-right: 2px;
+    /* 第二种 */
+    /* content: url(icon4Tsundoku/page.svg);
+    position: relative;
+    top: 0.1em; */
 }
 
 .protyle-wysiwyg [data-node-id] span[data-type="block-ref"]:hover {
@@ -543,15 +569,29 @@ mark {
 }
 
 /* 引用块悬浮时头部的背景颜色 */
+.b3-menu, .protyle-util {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.16);
+}
+
+/* 上方表头区域 */
 .block__popover--move>.block__icons {
+    color: var(--b3-theme-primary);
     background-color: var(--b3-theme-tm1) !important;
-    border-bottom: 2px solid var(--b3-theme-primary) !important;
-    box-shadow: var(--b3-bottom-inset-shadow);
+    border-top: 3px solid var(--b3-theme-primary) !important;
+}
+
+/* 下方编辑区域 */
+.block__popover--move textarea.b3-text-field.b3-text-field--text.fn__block {
+    background-color: var(--b3-theme-background);
+    border: none;
+    font-family: var(--b3-font-family-code);
+    user-select: none;
+    border-bottom: var(--b3-border-wider);
 }
 
 /* 引用块打开时的阴影 */
 .block__popover--open {
-    box-shadow: var(--b3-dialog-shadow);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.16);
 }
 
 /* 去掉h1-h6标题上块引用的下划线，感谢二群群友123的建议 */
@@ -628,15 +668,12 @@ mark {
     display: block;
     border-radius: var(--b3-border-radius-noraml);
     padding: 5px 20px;
-    /* margin-bottom: 0px !important; */
     margin: 4px;
     border-bottom: var(--b3-border-wider);
     border-top: 3px solid #245bdb;
     color: gray;
-    background-color: var(--b3-theme-background2) !important;
+    background-color: var(--b3-theme-background2);
     position: relative;
-    /* box-shadow: 0px 12px 10px -8px rgba(36, 91, 219, 0.7) inset,
-        0px -6px 10px -8px rgba(128, 128, 128, 0.7) inset; */
 }
 
 /* 为嵌入块左上角添加icon图标 */
@@ -649,7 +686,7 @@ mark {
 
 /* 进行SQL查询时嵌入块之间分割线颜色 */
 .render-node .protyle-wysiwyg__embed {
-    border-top: var(--b3-border-dashed-gray);
+    border-top: 0.1em dashed rgba(128, 128, 128, 0.3);
 }
 
 /* 嵌入块中的标题取消自动编号 */
@@ -662,6 +699,13 @@ mark {
     display: none !important;
 }
 
+.code-block .protyle-icons,
+.render-node .protyle-icons {
+    background-color: var(--b3-theme-background);
+    color: gray;
+    border: var(--b3-border-normal);
+}
+
 /* ------------------------------------------------块嵌入/嵌入块 END------------------------------------------------- */
 /* ------------------------------------------标签 tag--------------------------------------------- */
 .protyle-wysiwyg [data-node-id] span[data-type='tag']:not(:empty) {
@@ -669,8 +713,14 @@ mark {
     color: var(--b3-theme-hover);
     background-color: var(--b3-theme-primary);
     border-radius: var(--b3-border-radius-half-round);
-    margin: 0px 2px;
-    padding: 0px 6px;
+    margin: 0px;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    vertical-align: 0.1em;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type="tag"] {
+    border-bottom: none;
 }
 
 /* ————————————————————标签#号———————————————————— */
@@ -686,8 +736,10 @@ mark {
 /* ————————————————————修改以下内容的标签样式———————————————————— */
 /* 判断 */
 .protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="判断"]:not(:empty) {
-    color: white;
-    background-color: red;
+    /* color: white;
+    background-color: red; */
+    background-color: #ff8b8b;
+    color: #f9f8e6;
 }
 
 .protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="判断"]:not(:empty)::before {
@@ -696,8 +748,10 @@ mark {
 
 /* 填空 */
 .protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="填空"]:not(:empty) {
-    color: white;
-    background-color: blue;
+    /* color: white;
+    background-color: blue; */
+    color: #f6f3eb;
+    background-color: #384d9d;
 }
 
 .protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="填空"]:not(:empty)::before {
@@ -706,26 +760,30 @@ mark {
 
 /* 选择 */
 .protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="选择"]:not(:empty) {
-    color: white;
-    background-color: green;
+    /* color: white;
+    background-color: green; */
+    color: #f4f4f4;
+    background-color: #17c37b;
 }
 
 .protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="选择"]:not(:empty)::before {
-    content: "A ";
-    font-size: 1em;
-    font-family: "微软雅黑";
+    content: " A  ";
+    /* font-size: 1em;
+    font-family: "微软雅黑"; */
 }
 
 /* 排序 */
 .protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="排序"]:not(:empty) {
-    color: white;
-    background-color: purple;
+    /* color: white;
+    background-color: purple; */
+    color: #502f7e;
+    background-color: #b396db;
 }
 
 .protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="排序"]:not(:empty)::before {
     content: "① ";
     /* font-size: 1em; */
-    font-family: "微软雅黑";
+    /* font-family: "微软雅黑"; */
     /* top: 5px; */
     /* vertical-align: middle; */
 }
@@ -798,10 +856,24 @@ mark {
 }
 
 /* ————————————————————设置图片右上角按钮背景颜色———————————————————— */
-.protyle-icons {
+.img .protyle-icons {
     background-color: var(--b3-theme-background2);
     top: 7px;
     right: 4px;
+    border: 0.1em solid #80808080;
+}
+
+/* ————————————————————设置文档的自定义属性 限制图片宽度———————————————————— */
+.protyle-wysiwyg[custom-f~=picwidth] img,
+.b3-typography[custom-f~=picwidth] img,
+.protyle-wysiwyg[custom-f~=tpkd] img,
+.b3-typography[custom-f~=tpkd] img {
+    max-width: 50em;
+}
+
+/* 设置文档自定义属性，去掉网络图标左上角的图标 */
+.protyle-wysiwyg[custom-f~=picno] .img__net {
+    display: none !important;
 }
 
 /* --------------------------------------------图片 END----------------------------------------------- */
@@ -907,6 +979,8 @@ mark {
 /* -------------------------------------------------代码块样式--------------------------------------------------- */
 .code-block {
     margin: 4px !important;
+    border-radius: var(--b3-border-radius-noraml) !important;
+    background-color: var(--b3-theme-background2);
 }
 
 /* 代码块主体部分设置 */
@@ -933,7 +1007,7 @@ mark {
     box-shadow: 0px 0px 2px 0px #041b1538;
     border-bottom: var(--b3-border-wider);
     border-top: 3px solid #2ea121;
-    background-color: var(--b3-theme-background2) !important;
+    /* background-color: var(--b3-theme-background2) !important; */
     /* z-index: -1; */
 }
 
@@ -954,7 +1028,8 @@ mark {
 /*  ————————————————————————————————————代码块行数——————————————————————————————————*/
 .protyle-linenumber__rows {
     margin-top: 31px !important;
-    background-color: var(--b3-theme-background2);
+    /* background-color: var(--b3-theme-background2); */
+    background-color: transparent;
     padding-bottom: 0px;
     margin-bottom: 0px;
 }
@@ -971,9 +1046,9 @@ mark {
 }
 
 /* ——————————————————————————————————一直显示代码块右上角的代码语言和复制按钮—————————————————————————————— */
-.code-block .protyle-icons {
+/* .code-block .protyle-icons {
     opacity: 1;
-}
+} */
 
 
 /* ————————————————————————————————集市里边代码块的主题—————————————————————————————— */
@@ -1045,11 +1120,26 @@ code.hljs {
     display: inline;
 }
 
+/* ————————————————————鼠标悬浮在标签页上面———————————————————— */
+.layout-tab-bar .item:hover {
+    color: var(--b3-theme-primary) !important;
+    background-color: var(--b3-theme-hover2) !important;
+    border: 1px solid var(--b3-theme-primary) !important;
+}
+
 /* ——————————————————————————选中的标签页—————————————————————— */
 .layout-tab-bar .item--focus {
-    background-color: white !important;
-    border: var(--b3-border-normal);
-    border-top: 0.05em solid transparent !important;
+    /* background-color: white; */
+    background-color: var(--b3-theme-background2);
+    /* border: var(--b3-border-normal);
+    border-bottom: 0.05em solid transparent !important; */
+    border: 1px solid transparent;
+    border-top: 1px solid #cfcece !important;
+}
+
+/* 去掉标签上方阴影 */
+.layout__wnd--active .layout-tab-bar .item--focus {
+    box-shadow: none;
 }
 
 /* ————————————————————————标签页后面的背景—————————————————————— */
@@ -1100,14 +1190,14 @@ code.hljs {
 /* --------------------------------------------------鼠标样式 END----------------------------------------------- */
 /* ----------------------------------------------------调整超级块的块间距------------------------------------------ */
 /* ————————————————————————————————————大超级块，不用设置边框—————————————————————————————— */
-.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] {
+/* .protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] {
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
 /* —————————————————————————————————————次超级块大小—————————————————————————————————————— */
 .protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] .sb {
-    border: var(--b3-border-dashed-gray-wider);
+    border: 0.1em dashed rgba(128, 128, 128, 0.25);
     border-radius: var(--b3-border-radius-none);
     box-sizing: border-box;
     margin: 0.1em 0 0.1em 0.1em;
@@ -1119,12 +1209,10 @@ code.hljs {
 
 /* ——————————————————————————————————————每个子超级块—————————————————————————————————————— */
 .protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div {
-    border: 0.1em dashed rgba(128, 128, 128, 0.5);
+    border: 0.1em dashed rgba(128, 128, 128, 0.25);
     border-radius: var(--b3-border-radius-none);
     box-sizing: border-box;
     margin: 0.1em 0 0.1em 0.1em;
-    /* background-color: var(--b3-theme-background); */
-    /* background-color: var(--b3-theme-background); */
 }
 
 /* 最后一个子超级块不设置右边距 */
@@ -1132,31 +1220,66 @@ code.hljs {
     margin-right: 0.1em;
 }
 
-/* 鼠标悬浮时变色 */
-/* .protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] .sb:hover,
-.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div:hover {
-    border-color: var(--b3-theme-primary);
-    border-style: solid;
-} */
 
 /* 取消显示超级块中的标题衬底 */
-div.sb div.h1::after,
-div.sb div.h2::after,
-div.sb div.h3::after,
-div.sb div.h4::after,
-div.sb div.h5::after,
-div.sb div.h6::after {
+div.sb div.sb div.h1::after,
+div.sb div.sb div.h2::after,
+div.sb div.sb div.h3::after,
+div.sb div.sb div.h4::after,
+div.sb div.sb div.h5::after,
+div.sb div.sb div.h6::after {
     display: none !important;
 }
 
 /* 取消显示超级块中的自动编号 */
-div.sb .h1>::before,
-div.sb .h2>::before,
-div.sb .h3>::before,
-div.sb .h4>::before,
-div.sb .h5>::before,
-div.sb .h6>::before {
+div.sb div.sb .h1>::before,
+div.sb div.sb .h2>::before,
+div.sb div.sb .h3>::before,
+div.sb div.sb .h4>::before,
+div.sb div.sb .h5>::before,
+div.sb div.sb .h6>::before {
     display: none !important;
+}
+
+/* 去掉超级块中标题和第一个段落的上边距 */
+div.sb div.h1,
+div.sb div.h2,
+div.sb div.h3,
+div.sb div.h4,
+div.sb div.h5,
+div.sb div.h6,
+div.sb>div.p:first-child {
+    margin-top: 0px !important;
+    border-radius: 0 !important;
+}
+
+/* 超级块中的标题颜色设置为默认的颜色 */
+.sb[data-sb-layout="col"][data-type="NodeSuperBlock"] .h1,
+.sb[data-sb-layout="col"][data-type="NodeSuperBlock"] .h2,
+.sb[data-sb-layout="col"][data-type="NodeSuperBlock"] .h3,
+.sb[data-sb-layout="col"][data-type="NodeSuperBlock"] .h4,
+.sb[data-sb-layout="col"][data-type="NodeSuperBlock"] .h5,
+.sb[data-sb-layout="col"][data-type="NodeSuperBlock"] .h6 {
+    color: inherit;
+}
+
+/* 增加超级块的自定义属性，增加外边距 */
+.protyle-wysiwyg [data-node-id][custom-f~=super].sb[data-sb-layout="col"]>div,
+.protyle-wysiwyg [data-node-id][custom-f~=cjk].sb[data-sb-layout="col"]>div {
+    margin: 0.1em 3em 0.1em 0.1em;
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~=super].sb[data-sb-layout="col"]>div:nth-last-child(2),
+.protyle-wysiwyg [data-node-id][custom-f~=cjk].sb[data-sb-layout="col"]>div:nth-last-child(2) {
+    margin-right: 0;
+}
+
+/* 增加超级块的自定义属性，不显示边框 */
+.protyle-wysiwyg [data-node-id][custom-f~=superno].sb[data-sb-layout="col"] .sb,
+.protyle-wysiwyg [data-node-id][custom-f~=cjkno].sb[data-sb-layout="col"] .sb,
+.protyle-wysiwyg [data-node-id][custom-f~=superno].sb[data-sb-layout="col"]>div,
+.protyle-wysiwyg [data-node-id][custom-f~=cjkno].sb[data-sb-layout="col"]>div {
+    border-color: transparent !important;
 }
 
 /* ----------------------------------------------------调整超级块的块间距 END------------------------------------------ */
@@ -1186,10 +1309,11 @@ div.sb .h6>::before {
 /* --------------------------------------------------鼠标选中文本后弹出的工具栏样式 END------------------------------------- */
 /* ---------------------------------------------------键盘按键kbd和行内代码设置一样的格式--------------------------------------------- */
 .b3-typography code:not(.hljs), .protyle-wysiwyg code:not(.hljs) {
-    color: var(--b3-theme-primary);
-    background-color: var(--b3-theme-background2);
-    border: 0.05em solid #cfcece;
-    border-radius: var(--b3-border-radius-half-round);
+    color: var(--b3-protyle-inline-code-color);
+    background-color: var(--b3-protyle-inline-code-background);
+    border-radius: var(--b3-border-radius-noraml);
+    font-size: 0.8em;
+    vertical-align: 0.1em;
 }
 
 /* 键盘kbd样式 */
@@ -1200,6 +1324,8 @@ div.sb .h6>::before {
     color: gray;
     background-color: var(--b3-theme-background2);
     font-family: var(--b3-font-family-code);
+    font-size: 0.8em;
+    vertical-align: 0.1em;
 }
 
 /* ---------------------------------------------------键盘按键 END--------------------------------------------- */
@@ -1229,7 +1355,7 @@ div.sb .h6>::before {
 /* ------------------------------------------------更改空行提示 END----------------------------------------- */
 /* ----------------------------------------------------块添加圆角------------------------------------------- */
 .protyle-wysiwyg [data-node-id] {
-    border-radius: var(--b3-border-radius-noraml);
+    border-radius: var(--b3-border-radius-none);
 }
 
 /* ----------------------------------------------------块添加圆角 END------------------------------------------- */
@@ -1734,29 +1860,57 @@ span.b3-list-item__action.b3-tooltips[data-type="more-file"]:hover {
     transition: display 0.2s ease;
 }
 
-/* ——————————————————折叠后标题去掉标题下方衬底———————————————————— */
-.protyle-wysiwyg [data-node-id][fold="1"].h1:after {
+/* ————————————————————折叠后去掉标题左边圆形———————————————————— */
+.protyle-wysiwyg div[fold="1"][data-type="NodeHeading"]:before {
+    position: absolute;
+    top: 0.7em;
+    left: -1em;
+    background-color: transparent;
+    color: rgba(128, 128, 128, 0.6);
+    font-size: 20px;
+    font-family: var(--b3-font-family-code);
+}
+
+/* ————————————————————给折叠增加背景样式———————————————————— */
+.protyle-wysiwyg div[fold="1"][data-type="NodeHeading"] {
+    background-color: #fafafa;
+    color: rgba(128, 128, 128, 0.6);
+    border: var(--b3-border-normal);
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+/* ————————————————————折叠后标题去掉标题下方衬底———————————————————— */
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeHeading"]:after {
+    background-color: transparent !important;
+}
+
+/* ————————————————————折叠的标题去掉自动编号———————————————————— */
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeHeading"]>div::before {
     display: none;
 }
 
-.protyle-wysiwyg [data-node-id][fold="1"].h2:after {
-    display: none;
+.protyle-wysiwyg [data-node-id][fold="1"].h1:before {
+    content: "¹";
 }
 
-.protyle-wysiwyg [data-node-id][fold="1"].h3:after {
-    display: none;
+.protyle-wysiwyg [data-node-id][fold="1"].h2:before {
+    content: "²";
 }
 
-.protyle-wysiwyg [data-node-id][fold="1"].h4:after {
-    display: none;
+.protyle-wysiwyg [data-node-id][fold="1"].h3:before {
+    content: "³";
 }
 
-.protyle-wysiwyg [data-node-id][fold="1"].h5:after {
-    display: none;
+.protyle-wysiwyg [data-node-id][fold="1"].h4:before {
+    content: "⁴";
 }
 
-.protyle-wysiwyg [data-node-id][fold="1"].h6:after {
-    display: none;
+.protyle-wysiwyg [data-node-id][fold="1"].h5:before {
+    content: "⁵";
+}
+
+.protyle-wysiwyg [data-node-id][fold="1"].h6:before {
+    content: "⁶";
 }
 
 .protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeHeading"] {
@@ -1980,51 +2134,51 @@ button.b3-menu__item:hover {
 
 /* ———————————————自定义13种背景样式，前7种为彩虹色—————————————————— */
 strong[style="background-color: var(--b3-font-background1);"] {
-    color: var(--b3-font-color1);
+    color: var(--b3-font-color1) !important;
 }
 
 strong[style="background-color: var(--b3-font-background2);"] {
-    color: var(--b3-font-color2);
+    color: var(--b3-font-color2) !important;
 }
 
 strong[style="background-color: var(--b3-font-background3);"] {
-    color: var(--b3-font-color3);
+    color: var(--b3-font-color3) !important;
 }
 
 strong[style="background-color: var(--b3-font-background4);"] {
-    color: var(--b3-font-color4);
+    color: var(--b3-font-color4) !important;
 }
 
 strong[style="background-color: var(--b3-font-background5);"] {
-    color: var(--b3-font-color5);
+    color: var(--b3-font-color5) !important;
 }
 
 strong[style="background-color: var(--b3-font-background6);"] {
-    color: var(--b3-font-color6);
+    color: var(--b3-font-color6) !important;
 }
 
 strong[style="background-color: var(--b3-font-background7);"] {
-    color: var(--b3-font-color7);
+    color: var(--b3-font-color7) !important;
 }
 
 strong[style="background-color: var(--b3-font-background8);"] {
-    color: var(--b3-font-color8);
+    color: var(--b3-font-color8) !important;
 }
 
 strong[style="background-color: var(--b3-font-background9);"] {
-    color: var(--b3-font-color9);
+    color: var(--b3-font-color9) !important;
 }
 
 strong[style="background-color: var(--b3-font-background10);"] {
-    color: var(--b3-font-color10);
+    color: var(--b3-font-color10) !important;
 }
 
 strong[style="background-color: var(--b3-font-background11);"] {
-    color: var(--b3-font-color11);
+    color: var(--b3-font-color11) !important;
 }
 
 strong[style="background-color: var(--b3-font-background12);"] {
-    color: var(--b3-font-color12);
+    color: var(--b3-font-color12) !important;
 }
 
 /* 设置第13个背景色为挖空效果 */
@@ -2086,18 +2240,19 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
 /* .protyle-content {
     background: white;
     background-image:
-       linear-gradient(white 28px,transparent 0),
-       linear-gradient(90deg,rgba(60, 10, 30, 0.3) 2px,transparent 0);
-    background-size:30px 30px,30px 30px;
+        linear-gradient(white 28px, transparent 0),
+        linear-gradient(90deg, rgba(60, 10, 30, 0.3) 2px, transparent 0);
+    background-size: 30px 30px, 30px 30px;
     background-attachment: local;
 } */
+
 /* 横线背景 */
 /* .protyle-content {
-    background-image: linear-gradient(
-        1turn, rgba(60, 10, 30, 0.09) 2%, transparent 0px);
-            background-size: 40px 40px !important;
-            background-position: 50% center;
+    background-image: linear-gradient(1turn, rgba(60, 10, 30, 0.09) 2%, transparent 0px);
+    background-size: 40px 40px !important;
+    background-position: 50% center;
 } */
+
 /* ---------------------------设置页面格子背景END----------------------------------------------------- */
 /* -------------------------------无序列表前的小竖线颜色-------------------------------------------- */
 .protyle-wysiwyg [data-node-id].li>[data-node-id]:before {
@@ -2112,6 +2267,11 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
 /* ---------------------给有颜色背景的块设置前面无序列表的样式---------------- */
 .list[style*="background-color: var(--b3-font-background"] .li>:before {
     border-color: #00000033 !important;
+}
+
+/* ————————————————————缩短嵌入块中小竖线的高度———————————————————— */
+.render-node div.list:before {
+    top: -10px !important;
 }
 
 /* -------------------------------无序列表前的小竖线颜色 END-------------------------------------------- */
@@ -2157,7 +2317,7 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
     background-color: white;
 }
 
-.b3-text-filed, .pcr-app .pcr-interaction .pcr-result {
+.b3-text-field, .pcr-app .pcr-interaction .pcr-result {
     color: gray;
 }
 
@@ -2166,7 +2326,7 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
     color: gray;
 }
 
-.b3-text-filed, .pcr-app .pcr-interaction .pcr-result {
+.b3-text-field, .pcr-app .pcr-interaction .pcr-result {
     color: gray;
     /* border: 2px solid rgba(128, 128, 128, 0.767); */
     border: 0.05em solid rgba(128, 128, 128, 0.767);
@@ -2215,19 +2375,19 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
 
 /* -----------------------------------------设置面板关闭按钮设置 END-------------------------------------------- */
 /* ————————————————————设置shift+鼠标左键弹出的属性窗口中输入框的背景颜色和底边框—————————————————— */
-.b3-text-filed, .pcr-app .pcr-interaction .pcr-result {
+.b3-text-field:not(textarea.b3-text-field.b3-text-field--text.fn__block), .pcr-app .pcr-interaction .pcr-result {
     border-bottom: 2px solid inherit;
     box-sizing: border-box !important;
 }
 
-.b3-text-filed:hover, .pcr-app .pcr-interaction .pcr-result:hover {
+.b3-text-field:not(textarea.b3-text-field.b3-text-field--text.fn__block):hover, .pcr-app .pcr-interaction .pcr-result:hover {
     border-bottom: 1px solid #202124 !important;
     color: var(--b3-font-color-hover);
     background-color: var(--b3-theme-hover-gray);
     box-shadow: none;
 }
 
-.b3-text-filed:focus, .pcr-app .pcr-interaction .pcr-result:focus {
+.b3-text-field:not(textarea.b3-text-field.b3-text-field--text.fn__block):focus, .pcr-app .pcr-interaction .pcr-result:focus {
     border-bottom: 1px solid var(--b3-theme-primary) !important;
     color: var(--b3-theme-primary);
     background-color: var(--b3-theme-tm2);
@@ -2236,7 +2396,7 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
 
 /* ————————————————————设置shift+鼠标左键弹出的属性窗口中输入框的背景颜色和底边框—————————————————— */
 /* ----------------------------------------------------搜索栏------------------------------------------------- */
-.search__header .b3-text-filed--text {
+.search__header .b3-text-field--text {
     background-color: var(--b3-theme-hover2);
     color: var(--b3-theme-primary);
     border: 1px solid transparent;
@@ -2834,8 +2994,13 @@ button.b3-list-item.b3-list-item--two.fn__block[data-value="%E2%80%8B4"] .b3-lis
 /* --------------------------------将'/'弹出的选择窗口分为4栏 END-------------------------------------------------- */
 /* -----------------------------------------------------------小细节----------------------------------------------------- */
 /* ————————————————————设置数学公式块等编辑器左上角和右上角为直角———————————————————— */
-textarea.b3-text-filed.b3-text-filed--text.fn__block {
+textarea.b3-text-field.b3-text-field--text.fn__block {
     border-radius: var(--b3-border-radius-math);
+}
+
+/* 调整数学公式块的背景颜色 */
+.render-node:hover {
+    background-color: #fffbe4;
 }
 
 /* 调整内容中标题左侧文档图标大小 */
@@ -2871,7 +3036,7 @@ sub, sup {
 
 /* ————————————————————修改滚动条宽度———————————————————— */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
 }
 
 /* ————————————————————大纲等文字显示主题色———————————————————— */
@@ -2892,7 +3057,7 @@ body.body--win32 {
 }
 
 /* ————————————————————表单设置不能拖拽缩放———————————————————— */
-textarea.b3-text-filed.fn__flex-1 {
+textarea.b3-text-field.fn__flex-1 {
     border: 1px solid transparent;
     resize: none;
 }
@@ -2906,28 +3071,72 @@ textarea.b3-text-filed.fn__flex-1 {
 
 
 /* 修改文档标题右侧的引用计数样式 */
-.counter, .protyle-attr--refcount {
+/* .counter, .protyle-attr--refcount {
     color: var(--b3-theme-primary);
-    background-color: var(--b3-theme-background);
+    background-color: transparent;
     border: var(--b3-border-normal);
     border-radius: 2px;
-    padding: 0.1em;
+    padding: 0.1em 0.2em;
     min-width: 1em;
     text-align: center;
-}
-
-.counter, .protyle-attr--refcount:hover {
-    color: white;
-    background-color: var(--b3-theme-primary);
-    border-color: transparent;
-}
+} */
 
 /* 禁止编辑 */
 .protyle-wysiwyg[custom-f~=no] {
     pointer-events: none;
 }
 
+.protyle-wysiwyg[data-node-id][custom-f~=no] {
+    pointer-events: none;
+}
 
 /* .protyle-wysiwyg:read-only {
     text-align: justify;
 } */
+
+
+/* 修改批注样式 */
+strong[style*="quote"] {
+    background-color: rgba(255, 212, 0, 0.16);
+    border: 1px solid rgba(255, 212, 0, 0.16);
+    border-bottom: 1px solid #ffd400;
+    border-radius: 0px;
+    font-weight: normal !important;
+}
+
+/* strong[style*="quote"]::after {
+    display: inline-block;
+    position: relative;
+    content: "↓";
+    font-size: 0.6em;
+    top: -0.5em;
+    right: 0;
+    color: var(--b3-font-color3);
+} */
+
+
+/* 设置4种样式的格式 */
+.p[data-node-id][data-type="NodeParagraph"][style*="background-color: var(--b3-card-"],
+.list[style*="background-color: var(--b3-card-"] {
+    padding: 16px 8px;
+}
+
+.p[data-node-id][data-type="NodeParagraph"][style*="background-color: var(--b3-card-"]::before,
+.list[style*="background-color: var(--b3-card-"]::before {
+    content: url(src/pin.svg);
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    z-index: 2;
+}
+
+/* 4种样式和13种背景中间的引用设置透明度 */
+.protyle-wysiwyg [style*="background-color"] .bq,
+.protyle-wysiwyg [style*="background-color"] .code-block,
+.protyle-wysiwyg [style*="background-color"] .render-node,
+.protyle-wysiwyg [style*="background-color"] tbody tr {
+    background-color: #fafafa66 !important;
+}
