@@ -1,5 +1,3 @@
-
-
 # zhang-light主题
 
 ### 灵感来源
@@ -73,65 +71,55 @@
 ##### 0.4.1
 
 * 增加自定义属性图片去掉边框和阴影`f:pic`（有群友有用到段落文字中插入图片公式的情形）
-
 * 修改下划线的样式（下划线距离文字底部有点远）
-
 * 取消鼠标滑选区域显示（群友反馈，感觉不必要）
-
 * 更改行内代码的颜色（主题色）
-
 * 更改引用块和超链接在标题中的样式（自适应标题颜色，去掉下划线，这样不突兀）
-
-  * ![image.png](https://tva1.sinaimg.cn/mw690/0082QUidly1h03nw5j89uj30ji07hwhv.jpg)
-
 * 通过文档的自定义属性增加一些护眼色（来自群友“随船医”的推荐）
-
-  * |名称|颜色|代码|
-    | -------------| ---------| --------|
-    |杏仁黄|#faf8df|yellow|
-    |绿豆沙|#c8edcc|green|
-    |wps护眼模式|#cce8cf|green1|
-    |青草绿|#e3eccd|green2|
-    |极光灰|#ebeaf0|gray|
-    |瑞雪白|#f1ede1|white|
-
 * 通过自定义属性将表格设置为自适应宽度，超过100%后可以左右拖拽查看，文字不会自动分行
-
-  * ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1h03qbezd5fj31080dk7bu.jpg)
 
 #### 0.5版本
 
-- 为常用链接增加icon图标
-  - ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1h0526zuxcbj31hc0smgvz.jpg)
-- 增加去掉表头的自定义属性（f=biaotou)
-  - ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1h052brc95cj310j08hdh6.jpg)
-- 将自动编号等CSS片段设置为额外加载的挂件，可以在主题文件夹里直接删除文件，不用修改代码
-- 优化了一点细节
+* 为常用链接增加icon图标
+* 增加去掉表头的自定义属性（f=biaotou)
+* 将自动编号等CSS片段设置为额外加载的挂件，可以在主题文件夹里直接删除文件，不用修改代码
+* 优化了一点细节
 
 ##### 0.51
 
 - 去掉超级块中的标题下方圆角矩形衬底和自动编号
-
 - 减小无序列表前面的符号
-
 - 优化文档右侧引用数字的样式，加上衬底和边框
-
 - 给文档树和大纲增加渐变的背景
-
 - 给标题设置弹幕时标题下方圆角矩形会消失
-
 - 增加禁止点击的自定义属性 `f=no`
-
 - 将自定义属性相关代码放到`style`文件夹中
 
-  - | 分类                      | 含义                   |
-    | ------------------------- | ---------------------- |
-    | auto-number.css           | 自动编号               |
-    | h1-h6-z-index.css         | 标题下方的圆角矩形衬底 |
-    | link-icon.css             | 网址链接前面的图标     |
-    | link-icon-color.css       | 网址链接文字的颜色     |
-    | custom-function-for-block | 块的自定义属性         |
-    | custom-function-for-file  | 文档的自定义属性       |
+  - |分类|含义|
+    | -------------------------| ----------------------|
+    |auto-number.css|自动编号|
+    |h1-h6-z-index.css|标题下方的圆角矩形衬底|
+    |link-icon.css|网址链接前面的图标|
+    |link-icon-color.css|网址链接文字的颜色|
+    |custom-function-for-block|块的自定义属性|
+    |custom-function-for-file|文档的自定义属性|
+
+##### 0.6版本
+
+* 使用论坛大佬的Ctrl+P.css文件，将搜索界面设置为左右分栏
+* 使用langzhou大佬的评论脚本
+* 增加一系列文件类型图标（文件夹，压缩包，PPT, EXCEL, WORD)
+* 为超级块左上角增加图钉📌图标
+* 增加一些新的自定义属性
+
+  * 超级块增加间距（f=super)，超级块去掉边框（f=superno）等
+* 优化背景中引用块和表格的颜色，增加透明度，不和背景突兀
+* 增加鼠标悬浮在标签页上的效果
+* 优化文档树和大纲的渐变效果
+* 优化标题折叠样式
+* 增加滚动条宽度
+* 简化引用数字颜色，去掉红色
+* 减小无序列表前面符号的大小
 
 ### 🎈修复bug
 
@@ -162,12 +150,16 @@
 
 ##### 0.51版本
 
-- 修复行内代码和键盘不显示光标的问题
-- 修复挂件名称过长时分行显示的问题
-- 修复超级块横排时选中不明显的问题
-- 修复1.1-2倍字体自定义属性失效的问题
-- 修复嵌入块内含有标题自动编号的问题
-- 修复云空间显示错乱的问题
+* 修复行内代码和键盘不显示光标的问题
+* 修复挂件名称过长时分行显示的问题
+* 修复超级块横排时选中不明显的问题
+* 修复1.1-2倍字体自定义属性失效的问题
+* 修复嵌入块内含有标题自动编号的问题
+* 修复云空间显示错乱的问题
+
+##### 0.6版本
+
+*
 
 ### 下步计划
 
@@ -190,11 +182,11 @@
 
 #### 0.5版本
 
+* 修改不同级别的列表样式
+  * 实心圆，空心圆，实心方块等
 - 为word,ppt,excel,pdf等文件前面增加格式
 - 适配更多的网址icon
 - 修复主题导出PDF时的若干问题
-- 修改不同级别的列表样式
-  - 实心圆，空心圆，实心方块等
 
 ### 主题截图
 
@@ -237,7 +229,7 @@
 >
 
 |分类|名称|代码|
-| --------------------------| ----------------| ------|
+| --------------------------| ----------------| ---------------|
 |字体|楷体|k|
 ||宋体|s|
 ||黑体|h|
@@ -266,6 +258,8 @@
 |表格自动宽度|自动|auto|
 |表格去掉表头|表头|biaotou|
 |去掉图片边框和阴影|图片|pic|
+|增加超级块之间的空隙|超级块|cjk/super|
+|去掉超级块的边框|超级块不加边框|cjkno/superno|
 
 #### 便利贴自定义属性
 
@@ -291,7 +285,7 @@
 >
 
 |分类|名称|代码|
-| ----------------------| -------------| --------|
+| ------------------------| --------------| ---------------|
 |去除自动文档编号|编号|bh|
 |去掉标题下面圆角矩形|标题|bt|
 |修改文档字体|鸿蒙|hm|
@@ -303,6 +297,8 @@
 ||青草绿|green2|
 ||极光灰|gray|
 ||瑞雪白|white|
+|限制文档图片宽度|图片宽度|tpkd/picwidth|
+|去掉网络图片左上角图标|去掉图片图标|picno|
 
 ### 教程
 
@@ -310,25 +306,17 @@
 
 <video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=682094343&amp;bvid=BV11U4y1f7sP&amp;cid=544504047" data-src=""></video>
 
----
-
 #### 自定义属性 便利贴
 
 <video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=212038257&amp;bvid=BV1qa411h7hm&amp;cid=544507181" data-src=""></video>
-
----
 
 #### 对整个文档自定义属性
 
 <video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=937049677&amp;bvid=BV1ZT4y1S7dC&amp;cid=545461125" data-src=""></video>
 
----
-
 #### 自定义属性 表格自动调节宽度（不折叠）
 
 <video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=852116009&amp;bvid=BV1sL4y1u7A1&amp;cid=545461768" data-src=""></video>
-
----
 
 #### 取消自动编号功能
 
@@ -341,4 +329,12 @@
 #### 主题-模板-挂件的教程
 
 <video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=809998824&bvid=BV1p34y1b7ni&cid=554981214" data-src=""></video>
+
+#### 必看！日记+双链+SQL
+
+<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=595106298&amp;bvid=BV14q4y1Y7Ay&amp;cid=558581529" data-src=""></video>
+
+#### 超级块排版教程
+
+<video controls="controls" src="https://video-direct-link.vercel.app/bili.mp4?aid=810105216&amp;bvid=BV1534y147uf&amp;cid=559755702" data-src=""></video>
 
