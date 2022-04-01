@@ -12,6 +12,14 @@
     margin-right: 0.2em !important;
 }
 
+/* ————————————————————为常见的文件格式设置图标———————————————————— */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href^="file://"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href^="file://"]::before,
+.b3-typography a[href^="file://"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/folder.svg');
+}
+
 /* ————————————————————为没有收集icon图标的网站设置格式—————————————————— */
 .protyle-wysiwyg [data-node-id] span[data-type='a'][data-href ^="http"]:not(:empty)::before,
 .protyle-wysiwyg [data-node-id] a[href ^="http"]::before,
@@ -416,3 +424,228 @@
     content: "";
     background-image: url('../icon4Tsundoku/translate_google_cn.png');
 }
+
+
+/* zotero */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="zotero.org"]:not(:empty)::before,
+.b3-typography a[href *="zotero.org"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/zotero.png');
+}
+
+/* 搜狐 */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="sohu.com"]:not(:empty)::before,
+.b3-typography a[href *="sohu.com"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/souhu.svg');
+}
+
+/* 豌豆荚 */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="wandoujia.com"]:not(:empty)::before,
+.b3-typography a[href *="wandoujia.com"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/wandou.svg');
+}
+
+/* Reddit */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="redditinc.com"]:not(:empty)::before,
+.b3-typography a[href *="redditinc.com"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/reddit.svg');
+}
+
+/* Instagram.com */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="Instagram.com"]:not(:empty)::before,
+.b3-typography a[href *="Instagram.com"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/ins.svg');
+}
+
+/* twitter.com */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="twitter.com"]:not(:empty)::before,
+.b3-typography a[href *="twitter.com"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/Twitter.svg');
+}
+
+/* facebook.com */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="facebook.com"]:not(:empty)::before,
+.b3-typography a[href *="facebook.com"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/Facebook.svg');
+}
+
+/* notion */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="notion"]:not(:empty)::before,
+.b3-typography a[href *="notion"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/notion.svg');
+}
+
+/* Youtube */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="youtube"]:not(:empty)::before,
+.b3-typography a[href *="youtube"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/youtube.svg');
+}
+
+/* ————————————————————为常见的文件格式设置图标———————————————————— */
+/* 文件夹 */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href^="file://"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href^="file://"]::before,
+.b3-typography a[href^="file://"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/folder.svg');
+}
+
+/* 压缩包 */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".zip"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".zip"]::before,
+.b3-typography a[href ^="assets/"][href $=".zip"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".rar"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".rar"]::before,
+.b3-typography a[href ^="assets/"][href $=".rar"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".7z"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".7z"]::before,
+.b3-typography a[href ^="assets/"][href $=".7z"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/zip.svg');
+}
+
+/* word */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".docx"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".docx"]::before,
+.b3-typography [href ^="assets/"][href $=".docx"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".doc"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".doc"]::before,
+.b3-typography [href ^="assets/"][href $=".doc"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/word.svg');
+}
+
+/* ppt */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".pptx"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".pptx"]::before,
+.b3-typography [href ^="assets/"][href $=".pptx"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".ppt"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".ppt"]::before,
+.b3-typography [href ^="assets/"][href $=".ppt"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/ppt.svg');
+}
+
+/* excel */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".xlsx"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".xlsx"]::before,
+.b3-typography [href ^="assets/"][href $=".xlsx"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".xls"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".xls"]::before,
+.b3-typography [href ^="assets/"][href $=".xls"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/excel.svg');
+}
+
+/* pdf */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".pdf"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".pdf"]::before,
+.b3-typography [href ^="assets/"][href $=".pdf"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/pdf.svg');
+}
+
+/* txt */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".txt"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".txt"]::before,
+.b3-typography [href ^="assets/"][href $=".txt"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/txt.svg');
+}
+
+/* 视频 */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".mp4"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".mp4"]::before,
+.b3-typography [href ^="assets/"][href $=".mp4"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".m4v"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".m4v"]::before,
+.b3-typography [href ^="assets/"][href $=".m4v"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".mov"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".mov"]::before,
+.b3-typography [href ^="assets/"][href $=".mov"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".flv"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".flv"]::before,
+.b3-typography [href ^="assets/"][href $=".flv"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".avi"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".avi"]::before,
+.b3-typography [href ^="assets/"][href $=".avi"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/MP4.svg');
+}
+
+/* 图片 */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".jpg"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".jpg"]::before,
+.b3-typography [href ^="assets/"][href $=".jpg"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".png"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".png"]::before,
+.b3-typography [href ^="assets/"][href $=".png"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/jpg.svg');
+}
+
+/* html */
+/* .protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".html"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".html"]::before,
+.b3-typography [href ^="assets/"][href $=".html"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/html.svg');
+} */
+
+/* json */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".json"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".json"]::before,
+.b3-typography [href ^="assets/"][href $=".json"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/json.svg');
+}
+
+/* css */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".css"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".css"]::before,
+.b3-typography [href ^="assets/"][href $=".css"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/css.svg');
+}
+
+/* js,c++等 */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".java"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".java"]::before,
+.b3-typography [href ^="assets/"][href $=".java"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/JAVA.svg');
+}
+
+/* js,c++等 */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".js"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".js"]::before,
+.b3-typography [href ^="assets/"][href $=".js"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/vscode.svg');
+}
+
+/* xmind */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".xmind"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".xmind"]::before,
+.b3-typography [href ^="assets/"][href $=".xmind"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/xmind.svg');
+}
+
+/* xmind */
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href $=".md"]:not(:empty)::before,
+.protyle-wysiwyg [data-node-id] a[href $=".md"]::before,
+.b3-typography [href ^="assets/"][href $=".md"]::before {
+    content: "";
+    background-image: url('../icon4Tsundoku/fold/md.svg');
+}
+
+/* ————————————————————————————————————————————————————文件格式到此为止—————————————————————————————————————————————————————— */
