@@ -90,7 +90,7 @@
 
 .protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="zcool.com.cn"]:not(:empty),
 .b3-typography a[href *="zcool.com.cn"] {
-    color: #fdd001 !important;
+    color: #272828 !important;
 }
 
 .protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="ixigua.com"]:not(:empty),
