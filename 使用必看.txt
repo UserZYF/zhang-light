@@ -1,0 +1,4 @@
+将本目录下的 custom.css 文件
+放到 SiYuan\data\widgets 路径中
+
+里边有详细介绍，可以打开看看

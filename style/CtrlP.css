@@ -2,10 +2,13 @@
 /*---------ctrl+p窗口改造-------------*/
 /*放大ctrl+p窗口尺寸*/
 /*不添加[data-key]属性选择器将会同时影响alt+p窗口*/
-div[data-key] .b3-dialog__container {width: 95vw !important;}
-div[data-key] .b3-dialog__container .fn__flex-column {
-	height:95vh !important;
+/* div[data-key] .b3-dialog__container {
 	width: 95vw !important;
+} */
+
+div[data-key] .b3-dialog__container .fn__flex-column {
+	height: 75vh !important;
+	/* width: 95vw !important; */
 }
 
 /*ctrl+p改造成左右排列*/
@@ -14,22 +17,53 @@ div[data-key] .b3-dialog__container .fn__flex-column {
 	flex-direction: row !important;
 	flex-wrap: wrap;
 }
+
 /*设置需要占满一行的项目*/
 div[data-key] .b3-dialog__container .fn__flex-column .search__header,
 div[data-key] .b3-dialog__container .fn__flex-column .b3-form__space--small {
-	width:100vw;
+	width: 100vw;
 	/*flex-shrink:0;*/
 }
 
-/*搜索结果列表占一半宽度，靠左排列*/
-div[data-key] .b3-dialog__container .fn__flex-column #searchList {
-	float:left;
-	/*width:45vw;*/
-	width:calc(50%);
-	height:calc(100% - 85px) !important;
+/*窗口宽度大于一定尺寸时候，左右排列*/
+@media screen and (min-width: 960px) {
+
+	/*搜索结果列表占一半宽度，靠左排列*/
+	div[data-key] .b3-dialog__container .fn__flex-column #searchList {
+		float: left;
+		/*width:45vw;*/
+		width: calc(50%);
+		height: calc(100% - 85px) !important;
+		/*禁止搜索结果水平滚动*/
+		overflow-x: hidden !important;
+		overflow-y: auto;
+	}
+
+	/*结果预览自动占满剩余宽度，高度和结果列表等高*/
+	div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
+		/*width:45vw;*/
+		height: calc(100% - 85px) !important;
+	}
 }
-/*结果预览自动占满剩余宽度*/
-div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
-	/*width:45vw;*/
+
+/*窗口宽度小于一定尺寸时候，上下排列*/
+@media screen and (max-width: 960px) {
+	div[data-key] .b3-dialog__container .fn__flex-column #searchList {
+		float: left;
+		/*width:45vw;*/
+		width: calc(100%);
+		height: calc(40% - 85px) !important;
+		/*禁止搜索结果水平滚动*/
+		overflow-x: hidden !important;
+		overflow-y: auto;
+	}
+
+	/*结果预览自动占满剩余高度*/
+	div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
+		/*width:45vw;*/
+		height: calc(60%) !important;
+	}
 }
+
+
 /*---------ctrl+p窗口改造 end -------------*/

@@ -1,0 +1,289 @@
+/* ---------------------------------需要修改的地方：主要色，背景色，文字色---------------------------------- */
+:root {
+    /* ————————————————————主要色———————————————————— */
+    --b3-theme-primary: #cf5659;
+    --b3-theme-primary-light: var(--b3-theme-primary);
+    --b3-theme-primary-lighter: var(--b3-theme-primary);
+    --b3-theme-primary-lightest: #cf56594d;
+
+    /* ————————————————————透明色———————————————————— */
+    --b3-theme-tm1: #cf56594d;
+    --b3-theme-tm2: #cf56591a;
+
+    /* ————————————————————悬浮色———————————————————— */
+    --b3-theme-hover: #f1cccd;
+    --b3-theme-hover2: #f8ecec;
+    --b3-theme-hover-gray: #e2e2e2;
+    --b3-theme-background-link-hover: #e4e4e4;
+
+    /* ————————————————————辅助色———————————————————— */
+    --b3-theme-secondary: var(--b3-theme-primary);
+
+    /* ————————————————————背景色———————————————————— */
+    /* 01 正文背景颜色 */
+    --b3-theme-background: #fdfdfd;
+    /* 02 侧栏背景颜色 */
+    --b3-theme-background2: #fafafa;
+    /* 03 侧边栏和顶栏背景颜色 */
+    --b3-theme-background-light: white;
+    /* 04 PDF双链背景颜色 */
+    --b3-theme-background-gray: #e1e1e1;
+    /* 05 侧栏背景颜色 */
+    --b3-theme-surface: var(--b3-theme-background2);
+    /* 06 标签页背景颜色 */
+    --b3-theme-tab: var(--b3-theme-background-gray);
+    /* 07 错误颜色，保持默认 */
+    --b3-theme-error: #ec8d8deb;
+    /* 08 透明背景，适用于设置背景中引用的背景 */
+    --b3-theme-background-tm: #fafafa66;
+
+    /* ————————————————————文字色———————————————————— */
+    /* 01 正文文字颜色 */
+    --b3-theme-on-background: #202124;
+    /* 02 鼠标悬浮时文字颜色 */
+    --b3-font-color-hover: #202124;
+    /* 不知道干啥的，保持默认就行 */
+    --b3-theme-on-primary: white;
+    --b3-theme-on-secondary: white;
+    /* 灰色文字 */
+    --b3-font-color-gray: #9e9e9e;
+    /* 透明一点的灰色文字 */
+    --b3-font-color-gray-tm: #80808080;
+    /* 无内容时提示文字颜色 */
+    --b3-font-color-empty: #9fa5a675;
+    /* 卡片中文字颜色 */
+    --b3-font-color-oncard: #fefcfe;
+    /* 图标和说明文字颜色 */
+    --b3-theme-on-surface: gray;
+    /* 错误时文字颜色，保持默认即可 */
+    --b3-theme-on-error: white;
+    /* 上标和下标文字颜色 */
+    --b3-theme-sub-color: blue;
+
+    /* 字体 */
+    --b3-font-family: "仓耳今楷03", 'WWJNWLKQ', 'zh quote', -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --b3-font-family-code: "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, "HarmonyOS Sans SC", "Microsoft YaHei", "Liberation Mono", "Courier New", monospace;
+    --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
+    --b3-font-family-graph: mononoki;
+    --b3-font-family-math: KaTeX_Math;
+
+    /* 线条颜色 */
+    --b3-border-color: rgba(128, 128, 128, 0.1);
+
+    /* 默认滚动条 */
+    --b3-scroll-color: #4f657244;
+    /* 奥运背景卡片滚动条 */
+    --b3-scroll-color-card: #ffffffb3;
+
+    /* 列表 */
+    --b3-list-hover: transparent;
+
+    /* 标签页/页签 */
+    --b3-tab-background: #e1e1e1;
+    --b3-tab-background-hover: #fff;
+
+    /* 菜单 */
+    --b3-menu-background: var(--b3-theme-background2);
+
+    /* 提示气泡颜色 */
+    --b3-tooltips-color: gray;
+
+    /* ————————————————————4种外观样式———————————————————— */
+    /* 4种样式中文字的颜色 */
+    --b3-card-error-color: #5f6368;
+    --b3-card-warning-color: #5f6368;
+    --b3-card-info-color: #5f6368;
+    --b3-card-success-color: #5f6368;
+    /* 4种样式背景颜色
+       +浅色便利贴背景颜色 */
+    --b3-card-error-background: #fce7e9;
+    --b3-card-warning-background: #fee6ac;
+    --b3-card-info-background: #cfddfe;
+    --b3-card-success-background: #ccf2c8;
+    /* 深色便利贴背景颜色 */
+    --b3-card-darker-red: #c81a31;
+    --b3-card-darker-yellow: #ec6f05;
+    --b3-card-darker-blue: #384b76;
+    --b3-card-darker-green: #325342;
+
+    /* 13种自定义文字颜色 */
+    --b3-font-color1: #d83931;
+    --b3-font-color2: #de7802;
+    --b3-font-color3: #856404;
+    --b3-font-color4: #2ea121;
+    --b3-font-color5: #35737d;
+    --b3-font-color6: #245bdb;
+    --b3-font-color7: #6425d0;
+    --b3-font-color8: #b3b3b3;
+    --b3-font-color9: white;
+    --b3-font-color10: white;
+    --b3-font-color11: white;
+    --b3-font-color12: white;
+    --b3-font-color13: gray;
+
+    /* 13种自定义背景颜色 */
+    --b3-font-background1: #fbbfbc;
+    --b3-font-background2: #fed4a4;
+    --b3-font-background3: #ffe9a1;
+    --b3-font-background4: #b7edb1;
+    --b3-font-background5: #d1ecf1;
+    --b3-font-background6: #bacefd;
+    --b3-font-background7: #cdb2fa;
+    --b3-font-background8: #e1e1e1;
+    --b3-font-background9: #fc2e1b;
+    --b3-font-background10: #f6df5b;
+    --b3-font-background11: #2d48f8;
+    --b3-font-background12: #2a9f65;
+    --b3-font-background13: transparent;
+
+    /* PDF标注颜色 */
+    --b3-pdf-sidebar-width: 200px;
+    --b3-pdf-offset: 0;
+    --b3-pdf-background1: #ffb3ac;
+    --b3-pdf-background2: #ffec84;
+    --b3-pdf-background3: #ffff57;
+    --b3-pdf-background4: #80ff80;
+    --b3-pdf-background5: #98eaff;
+    --b3-pdf-background6: #91d5ff;
+    --b3-pdf-background7: #d4b8f8;
+
+    /* ————————————————————标题下方圆角矩形颜色———————————————————— */
+    /* 不需要可以将下面颜色都设置为透明 transparent */
+    --b3-h1-after: var(--b3-font-background1);
+    --b3-h2-after: var(--b3-font-background2);
+    --b3-h3-after: var(--b3-font-background3);
+    --b3-h4-after: var(--b3-font-background4);
+    --b3-h5-after: var(--b3-font-background5);
+    --b3-h6-after: var(--b3-font-background6);
+
+    /* ————————————————————大纲文字颜色———————————————————— */
+    --b3-catalog-h1-color: var(--b3-font-color1);
+    --b3-catalog-h2-color: var(--b3-font-color2);
+    --b3-catalog-h3-color: var(--b3-font-color3);
+    --b3-catalog-h4-color: var(--b3-font-color4);
+    --b3-catalog-h5-color: var(--b3-font-color5);
+    --b3-catalog-h6-color: var(--b3-font-color6);
+
+    /* 动画效果 */
+    --b3-transition: all 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms;
+    --b3-width-transition: width .15s cubic-bezier(0, 0, .2, 1) 0ms;
+
+    /* 阴影 */
+    --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    --b3-dialog-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+    --b3-right-bottom-shadow: 8px 16px 16px hsl(0deg 0% 0% / 0.25);
+    --b3-small-shadow: 0px 0px 20px 3px rgba(50, 50, 50, 0.29);
+    --b3-small-kuaiyinyong-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.16);
+    --b3-img-net-shadow: 2px 2px 5px 2px #0000004d;
+    --b3-code-block-shadow: 0px 0px 2px 0px #041b1538;
+    --b3-hr-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    --b3-img-icon-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+    --b3-img-icon-color-shadow: rgba(15, 15, 15, 0.1) 1px 0px 0px;
+
+
+    /* diff */
+    --b3-diff-add: #dfd;
+    --b3-diff-add-surface: #97f295;
+    --b3-diff-del: #fee8e9;
+    --b3-diff-del-surface: #ffb6ba;
+
+    /* 图表颜色 */
+    --b3-graph-p-point: #076f7e;
+    --b3-graph-heading-point: #660e7a;
+    --b3-graph-math-point: #80ffa5;
+    --b3-graph-code-point: #00ddff;
+    --b3-graph-table-point: #37a2ff;
+    --b3-graph-list-point: #ff0087;
+    --b3-graph-todo-point: #ffbf00;
+    --b3-graph-olist-point: #b3005f;
+    --b3-graph-listitem-point: #f65b00;
+    --b3-graph-bq-point: #8d48e3;
+    --b3-graph-super-point: #dd79ff;
+    --b3-graph-doc-point: #202124;
+    --b3-graph-tag-point: #dbf32f;
+    --b3-graph-asset-point: #05c091;
+    --b3-graph-line: #5f6368;
+    --b3-graph-ref-line: #d23f31;
+    --b3-graph-tag-line: #5f6b06;
+    --b3-graph-tag-tag-line: #dbf32f;
+    --b3-graph-asset-line: #037457;
+    --b3-graph-hl-point: #f3a92f;
+    --b3-graph-hl-line: #4285f4;
+
+    /* 编辑器搜索颜色 */
+    --b3-protyle-search-background: #ffe955;
+    --b3-protyle-search-border-color: #f2e680;
+    --b3-protyle-search-current-background: #a5d3fe;
+
+    /* 代码片段背景 */
+    --b3-protyle-code-background: #e7ecef;
+
+    /* ————————————————————行内元素颜色———————————————————— */
+    /* 加粗文字颜色 */
+    --b3-protyle-inline-strong-color: var(--b3-theme-on-background);
+    /* 倾斜文字颜色 */
+    --b3-protyle-inline-em-color: var(--b3-theme-on-background);
+    /* 删除线文字颜色 */
+    --b3-protyle-inline-s-color: var(--b3-theme-on-background);
+    /* 超链接颜色和鼠标悬浮颜色，不用管 */
+    --b3-protyle-inline-link-color: #408bba;
+    --b3-protyle-inline-link-hover-color: red;
+    /* 高亮颜色/标记颜色 */
+    --b3-protyle-inline-mark-background: yellow;
+    --b3-protyle-inline-mark-color: black;
+    /* 标签颜色 */
+    --b3-protyle-inline-tag-background: var(--b3-theme-primary);
+    --b3-protyle-inline-tag-color: var(--b3-theme-hover);
+    /* 行内代码颜色 */
+    --b3-protyle-inline-code-color: var(--b3-theme-primary);
+    --b3-protyle-inline-code-background: var(--b3-theme-hover2);
+    /* 块引用颜色，不用管 */
+    --b3-protyle-inline-blockref-color: #0e7a88;
+    --b3-protyle-inline-blockref-hover-color: red;
+
+    /* 表格 */
+    --b3-table-border-color: rgb(211, 211, 211);
+    --b3-table-th-color: var(--b3-theme-hover2);
+    --b3-table-trn-color: var(--b3-theme-background2);
+    --b3-table-tr2n-color: white;
+
+    /* 高亮 */
+    --b3-menu-highlight-color: var(--b3-theme-primary);
+    --b3-menu-highlight-focus-color: var(--b3-theme-primary);
+    --b3-search-highlight: yellow;
+    --b3-pdf-selcect-hightlight: yellow;
+
+    /* 文件树背景高亮颜色 */
+    --b3-menu-highlight-background: #dde5ea;
+    --b3-tab-custom-background: #e4ebec;
+
+    /* ————————————————————圆角大小———————————————————— */
+    --b3-border-radius-noraml: 4px;
+    --b3-border-radius-half-round: 50px;
+    --b3-border-radius-round: 50%;
+    --b3-border-radius-none: 0px;
+    --b3-border-radius-image-emoji: 5px 0px;
+    --b3-border-radius-math: 0px 0px 3px 3px;
+
+    /* ————————————————————边框—————————————————— */
+    --b3-border-color1: #cfcece;
+    --b3-border-normal: 1px solid #cfcece;
+    --b3-border-wider: 2px solid #cfcece;
+    --b3-border-dashed: 1px dashed #cfcece;
+    --b3-border-dashed-gray: 1px dashed #80808080;
+    --b3-border-dashed-gray-wider: 2px dashed #80808080;
+    --b3-border-column: 1px solid #ffffff4d;
+    --b3-border-column-item: 1px solid #80808033;
+    --b3-border-kbd: 0.1em solid rgba(128, 128, 128, 0.2);
+    --b3-border-gezi: 0.05em solid #cfcece4d;
+
+
+    /* ————————————————————正文格子背景———————————————————— */
+    --b3-theme-background-gezi: linear-gradient(90deg, rgba(60, 10, 30, 0.06) 2%, transparent 0px), linear-gradient(1turn, rgba(60, 10, 30, 0.06) 2%, transparent 0px);
+    /* ————————————————————侧栏渐变背景———————————————————— */
+    --b3-theme-background-jianbian: linear-gradient(135deg, rgba(255, 232, 232, 0.62) 0%, rgba(236, 236, 255, 0.54) 25%, rgba(228, 247, 236, 0.3) 50%, rgba(223, 254, 224, 0.2) 75%, rgba(245, 247, 249, 0.99) 100%);
+    /* ————————————————————分割线渐变线条———————————————————— */
+    --b3-theme-hr-background: linear-gradient(125deg, #F44336, #E91E63, #9C27B0, #3F51B5, #2196F3);
+}
+
+/* ----------------------------------------------------root定义结束---------------------------------------------------- */

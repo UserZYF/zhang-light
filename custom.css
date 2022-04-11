@@ -1,0 +1,30 @@
+/* 此文件放在 SiYuan\data\widgets 路径中（dark+主题作者萌新的想法），可以实现多端同步，也可以覆盖掉theme.css中的一些代码 */
+/* 在此目录下的代码可以覆盖掉后面的一些代码，如果没有生效，可以尝试在属性值后面加上!important */
+/* 想要某段代码生效，需要取消注释，删掉前面的 "   / *   " 和后面的 "   * /   " */
+/* 由于思源笔记主题的缓存，修改完代码后，需要打开theme.css文件，然后点击保存，才能生效 */
+/* 注：下列代码适用于zhang-light主题，不一定对其他主题有效 */
+
+/* ————————————————————01 去掉自动编号 */
+/* .protyle-wysiwyg div[data-type="NodeHeading"]>::before,
+.b3-typography div[data-type="NodeHeading"]::before {
+    display: none;
+} */
+
+/* ————————————————————02 去掉标题下方衬底/圆角矩形 */
+/* div[data-node-id][data-type="NodeHeading"]::after {
+    display: none;
+} */
+
+/* ————————————————————03 显示文档树和大纲下方的引用计数 */
+/* span.popover__block.counter.b3-tooltips.b3-tooltips__nw {
+    display: inline-block !important;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__outline span.counter {
+    display: inline-block !important;
+} */
+
+/* ————————————————————04 取消显示文档树的渐变背景 */
+/* .layout-tab-container:not(.fn_flex-1) {
+    background: var(--b3-theme-surface) !important;
+} */
