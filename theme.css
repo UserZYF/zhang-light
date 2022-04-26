@@ -2838,11 +2838,13 @@ strong[style*="quote"] {
 
 
 /* 设置4种样式的格式 */
+.sb[data-node-id][data-type="NodeSuperBlock"][style*="background-color: var(--b3-card-"],
 .p[data-node-id][data-type="NodeParagraph"][style*="background-color: var(--b3-card-"],
 .list[style*="background-color: var(--b3-card-"] {
     padding: 16px 8px;
 }
 
+.sb[data-node-id][data-type="NodeSuperBlock"][style*="background-color: var(--b3-card-"]::before,
 .p[data-node-id][data-type="NodeParagraph"][style*="background-color: var(--b3-card-"]::before,
 .list[style*="background-color: var(--b3-card-"]::before {
     content: url(src/pin.svg);
