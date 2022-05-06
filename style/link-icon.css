@@ -427,8 +427,8 @@
 
 
 /* zotero */
-.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="zotero.org"]:not(:empty)::before,
-.b3-typography a[href *="zotero.org"]::before {
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="zotero"]:not(:empty)::before,
+.b3-typography a[href *="zotero"]::before {
     content: "";
     background-image: url('../icon4Tsundoku/zotero.png');
 }

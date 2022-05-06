@@ -61,7 +61,7 @@
     --b3-theme-sub-color: blue;
 
     /* 字体 */
-    --b3-font-family: "仓耳今楷03", 'WWJNWLKQ', 'zh quote', -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --b3-font-family: "LXGWWenKai-Regular", "仓耳今楷03", 'WWJNWLKQ', 'zh quote', -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --b3-font-family-code: "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, "HarmonyOS Sans SC", "Microsoft YaHei", "Liberation Mono", "Courier New", monospace;
     --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
     --b3-font-family-graph: mononoki;
