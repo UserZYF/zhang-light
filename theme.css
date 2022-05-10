@@ -589,6 +589,7 @@ mark {
     top: 7px;
     right: 4px;
     border: var(--b3-border-wider);
+    border-radius: 0px !important;
 }
 
 /* ————————————————————设置文档的自定义属性 限制图片宽度———————————————————— */
@@ -769,7 +770,7 @@ div[fold="1"] .protyle-action.protyle-action--task {
 /*  ————————————————————————————————————代码块行数——————————————————————————————————*/
 .protyle-linenumber__rows {
     margin-top: 14px !important;
-    background-color: transparent !important;
+    background-color: var(--b3-theme-background2) !important;
     padding-bottom: 0px;
     margin-bottom: 0px;
     font-family: var(--b3-font-family-code);
@@ -2520,10 +2521,14 @@ button.b3-color__square[style="background-color:var(--b3-pdf-background7)"]::bef
 /* -------------------------------------------------头图图片设置------------------------------------------------- */
 /*————————————————————头图选项(上传，链接，随机，移动，删除）的背景颜色和位置————————————————————*/
 .protyle-background__img .protyle-icons {
-    background-color: var(--b3-theme-background);
+    background-color: var(--b3-theme-background) !important;
     color: inherit;
     box-shadow: var(--b3-img-icon-shadow);
     border-radius: var(--b3-border-radius-noraml);
+}
+
+.protyle-icon {
+    background-color: var(--b3-theme-background);
 }
 
 /* ——————————————————————提示文字的背景颜色设置(每个icon和文字）—————————————————————————————— */
@@ -2552,7 +2557,7 @@ button.b3-color__square[style="background-color:var(--b3-pdf-background7)"]::bef
     transform: none;
     transition: none;
     opacity: 1;
-    color: var(--b3-theme-on-surface);
+    color: var(--b3-theme-on-background);
     background-color: transparent;
     position: static;
     margin: 0;
@@ -3062,6 +3067,11 @@ div[data-type="NodeHeading"][style*="background-color"]::after {
     display: none;
 }
 
+/* ————————————————————修改分割线样式———————————————————— */
+.protyle-wysiwyg [data-node-id].hr>div {
+    border-bottom: 2px dashed var(--b3-border-color1);
+}
+
 /* -----------------------------------------------------标题下方圆角矩形结束-------------------------------------------- */
 
 
@@ -3161,6 +3171,7 @@ div[data-type="NodeHeading"][style*="background-color"]::after {
 }
 
 /* ———————————————加粗————————————— */
+.protyle-wysiwyg [data-node-id][custom-f~=bold],
 .protyle-wysiwyg [data-node-id][custom-f~=jc] {
     font-weight: bold;
 }
