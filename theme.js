@@ -156,7 +156,7 @@ function MenuSeparator(className = 'b3-menu__separator') {
  * }
  * @returns {null} 没有找到块 ID */
 function getBlockSelected() {
-    let node_list = document.querySelectorAll('.protyle-wysiwyg--select');
+    let node_list = document.querySelectorAll('.protyle:not(.fn__none)>.protyle-content .protyle-wysiwyg--select');
     if (node_list.length === 1 && node_list[0].dataset.nodeId != null) return {
         id: node_list[0].dataset.nodeId,
         type: node_list[0].dataset.type,

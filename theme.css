@@ -724,12 +724,12 @@ div[fold="1"] .protyle-action.protyle-action--task {
 .code-block {
     margin: 4px !important;
     border-radius: var(--b3-border-radius-noraml) !important;
-    background-color: var(--b3-theme-background2);
+    background-color: var(--b3-theme-background2) !important;
 }
 
 /* 代码块主体部分设置 */
-.protyle-reset .hljs,
-.protyle-wysiwyg .hljs, .b3-typography .hljs {
+.b3-typography div.hljs,
+.protyle-wysiwyg div.hljs {
     padding-top: 4px !important;
     padding-bottom: 4px !important;
     padding-left: 16px;
@@ -737,8 +737,6 @@ div[fold="1"] .protyle-action.protyle-action--task {
     background-size: 20px 20px;
     background-image: none !important;
     background: transparent;
-    /* background-color: var(--b3-theme-background2); */
-    /* z-index: -1; */
 }
 
 /* 代码块上方部分设置 */
@@ -769,33 +767,18 @@ div[fold="1"] .protyle-action.protyle-action--task {
 
 /*  ————————————————————————————————————代码块行数——————————————————————————————————*/
 .protyle-linenumber__rows {
-    margin-top: 14px !important;
+    margin-top: 32px !important;
+    padding: 4px;
     background-color: var(--b3-theme-background2) !important;
-    padding-bottom: 0px;
     margin-bottom: 0px;
     font-family: var(--b3-font-family-code);
 }
 
+/* 代码块行数的数字  */
 .protyle-linenumber__rows span::before {
     color: rgba(128, 128, 128, 0.5);
 }
 
-/* ————————————————————————————————————代码块行数和代码之间的竖线——————————————————————— */
-/* .protyle-linenumber__rows::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 1px;
-    height: calc(100% - 8px);
-    background-color: var(--b3-theme-on-background);
-    opacity: 0.2;
-    left: 51px !important;
-} */
-
-/* ——————————————————————————————————一直显示代码块右上角的代码语言和复制按钮—————————————————————————————— */
-/* .code-block .protyle-icons {
-    opacity: 1;
-} */
 /* 代码块的语言代码 */
 .b3-typography .code-block .protyle-action .protyle-action__language,
 .protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
@@ -882,13 +865,14 @@ code.hljs {
 /* --------------------------------------------------标签页 Tab--------------------------------------------- */
 /* ————————————————————————标签页样式——————————————————————————*/
 .layout-tab-bar .item {
-    padding: 1px 4px 1px 14px;
+    padding: 1px 4px 1px 4px;
     margin: 0px;
     border: var(--b3-border-normal);
     border-collapse: collapse !important;
     border-radius: var(--b3-border-radius-none) !important;
     background-color: var(--b3-theme-tab);
     box-sizing: border-box;
+    height: 35px;
 }
 
 /* ——————————————————————设置文字最小宽度，标签过多时才能看清楚文字—————————————————————— */
@@ -912,10 +896,7 @@ code.hljs {
 
 /* ——————————————————————————选中的标签页—————————————————————— */
 .layout-tab-bar .item--focus {
-    /* background-color: white; */
     background-color: var(--b3-theme-background2);
-    /* border: var(--b3-border-normal);
-    border-bottom: 0.05em solid transparent !important; */
     border: 1px solid transparent;
     border-top: var(--b3-border-normal) !important;
 }
@@ -925,13 +906,26 @@ code.hljs {
     box-shadow: none;
 }
 
-/* ————————————————————————标签页后面的背景—————————————————————— */
-/* .layout-tab-bar {
-    background-color: #d1ecf1 !important;
+.layout-tab-bar .item:not(:last-child) {
+    box-shadow: none;
 }
-.layout-tab-bar .item:hover:not(.item--focus) {
-    background-color: #f8f9fa;
-} */
+
+.layout__wnd--active .layout-tab-bar .item--focus {
+    box-shadow: inset 0 2px 0 0 transparent !important;
+}
+
+/* 设置标签页中emoji的大小 */
+.layout-tab-bar .item__icon>img,
+.layout-tab-bar .item__icon>svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* 设置固定的标签页宽度 */
+.layout-tab-bar .item--pin .item__text {
+    width: 1em;
+}
+
 /* --------------------------------------------------标签页 END--------------------------------------------- */
 /* -------------------------------------------------面包屑导航样式-------------------------------------------- */
 .protyle-breadcrumb {
@@ -1165,6 +1159,23 @@ div.sb>div[data-type="NodeHeading"] {
     transition: all 0.1s ease-in-out;
 }
 
+/* 调整顶栏图标外边距 */
+#toolbar .toolbar__item {
+    margin: 0 4px;
+}
+
+/* 设置顶栏高度 */
+.toolbar {
+    height: 24px;
+    line-height: 24px;
+}
+
+/* 调整顶栏图标大小 */
+div#toolbar svg {
+    height: 12px;
+    width: 12px;
+}
+
 /* ————————————————————————文档树区分有子文档和无子文档的文档—————————————————————— */
 .b3-list-item.b3-list-item--hide-action .b3-list-item__toggle.fn__hidden::before {
     content: "·";
@@ -1265,11 +1276,12 @@ span.b3-list-item__action.b3-tooltips[data-type="new"] {
     background-image: url(src/new.svg);
     background-size: 20px 20px;
     background-repeat: no-repeat;
-    top: 4px;
+    top: 1px;
 }
 
 span.b3-list-item__action.b3-tooltips[data-type="new"]:hover {
     background-image: url(src/new-c.svg);
+    background-color: transparent;
 }
 
 /* ————————————————————更改更多按钮样式———————————————————— */
@@ -1285,12 +1297,13 @@ span.b3-list-item__action.b3-tooltips[data-type="more-file"] {
     background-image: url(src/new-file.svg);
     background-size: 20px 20px;
     background-repeat: no-repeat;
-    top: 4px;
+    top: 1px;
 }
 
 span.b3-list-item__action.b3-tooltips[data-type="more-root"]:hover,
 span.b3-list-item__action.b3-tooltips[data-type="more-file"]:hover {
     background-image: url(src/new-file-c.svg);
+    background-color: transparent;
 }
 
 /* ----------------------------------------修改文档树新建按钮的样式 END----------------------------------------- */
@@ -1659,9 +1672,9 @@ span.b3-list-item__action.b3-tooltips[data-type="more-file"]:hover {
 }
 
 /* ————————————————————折叠的标题去掉自动编号———————————————————— */
-.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeHeading"]>div::before {
+/* .protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeHeading"]>div::before {
     display: none;
-}
+} */
 
 .protyle-wysiwyg [data-node-id][fold="1"].h1:before {
     content: "¹";
@@ -3417,7 +3430,7 @@ div[data-node-id][data-type="NodeHeading"][custom-f~=dm]::after {
 
 
 /*————————————————————————列表转导图————————————————————————*/
-
+/* zhang-light 专属 */
 /*整个导图取消缩进*/
 .protyle-wysiwyg *[custom-f="dt"] .li .list {
     padding: 0px;
@@ -3425,15 +3438,16 @@ div[data-node-id][data-type="NodeHeading"][custom-f~=dm]::after {
     transition: all 0.5s;
 }
 
-.protyle-wysiwyg *[custom-f="dt"].list[data-node-index] {
-    width: 100% !important;
+.protyle-wysiwyg *[custom-f="dt"].list {
+    width: 100%-50 !important;
     overflow-x: auto;
     /*溢出滚动*/
     padding-bottom: 30px;
+    margin: 10px 4px;
 }
 
 /* 设置首项底色为蓝色 */
-.protyle-wysiwyg *[custom-f="dt"].list[data-node-index]>div.li>div.p>div {
+.protyle-wysiwyg *[custom-f="dt"].list[data-node-index]>div.li>div.p>div:first-child {
     background-color: var(--b3-theme-primary);
     color: white;
     outline: none;
@@ -3442,7 +3456,7 @@ div[data-node-id][data-type="NodeHeading"][custom-f~=dm]::after {
 }
 
 /* 第二项颜色 */
-.protyle-wysiwyg *[custom-f="dt"].list[data-node-index]>div.li>div.list>div.li>div.p>div {
+.protyle-wysiwyg *[custom-f="dt"].list[data-node-index]>div.li>div.list>div.li>div.p>div:first-child {
     color: var(--b3-theme-primary);
     background-color: var(--b3-theme-tm1);
     outline: none;
@@ -3452,7 +3466,7 @@ div[data-node-id][data-type="NodeHeading"][custom-f~=dm]::after {
 /*子项设偏移调整*/
 .protyle-wysiwyg *[custom-f="dt"] [data-node-id].li>[data-node-id] {
     margin-left: 20px !important;
-    margin-right: -14px !important;
+    margin-right: -24px !important;
 }
 
 .protyle-wysiwyg *[custom-f="dt"] [data-node-id].li>.list {
@@ -3477,6 +3491,9 @@ div[data-node-id][data-type="NodeHeading"][custom-f~=dm]::after {
 }
 
 /*取消标题层级提示*/
+.protyle-wysiwyg *[custom-f="dt"] .li div {
+    border-right: 10px solid transparent;
+}
 
 /*文字框*/
 .protyle-wysiwyg *[custom-f="dt"] .li div>div[spellcheck="false"] {
@@ -3485,13 +3502,12 @@ div[data-node-id][data-type="NodeHeading"][custom-f~=dm]::after {
     margin-top: 2px;
     background-color: transparent;
     border-radius: 1px;
-    /* border: 2px solid #cfcece; */
     outline: 1px solid var(--b3-border-color1);
-    /* white-space: nowrap; */
+    max-width: 15vw;
 }
 
 .protyle-wysiwyg *[custom-f="dt"] .li[data-subtype="t"]>[data-node-id]>div[spellcheck="false"] {
-    padding: 5px 10px 5px 32px;
+    padding: 5px 10px 5px 35px;
 }
 
 .protyle-wysiwyg *[custom-f="dt"] .li[data-subtype="o"]>[data-node-id]>div[spellcheck="false"] {
@@ -3503,15 +3519,7 @@ div[data-node-id][data-type="NodeHeading"][custom-f~=dm]::after {
     display: none;
 }
 
-/*圆点符号居中对齐*/
-.list[custom-f="dt"][data-node-id] .protyle-action {
-    top: calc(50% + 1px);
-    left: 23px;
-    position: absolute;
-    transform: translate(0, -50%);
-    z-index: 2;
 
-}
 
 .protyle-content *[custom-f~=dt] [data-subtype="u"][data-node-id].li>div.protyle-action {
     top: 50%;
@@ -3519,8 +3527,25 @@ div[data-node-id][data-type="NodeHeading"][custom-f~=dm]::after {
 }
 
 .protyle-content *[custom-f~=dt] [data-subtype="o"][data-node-id].li>div.protyle-action {
-    top: 50%;
-    margin-left: -5px;
+    top: calc(50% + 1px);
+    margin-left: 17px;
+}
+
+/*有序列表*/
+.list[custom-f="dt"][data-node-id] .protyle-action {
+    top: calc(50% + 1px);
+    left: 3px;
+    position: absolute;
+    transform: translate(0, -50%);
+    z-index: 2;
+}
+
+.protyle-wysiwyg *[custom-f="dt"] [data-subtype="u"][data-node-id].li>.protyle-action:after {
+    left: 37px;
+}
+
+.list[custom-f="dt"][data-node-id] .protyle-action svg {
+    left: 20px;
 }
 
 /*前继承线*/
@@ -3569,14 +3594,12 @@ div[data-node-id][data-type="NodeHeading"][custom-f~=dm]::after {
 
 /*上框线*/
 .protyle-wysiwyg *[custom-f="dt"] .li:first-child::before {
-    /* border-radius: 5px 0 0 0; */
     border-radius: 0;
 }
 
 /*下框线*/
 .protyle-wysiwyg *[custom-f="dt"] .li:nth-last-child(2)::after {
     border-bottom: 2px solid var(--b3-border-color1) !important;
-    /* border-radius: 0 0 0 5px; */
     border-radius: 0;
 }
 
@@ -3596,6 +3619,7 @@ div[data-node-index]>[data-type="NodeListItem"]::after,
 div[data-node-index]>[data-type="NodeListItem"]::before {
     display: none;
 }
+
 
 
 
@@ -3784,3 +3808,36 @@ div[data-node-index]>[data-type="NodeListItem"]::before {
 }
 
 /* -------------------------------------------------对整个文档实行自定义属性 END--------------------------------------------- */
+
+
+/* 设置导出样式 */
+@media print {
+    :root {
+        font-family: "仓耳今楷03";
+    }
+
+    div.hr>div {
+        border-color: transparent !important;
+    }
+
+    .h1 {
+        page-break-before: always;
+    }
+
+    div.hr {
+        page-break-after: always;
+    }
+
+    .list[custom-f="dt"][data-node-id] .protyle-action svg {
+        display: none !important;
+    }
+
+    .b3-typography [custom-f~="dt"] [data-subtype="o"][data-node-id].li>div.protyle-action,
+    .protyle-content [custom-f~="dt"] [data-subtype="o"][data-node-id].li>div.protyle-action {
+        display: none !important;
+    }
+
+    .list[custom-f="dt"][data-node-id] .protyle-action {
+        display: none !important;
+    }
+}

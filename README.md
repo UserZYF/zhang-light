@@ -2,9 +2,19 @@
 
 #### 字体
 
-- **解压主题文件夹后，建议从下面网址下载仓耳今楷03-W04字体**
-  - https://www.ztxz.org.cn/canger/549.html
+- 解压主题文件夹后，建议从下面网址下载仓耳今楷03-W04字体或者霞鹜文楷字体
+  - 仓耳金楷字体地址：https://www.ztxz.org.cn/canger/549.html
+    - 目前此字体存在的问题是输入“\”符号时，会和后面文字有距离
+  - 霞鹜文楷字体地址：https://github.com/lxgw/LxgwWenKai/
   - 安装后可自动生效，不用做什么设置；如果没有立即生效，可以重启一下思源笔记
+
+#### 0.76版本更新
+
+- 修复标签页兼容性问题
+- 修复标题折叠引起的编号错误的问题
+- 增加导出PDF时在分割线和一级标题处分页
+- 修复导出PDF时列表转思维导图“·”符号位置错乱问题
+- 取消折叠标题中去除自动编号的设置
 
 #### 0.75版本更新说明
 
@@ -97,6 +107,8 @@
 | 去掉本文档网络图片左上角图标 | f    | picno                     |
 
 ### 主题截图
+
+![preview.png](https://tva1.sinaimg.cn/large/0082QUidly1h2e3atpvxnj31hc0u0qc4.jpg)
 
 ![image.png](https://tva1.sinaimg.cn/large/0082QUidly1gzsgda4t7aj31hc0smkao.jpg)
 
