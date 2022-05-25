@@ -40,6 +40,7 @@ body {
     border-bottom: var(--b3-border-dashed);
     padding: 1px 8px;
     box-sizing: border-box;
+    height: 33px;
 }
 
 /* ----------------------------------------------------------设置主要背景色 END------------------------------------------------------- */
@@ -112,6 +113,12 @@ body {
     margin-top: 6px;
 }
 
+/* 文档中第一个标题上边距为0 */
+.protyle-wysiwyg [data-node-id][data-type="NodeHeading"]:first-child,
+.b3-typography [data-type="NodeHeading"]:first-child {
+    margin-top: 0px !important;
+}
+
 /* 设置6级标题高度 */
 .protyle-wysiwyg [data-node-id].h6 {
     height: 22px;
@@ -168,7 +175,6 @@ div.list div[data-type="NodeHeading"]::after {
 .b3-typography table {
     display: table;
     width: 100%;
-    text-align: center;
 }
 
 /* 表格居中的自定义属性 */
@@ -202,7 +208,7 @@ th, td {
 /* 设置表格行悬浮高亮 */
 table tr:hover {
     background: var(--b3-theme-hover2) !important;
-    color: var(--b3-theme-primary) !important;
+    /* color: var(--b3-theme-primary) !important; */
 }
 
 /* -------------------------------表格end------------------------------------- */
@@ -867,7 +873,7 @@ code.hljs {
 .layout-tab-bar .item {
     padding: 1px 4px 1px 4px;
     margin: 0px;
-    border: var(--b3-border-normal);
+    border: 1px solid var(--b3-border-color);
     border-collapse: collapse !important;
     border-radius: var(--b3-border-radius-none) !important;
     background-color: var(--b3-theme-tab);
@@ -887,7 +893,7 @@ code.hljs {
 /* ————————————————————鼠标悬浮在标签页上面———————————————————— */
 .layout-tab-bar .item:hover {
     background-color: var(--b3-theme-hover2) !important;
-    border: 1px solid var(--b3-theme-primary) !important;
+    /* border: 1px solid var(--b3-theme-primary) !important; */
 }
 
 .layout-tab-bar .item:hover .item__text {
@@ -932,7 +938,7 @@ code.hljs {
     color: gray;
     background-color: var(--b3-theme-background2);
     font-size: 14px !important;
-    height: 26px;
+    /* height: 26px; */
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -1159,22 +1165,7 @@ div.sb>div[data-type="NodeHeading"] {
     transition: all 0.1s ease-in-out;
 }
 
-/* 调整顶栏图标外边距 */
-#toolbar .toolbar__item {
-    margin: 0 4px;
-}
 
-/* 设置顶栏高度 */
-.toolbar {
-    height: 24px;
-    line-height: 24px;
-}
-
-/* 调整顶栏图标大小 */
-div#toolbar svg {
-    height: 12px;
-    width: 12px;
-}
 
 /* ————————————————————————文档树区分有子文档和无子文档的文档—————————————————————— */
 .b3-list-item.b3-list-item--hide-action .b3-list-item__toggle.fn__hidden::before {
@@ -1192,27 +1183,12 @@ div#toolbar svg {
 }
 
 /* ------------------------------------------------------文档树 END--------------------------------------- */
-/* ——————————————————————————————文档树条目前面图标的大小—————————————————————————————— */
-.b3-list-item__icon svg, .b3-list-item__icon img {
-    float: left;
-    margin: 6px 0;
-    vertical-align: middle !important;
-    color: var(--b3-theme-on-surface);
-}
 
 /* ——————————————————————————————点击文档树emoji不弹出修改窗口—————————————————————————— */
 span.b3-list-item__icon.b3-tooltips.b3-tooltips__n {
     pointer-events: none;
 }
 
-/* ——————————————————————————————增大emoji图标大小—————————————————————————————— */
-.b3-list-item__icon svg,
-.b3-list-item__icon img {
-    height: 18px;
-    width: 18px;
-    position: relative;
-    top: -1px;
-}
 
 /* -----------------------------------------------------------文档树条目------------------------------------------------- */
 /* ------------------------------------文档树文字设置为灰色------------------------------- */
@@ -1303,6 +1279,11 @@ span.b3-list-item__action.b3-tooltips[data-type="more-file"] {
 span.b3-list-item__action.b3-tooltips[data-type="more-root"]:hover,
 span.b3-list-item__action.b3-tooltips[data-type="more-file"]:hover {
     background-image: url(src/new-file-c.svg);
+    background-color: transparent;
+}
+
+/* 将鼠标悬浮在文档树折叠按钮时的背景颜色设置为透明色 */
+.b3-list-item__toggle--hl:hover {
     background-color: transparent;
 }
 
@@ -2027,9 +2008,8 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
 .b3-button--cancel,
 .b3-button--outline {
     border-radius: var(--b3-border-radius-noraml);
-    background-color: transparent;
+    background-color: var(--b3-theme-tm1);
     color: var(--b3-theme-primary);
-    border: 0.05em solid var(--b3-theme-primary);
     box-sizing: border-box;
 }
 
@@ -2042,9 +2022,18 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
 .b3-button--outline:focus {
     transition: all 0.1s ease-in-out;
     color: white;
-    border: 1px solid var(--b3-theme-primary);
     background-color: var(--b3-theme-primary);
     box-sizing: border-box;
+}
+
+/* 有外框的按钮取消显示外框 */
+.b3-button--outline {
+    box-shadow: none;
+}
+
+.b3-button--outline:hover,
+.b3-button--outline:focus {
+    box-shadow: none;
 }
 
 /* -------------------------------------------------------按钮样式 END------------------------------------------------------- */
@@ -2075,7 +2064,7 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
 .b3-text-field, .pcr-app .pcr-interaction .pcr-result {
     color: gray;
     /* border: 2px solid rgba(128, 128, 128, 0.767); */
-    border: 0.05em solid rgba(128, 128, 128, 0.767);
+    /* border: 0.05em solid rgba(128, 128, 128, 0.767); */
     border-radius: var(--b3-border-radius-noraml);
 }
 
@@ -2088,15 +2077,14 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
 .b3-tab-container .b3-select {
     color: gray;
     background-color: var(--b3-theme-hover-gray);
-    border-bottom: 2px solid gray !important;
+    /* border-bottom: 2px solid gray !important; */
     box-shadow: none;
 }
 
-.b3-tab-container .b3-select:hover {
+/* .b3-tab-container .b3-select:hover {
     color: var(--b3-theme-primary);
     background-color: var(--b3-theme-tm2);
-    border-bottom: 2px solid var(--b3-theme-primary) !important;
-}
+} */
 
 /* -----------------------------------------设置面板关闭按钮设置-------------------------------------------- */
 .b3-dialog__container .b3-dialog__close {
@@ -2122,19 +2110,19 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
 /* -----------------------------------------设置面板关闭按钮设置 END-------------------------------------------- */
 /* ————————————————————设置shift+鼠标左键弹出的属性窗口中输入框的背景颜色和底边框—————————————————— */
 .b3-text-field:not(textarea.b3-text-field.b3-text-field--text.fn__block), .pcr-app .pcr-interaction .pcr-result {
-    border-bottom: 2px solid inherit;
+    /* border-bottom: 2px solid inherit; */
     box-sizing: border-box !important;
 }
 
 .b3-text-field:not(textarea.b3-text-field.b3-text-field--text.fn__block):hover, .pcr-app .pcr-interaction .pcr-result:hover {
-    border-bottom: 1px solid var(--b3-theme-on-background) !important;
+    /* border-bottom: 1px solid var(--b3-theme-on-background) !important; */
     color: var(--b3-font-color-hover);
     background-color: var(--b3-theme-hover-gray);
     box-shadow: none;
 }
 
 .b3-text-field:not(textarea.b3-text-field.b3-text-field--text.fn__block):focus, .pcr-app .pcr-interaction .pcr-result:focus {
-    border-bottom: 1px solid var(--b3-theme-primary) !important;
+    /* border-bottom: 1px solid var(--b3-theme-primary) !important; */
     color: var(--b3-theme-primary);
     background-color: var(--b3-theme-tm2);
     box-shadow: none;
@@ -2145,8 +2133,8 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
 .search__header .b3-text-field--text {
     background-color: var(--b3-theme-hover2);
     color: var(--b3-theme-primary);
-    border: 1px solid transparent;
-    border-bottom: 1px solid var(--b3-theme-primary);
+    /* border: 1px solid transparent;
+    border-bottom: 1px solid var(--b3-theme-primary); */
 }
 
 .b3-form__icon.search__header {
@@ -2601,7 +2589,7 @@ button.b3-color__square[style="background-color:var(--b3-pdf-background7)"]::bef
 
 /* ————————————————————题头图下方设置虚线边框———————————————————— */
 .protyle-background__img {
-    border-bottom: var(--b3-border-dashed);
+    /* border-bottom: var(--b3-border-dashed); */
     background-color: var(--b3-theme-background);
 }
 
@@ -2814,6 +2802,16 @@ sub, sup {
 ::-webkit-scrollbar {
     width: 7px;
 }
+
+/* 文档树滚动条，鼠标悬浮时才显示 */
+.fn__flex-1::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.fn__flex-1:hover::-webkit-scrollbar-thumb {
+    background-color: var(--b3-scroll-color);
+}
+
 
 /* ————————————————————大纲等文字显示主题色———————————————————— */
 .block__logo {

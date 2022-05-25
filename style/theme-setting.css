@@ -31,7 +31,7 @@
     /* 05 侧栏背景颜色 */
     --b3-theme-surface: var(--b3-theme-background2);
     /* 06 标签页背景颜色 */
-    --b3-theme-tab: var(--b3-theme-background-gray);
+    --b3-theme-tab: #dee1e6;
     /* 07 错误颜色，保持默认 */
     --b3-theme-error: #ec8d8deb;
     /* 08 透明背景，适用于设置背景中引用的背景 */
@@ -79,7 +79,7 @@
     --b3-list-hover: transparent;
 
     /* 标签页/页签 */
-    --b3-tab-background: #e1e1e1;
+    --b3-tab-background: #dee1e6;
     --b3-tab-background-hover: #fff;
 
     /* 菜单 */
