@@ -1,0 +1,59 @@
+/* ————————————————————所有边距初始化（不知道有没有作用）———————————————————— */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* ----------------------------------------------------块添加圆角------------------------------------------- */
+.protyle-wysiwyg [data-node-id] {
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+/* ————————————————————去掉软件的边框线———————————————————— */
+body.body--win32 {
+    border: none !important;
+}
+
+/* ————————————————————设置滚动条样式——————————————————__ */
+::-webkit-scrollbar-thumb {
+    background-color: var(--b3-scroll-color);
+    border-radius: var(--b3-border-radius-half-round);
+}
+
+/* ————————————————————修改滚动条宽度———————————————————— */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+/* 文档树滚动条，鼠标悬浮时才显示 */
+.fn__flex-1::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.fn__flex-1:hover::-webkit-scrollbar-thumb {
+    background-color: var(--b3-scroll-color);
+}
+
+/* -----------------------------------------------------------小细节----------------------------------------------------- */
+/* ————————————————————设置数学公式块等编辑器左上角和右上角为直角———————————————————— */
+textarea.b3-text-field.b3-text-field--text.fn__block {
+    border-radius: var(--b3-border-radius-math);
+}
+
+/* 调整数学公式块的背景颜色 */
+/* .render-node:hover {
+    background-color: #fffbe4;
+} */
+
+/* 调整内容中标题左侧文档图标大小 */
+.protyle-title.protyle-wysiwyg--attr span svg {
+    height: 20px;
+    width: 20px;
+    float: left;
+}
+
+/* 块标提示不被窗口线遮挡 */
+.protyle-gutters {
+    z-index: 3;
+}

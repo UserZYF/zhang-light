@@ -1,0 +1,21 @@
+/* -------------------------------------------------面包屑导航样式-------------------------------------------- */
+.protyle-breadcrumb {
+    color: gray;
+    background-color: var(--b3-theme-background2);
+    font-size: 14px !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.protyle-breadcrumb__item svg {
+    height: 14px;
+    width: 14px;
+}
+
+.protyle-breadcrumb__item:hover,
+.protyle-breadcrumb__item--active {
+    background-color: var(--b3-theme-tm2) !important;
+}
+
+/* -------------------------------------------------面包屑导航样式 END-------------------------------------------- */

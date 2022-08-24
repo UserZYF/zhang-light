@@ -1,0 +1,103 @@
+/* -------------------------------------------------代码块样式--------------------------------------------------- */
+.code-block {
+    margin: 4px !important;
+    border-radius: var(--b3-border-radius-noraml) !important;
+    background-color: var(--b3-theme-background2) !important;
+}
+
+/* 代码块主体部分设置 */
+.b3-typography div.hljs,
+.protyle-wysiwyg div.hljs {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    padding-left: 16px;
+    font-family: var(--b3-font-family-code);
+    background-size: 20px 20px;
+    background-image: none !important;
+    background: transparent;
+}
+
+/* 代码块上方部分设置 */
+.protyle-wysiwyg .code-block,
+.b3-typography .code-block {
+    position: relative;
+    display: block;
+    border-radius: var(--b3-border-radius-noraml);
+    padding-top: 32px !important;
+    box-shadow: var(--b3-code-block-shadow);
+    border-bottom: var(--b3-border-wider);
+    border-top: 3px solid #2ea121;
+}
+
+/* 设置顶部三个mac按钮样式 */
+.code-block::after {
+    content: ' ';
+    position: absolute;
+    background: #fa625c;
+    box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
+    border-radius: var(--b3-border-radius-round);
+    top: 10px;
+    left: 15px;
+    height: 12px;
+    width: 12px;
+    z-index: 1;
+}
+
+/*  ————————————————————————————————————代码块行数——————————————————————————————————*/
+.protyle-linenumber__rows {
+    margin-top: 32px !important;
+    padding: 4px;
+    background-color: var(--b3-theme-background2) !important;
+    margin-bottom: 0px;
+    font-family: var(--b3-font-family-code);
+}
+
+/* 代码块行数的数字  */
+.protyle-linenumber__rows span::before {
+    color: rgba(128, 128, 128, 0.5);
+}
+
+/* 代码块的语言代码 */
+.b3-typography .code-block .protyle-action .protyle-action__language,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+    margin-top: 0px;
+    position: absolute;
+    right: 4em;
+    border-radius: 4px;
+    opacity: 1 !important;
+    font-family: var(--b3-font-family-code);
+}
+
+.b3-typography .code-block .protyle-action .protyle-action__language::after,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language::after {
+    content: "›";
+    font-family: var(--b3-font-family-code);
+    color: #80808080;
+    opacity: 1;
+}
+
+/* 复制和设置按钮样式 */
+.b3-typography .code-block .protyle-action .protyle-icon,
+.b3-typography .code-block .protyle-action .protyle-action__language,
+.protyle-wysiwyg .code-block .protyle-action .protyle-icon,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+    opacity: 1 !important;
+    background-color: transparent !important;
+}
+
+.b3-typography .code-block .protyle-action .protyle-icon svg,
+.b3-typography .code-block .protyle-action .protyle-action__language svg,
+.protyle-wysiwyg .code-block .protyle-action .protyle-icon svg,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language svg {
+    color: gray;
+}
+
+/* ————————————————————————————————集市里边代码块的主题—————————————————————————————— */
+code.hljs {
+    background-color: var(--b3-theme-background2) !important;
+    border-top: 3px solid #2ea121;
+    border-bottom: var(--b3-border-wider);
+    box-shadow: var(--b3-point-shadow);
+}
+
+/* -------------------------------------------------代码块样式 END--------------------------------------------------- */

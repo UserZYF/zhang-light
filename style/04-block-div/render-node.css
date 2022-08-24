@@ -1,0 +1,51 @@
+/* ------------------------------------------------块嵌入/嵌入块------------------------------------------------- */
+.protyle-wysiwyg [data-node-id].render-node[data-type="NodeBlockQueryEmbed"] {
+    position: relative;
+    display: block;
+    border-radius: var(--b3-border-radius-noraml);
+    padding: 5px 20px;
+    margin: 4px;
+    border-bottom: var(--b3-border-wider);
+    border-top: 3px solid #245bdb;
+    color: gray;
+    background-color: var(--b3-theme-background2);
+    position: relative;
+}
+
+/* 为嵌入块左上角添加icon图标 */
+.protyle-wysiwyg [data-node-id].render-node[data-type="NodeBlockQueryEmbed"]::before {
+    content: url(../../src/qr.svg);
+    position: absolute;
+    top: 3px;
+    left: 0px;
+}
+
+/* 进行SQL查询时嵌入块之间分割线颜色 */
+.render-node .protyle-wysiwyg__embed {
+    border-top: 0.1em dashed rgba(128, 128, 128, 0.3);
+}
+
+/* 嵌入块中的标题取消自动编号 */
+.render-node [data-type="NodeHeading"]>div:before {
+    display: none !important;
+}
+
+/* 嵌入块右上角图标颜色 */
+/* .code-block .protyle-icons .protyle-icon, */
+.render-node .protyle-icons .protyle-icon {
+    color: gray;
+    background-color: #80808080;
+}
+
+.render-node .protyle-icons .protyle-icon:hover {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-tm1);
+}
+
+/* 嵌入块中标题外边距为4px */
+.render-node [data-type="NodeHeading"] {
+    margin: 4px !important;
+}
+
+
+/* ------------------------------------------------块嵌入/嵌入块 END------------------------------------------------- */

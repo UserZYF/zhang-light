@@ -1,0 +1,91 @@
+/* ---------------------------------------------------------设置界面--------------------------------------------------------- */
+.b3-list-item--big {
+    color: gray;
+    font-size: 1em;
+}
+
+.b3-dialog__container .b3-list--background .b3-list-item--focus {
+    background-color: var(--b3-theme-hover) !important;
+    font-size: 1em !important;
+}
+
+.b3-switch:checked:after {
+    background-color: white;
+}
+
+.b3-text-field, .pcr-app .pcr-interaction .pcr-result {
+    color: gray;
+}
+
+.b3-tab-container .b3-select {
+    background-color: var(--b3-theme-background2);
+    color: gray;
+}
+
+.b3-text-field, .pcr-app .pcr-interaction .pcr-result {
+    color: gray;
+    /* border: 2px solid rgba(128, 128, 128, 0.767); */
+    /* border: 0.05em solid rgba(128, 128, 128, 0.767); */
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+.b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
+    color: var(--b3-theme-primary) !important;
+}
+
+/* ----------------------------------------------------设置界面 END -------------------------------------------------*/
+/* ————————————————————为设置界面输入框设置样式———————————————————— */
+.b3-tab-container .b3-select {
+    color: gray;
+    background-color: var(--b3-theme-hover-gray);
+    /* border-bottom: 2px solid gray !important; */
+    box-shadow: none;
+}
+
+/* .b3-tab-container .b3-select:hover {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-tm2);
+} */
+
+
+/* ————————————————————设置shift+鼠标左键弹出的属性窗口中输入框的背景颜色和底边框—————————————————— */
+/* .b3-text-field:not(textarea.b3-text-field.b3-text-field--text.fn__block), 
+.pcr-app .pcr-interaction .pcr-result {
+    box-sizing: border-box !important;
+}
+
+.b3-text-field:not(textarea.b3-text-field.b3-text-field--text.fn__block):hover, 
+.pcr-app .pcr-interaction .pcr-result:hover {
+    color: var(--b3-font-color-hover);
+    background-color: var(--b3-theme-hover-gray);
+    box-shadow: none;
+}
+
+.b3-text-field:not(textarea.b3-text-field.b3-text-field--text.fn__block):focus, 
+.pcr-app .pcr-interaction .pcr-result:focus {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-tm2);
+    box-shadow: none;
+} */
+
+/* ————————————————————设置shift+鼠标左键弹出的属性窗口中输入框的背景颜色和底边框—————————————————— */
+
+
+/* ————————————————————账号-续订价格那里的设置———————————————————— */
+.config-account__center--text .b3-button--outline:hover {
+    color: inherit;
+    background-color: inherit;
+}
+
+/* ————————————————————表单设置不能拖拽缩放———————————————————— */
+textarea.b3-text-field.fn__flex-1 {
+    border: 1px solid transparent;
+    resize: none;
+}
+
+/* 取消集市里边主题预览图鼠标悬浮 */
+.b3-card:hover {
+    background-color: inherit !important;
+    box-shadow: var(--b3-point-shadow) !important;
+    transform: none !important;
+}

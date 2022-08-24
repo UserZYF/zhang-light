@@ -1,0 +1,650 @@
+/* -----------------------------------------------------块的自定义属性开始-------------------------------------------- */
+/* ——————————————————奥运限定版背景（冰墩墩和雪容融）—————————————— */
+.protyle-wysiwyg [data-node-id][custom-f~=ay] {
+    /* background-color: #ad0006; */
+    /* background-image: url('src/ay.jpg'); */
+    background-image: url('../../src/ay.jpg');
+    background-size: 300px auto;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    color: #fefcfe;
+    width: 300px;
+    height: 300px;
+    /* 固定高度，超出后滚动，因为是图片背景，所以超级块后会拉伸背景，不建议用超级块 */
+    overflow-y: scroll;
+    box-shadow: var(--b3-right-bottom-shadow);
+    position: relative;
+    z-index: 2;
+    padding: 20px 10px;
+    margin: 20px 5px !important;
+    text-align: justify;
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~=ay2] {
+    /* background-color: #3434c7; */
+    /* background-image: url('src/ay2.jpg'); */
+    background-image: url('../../src/ay2.jpg');
+    background-size: 300px auto;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    color: #fefcfe;
+    width: 300px;
+    height: 300px;
+    overflow-y: scroll;
+    box-shadow: var(--b3-right-bottom-shadow);
+    position: relative;
+    z-index: 2;
+    padding: 20px 10px !important;
+    margin: 20px 5px !important;
+    text-align: justify;
+}
+
+/* 修改奥运限定背景中无序列表前面符号·的颜色 */
+.list[data-node-id][custom-f~=ay] .protyle-action svg,
+.list[data-node-id][custom-f~=ay2] .protyle-action svg {
+    color: white;
+}
+
+/* 设置滚动条的样式 */
+[data-node-id][custom-f~=ay]::-webkit-scrollbar-thumb,
+[data-node-id][custom-f~=ay2]::-webkit-scrollbar-thumb {
+    background-color: var(--b3-scroll-color-card);
+}
+
+/* ——————————————————奥运限定版背景（冰墩墩和雪容融） END—————————————— */
+/* ————————————————————径向渐变背景—————————————— */
+.protyle-wysiwyg [data-node-id][custom-f~=jb] {
+    height: 300px;
+    width: 300px;
+    overflow: scroll;
+    background-image: radial-gradient(#f8ca6c 20%, #fcf4df 80%);
+    box-shadow: var(--b3-right-bottom-shadow);
+    padding: 20px 10px;
+    margin: 30px 5px;
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    color: rgb(80, 79, 79);
+    text-align: justify;
+}
+
+/* ————————————字体———————————— */
+.protyle-wysiwyg [data-node-id][custom-f~=k] {
+    font-family: "楷体";
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~=s] {
+    font-family: "宋体";
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~=h] {
+    font-family: "黑体";
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~=w] {
+    font-family: "微软雅黑";
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~=xk] {
+    font-family: "华文行楷";
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~=l] {
+    font-family: "隶书";
+}
+
+/* ———————————————加粗————————————— */
+.protyle-wysiwyg [data-node-id][custom-f~=bold],
+.protyle-wysiwyg [data-node-id][custom-f~=jc] {
+    font-weight: bold;
+}
+
+/* ————————————文字下划线———————————— */
+/* 曲线q */
+.protyle-wysiwyg [data-node-id][custom-f~=q] {
+    /* text-decoration: underline wavy var(--b3-theme-on-background); */
+    text-decoration: underline wavy var(--b3-theme-on-background);
+    text-underline-offset: 4px;
+    color: var(--b3-theme-on-background);
+}
+
+/* 虚线x */
+.protyle-wysiwyg [data-node-id][custom-f~=x] {
+    /* text-decoration: underline wavy var(--b3-theme-on-background); */
+    text-decoration: underline dashed var(--b3-theme-on-background);
+    text-underline-offset: 4px;
+    color: var(--b3-theme-on-background);
+}
+
+/* ————————————文本竖排(适合古诗文）———————————— */
+.protyle-wysiwyg [data-node-id][custom-f~=sp] {
+    writing-mode: vertical-lr;
+    /*从左向右 从右向左是 writing-mode: vertical-rl;*/
+    font-size: 120%;
+    line-height: 2em;
+    background-color: #f0efe2;
+    padding: 20px;
+    border: 20px solid #e1e0c7;
+    word-wrap: break-word;
+    letter-spacing: 4px;
+}
+
+/* ————————————文本缩进———————————— */
+.protyle-wysiwyg [data-node-id][custom-f~=sj] {
+    text-indent: 2em;
+}
+
+/* ————————————文字大小———————————— */
+.protyle-wysiwyg [data-node-id][custom-f~="1.1"] {
+    font-size: 110%;
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~="1.2"] {
+    font-size: 120%;
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~="1.3"] {
+    font-size: 130%;
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~="1.4"] {
+    font-size: 140%;
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~="1.5"] {
+    font-size: 150%;
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~="1.75"] {
+    font-size: 175%;
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~="2"] {
+    font-size: 200%;
+}
+
+/* ————————————英文字母大小写———————————— */
+/* 首字母大写 */
+.protyle-wysiwyg [data-node-id][custom-f~=dx] {
+    text-transform: capitalize;
+}
+
+/* 所有字母大写 */
+.protyle-wysiwyg [data-node-id][custom-f~=ddx] {
+    text-transform: uppercase;
+}
+
+/* ————————————文字弹幕效果尝试———————————— */
+/* 普通弹幕 */
+.protyle-wysiwyg [data-node-id][custom-f~=dm] {
+    width: 100%;
+    margin: 2px 4px;
+    /* border-top: var(--b3-border-dashed-gray-wider);
+    border-bottom: var(--b3-border-dashed-gray-wider); */
+    overflow: hidden;
+    background-color: var(--b3-theme-background2);
+    border-radius: var(--b3-border-radius-none);
+}
+
+/* 下调弹幕中备注等的位置 */
+.protyle-wysiwyg [data-node-id][custom-f~=dm] .protyle-attr {
+    top: 0px;
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~=dm]>div[contenteditable="true"][spellcheck="false"] {
+    padding-left: 20px;
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    animation: 25s wordsLoop linear infinite normal;
+}
+
+@keyframes wordsLoop {
+    0% {
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+
+/* 鼠标悬浮在文字上方时暂停 */
+.protyle-wysiwyg [data-node-id][custom-f~=dm]>div[contenteditable="true"][spellcheck="false"]:hover {
+    animation-play-state: paused;
+}
+
+/* 对标题设置弹幕时去掉标题下方的圆角矩形 */
+div[data-node-id][data-type="NodeHeading"][custom-f~=dm]::after {
+    display: none !important;
+}
+
+
+/* 通过自定义属性加边框，边框不要与超级块一起用 */
+.protyle-wysiwyg [data-node-id][custom-f~=bk] {
+    outline: var(--b3-border-dashed-gray-wider);
+    margin-bottom: 6px;
+}
+
+/* 设置表格自动宽度 */
+.protyle-wysiwyg [data-node-id][custom-f~=auto] table {
+    /* display: table; */
+    width: auto !important;
+    /* overflow: scroll; */
+    white-space: nowrap;
+}
+
+/* 表头和表行格式一致 */
+.protyle-wysiwyg [data-node-id][custom-f~=biaotou] table th {
+    font-weight: normal !important;
+    text-align: left !important;
+    color: inherit !important;
+    background-color: var(--b3-table-trn-color) !important;
+}
+
+/* 通过自定义属性去掉图片边框和阴影 */
+.protyle-wysiwyg [data-node-id][custom-f~=pic] img {
+    box-shadow: none !important;
+    border-radius: var(--b3-border-radius-none) !important;
+    border: 0.05em solid transparent;
+}
+
+/* ----------------------------------------------自定义属性 END-------------------------------------------- */
+/* -----------------------------------------------列表转化为表格------------------------------------------- */
+/* 设置整个列表表格的缩进 */
+.list[data-node-id][data-type="NodeList"][custom-f="bg"] {
+    padding: 4px;
+}
+
+/* ————————————————————所有子项目的表格（除去第一列其余的列），包含溢出的空白部分，所以才会有边框—————————————————————— */
+.protyle-wysiwyg *[custom-f="bg"] .li .list {
+    padding: 0px;
+    margin: 0px !important;
+    width: 100%;
+    /* outline: 0.05em solid #8080804d; */
+    outline: var(--b3-border-normal);
+}
+
+/* ————————————————————对所有子列表项设置格式———————————————————— */
+.protyle-wysiwyg *[custom-f="bg"] .li {
+    display: flex;
+    /* outline: 0.05em solid #8080804d; */
+    outline: var(--b3-border-normal);
+    background-color: var(--b3-theme-background);
+    border-radius: var(--b3-border-radius-none);
+    /* padding-right: 6px; */
+}
+
+/* ————————————————————调整每个子列表项右侧边距———————————————————— */
+.protyle-wysiwyg *[custom-f="bg"] .li>div {
+    margin-right: 6px;
+}
+
+.protyle-wysiwyg *[custom-f="bg"] .li:hover {
+    background-color: var(--b3-theme-hover2);
+}
+
+/* ————————————————————大神增加代码———————————————————— */
+.protyle-wysiwyg *[custom-f="bg"] [data-node-id].li>[data-node-id] {
+    margin-left: 20px !important;
+}
+
+/* ————————————————————对符号后文字设置格式———————————————————— */
+.protyle-wysiwyg *[custom-f="bg"] .p {
+    flex: 1;
+    text-align: left;
+    align-items: center;
+    display: flex;
+    min-width: 120px;
+    height: auto;
+    margin: 0;
+    text-align: justify;
+}
+
+.protyle-wysiwyg *[custom-f="bg"] .li>.list>.li {
+    outline: none !important;
+    /* border-top: 0.05em solid #8080804d; */
+    border-top: var(--b3-border-normal);
+}
+
+.protyle-wysiwyg *[custom-f="bg"] .li>.list>.li:first-of-type {
+    border-top: none;
+}
+
+/* ————————————————————去除小竖线———————————————————— */
+.list[data-node-id][data-type="NodeList"][custom-f="bg"] .li>:before {
+    display: none;
+}
+
+/* ————————————————————设置前面的符号居中对齐———————————————————— */
+.list[data-node-id][data-type="NodeList"][custom-f="bg"] .protyle-action {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 20px;
+}
+
+/* ————————————————————减小前面符号·的大小———————————————————— */
+.list[data-node-id][data-type="NodeList"][custom-f="bg"] .protyle-action {
+    color: var(--b3-theme-primary);
+}
+
+.list[data-node-id][data-type="NodeList"][custom-f="bg"] .protyle-action>svg {
+    width: 10px;
+}
+
+/* ---------------------------------------------------------列表转化为表格 END-------------------------------------------------- */
+
+
+/*————————————————————————列表转导图————————————————————————*/
+/* zhang-light 专属 */
+/*整个导图取消缩进*/
+.protyle-wysiwyg *[custom-f="dt"] .li .list {
+    padding: 0px;
+    margin: 0px;
+    transition: all 0.5s;
+}
+
+.protyle-wysiwyg *[custom-f="dt"].list {
+    width: 100%-50 !important;
+    overflow-x: auto;
+    /*溢出滚动*/
+    padding-bottom: 30px;
+    margin: 10px 4px;
+}
+
+/* 设置首项底色为蓝色 */
+.protyle-wysiwyg *[custom-f="dt"].list[data-node-index]>div.li>div.p>div:first-child {
+    background-color: var(--b3-theme-primary);
+    color: white;
+    outline: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* 第二项颜色 */
+.protyle-wysiwyg *[custom-f="dt"].list[data-node-index]>div.li>div.list>div.li>div.p>div:first-child {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-tm1);
+    outline: none;
+    font-size: 1.1em;
+}
+
+/*子项设偏移调整*/
+.protyle-wysiwyg *[custom-f="dt"] [data-node-id].li>[data-node-id] {
+    margin-left: 20px !important;
+    margin-right: -24px !important;
+}
+
+.protyle-wysiwyg *[custom-f="dt"] [data-node-id].li>.list {
+    padding-left: 20px;
+}
+
+/*文字设置居中*/
+.protyle-wysiwyg *[custom-f="dt"] .li {
+    display: flex;
+}
+
+.protyle-wysiwyg *[custom-f="dt"] .li .p, .protyle-wysiwyg *[custom-f="dt"] .li [data-type="NodeHeading"] {
+    display: flex;
+    align-items: center;
+    left: 6px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.protyle-wysiwyg *[custom-f="dt"] .li [data-type="NodeHeading"]>[spellcheck="false"]:after {
+    display: none;
+}
+
+/*取消标题层级提示*/
+.protyle-wysiwyg *[custom-f="dt"] .li div {
+    border-right: 10px solid transparent;
+}
+
+/*文字框*/
+.protyle-wysiwyg *[custom-f="dt"] .li div>div[spellcheck="false"] {
+    margin-left: -8px;
+    padding: 5px 10px;
+    margin-top: 2px;
+    background-color: transparent;
+    border-radius: 1px;
+    outline: 1px solid var(--b3-border-color1);
+    max-width: 15vw;
+}
+
+.protyle-wysiwyg *[custom-f="dt"] .li[data-subtype="t"]>[data-node-id]>div[spellcheck="false"] {
+    padding: 5px 10px 5px 35px;
+}
+
+.protyle-wysiwyg *[custom-f="dt"] .li[data-subtype="o"]>[data-node-id]>div[spellcheck="false"] {
+    padding: 5px 10px 5px 25px;
+}
+
+/*去除竖线*/
+.list[custom-f="dt"][data-node-id] .li>:before {
+    display: none;
+}
+
+
+
+.protyle-content *[custom-f~=dt] [data-subtype="u"][data-node-id].li>div.protyle-action {
+    top: 50%;
+    margin-left: -18px;
+}
+
+.protyle-content *[custom-f~=dt] [data-subtype="o"][data-node-id].li>div.protyle-action {
+    top: calc(50% + 1px);
+    margin-left: 17px;
+}
+
+/*有序列表*/
+.list[custom-f="dt"][data-node-id] .protyle-action {
+    top: calc(50% + 1px);
+    left: 3px;
+    position: absolute;
+    transform: translate(0, -50%);
+    z-index: 2;
+}
+
+.protyle-wysiwyg *[custom-f="dt"] [data-subtype="u"][data-node-id].li>.protyle-action:after {
+    left: 37px;
+}
+
+.list[custom-f="dt"][data-node-id] .protyle-action svg {
+    left: 20px;
+}
+
+/*前继承线*/
+.protyle-wysiwyg *[custom-f="dt"] .li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-top: 2px solid var(--b3-border-color1);
+    width: 20px;
+    height: 50%;
+}
+
+/*上竖线*/
+.protyle-wysiwyg *[custom-f="dt"] .li::before {
+    bottom: 50%;
+    border-left: 2px solid var(--b3-border-color1);
+}
+
+/*下竖线*/
+.protyle-wysiwyg *[custom-f="dt"] .li::after {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    border-left: 2px solid var(--b3-border-color1);
+    width: 20px;
+    height: 50%;
+}
+
+/*单个子项直线*/
+.protyle-wysiwyg *[custom-f="dt"] .list>.li:first-child:nth-last-child(2)::after {
+    border-radius: 0px;
+    width: 22px;
+    margin-bottom: -2px;
+}
+
+/*单子项居中*/
+.protyle-wysiwyg *[custom-f="dt"] .list>.li:first-child:nth-last-child(2) {
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+/*取消多余线条*/
+.protyle-wysiwyg *[custom-f="dt"] .li:first-child::after, .protyle-wysiwyg *[custom-f="dt"] .li:nth-last-child(2)::before {
+    border: none !important;
+}
+
+/*上框线*/
+.protyle-wysiwyg *[custom-f="dt"] .li:first-child::before {
+    border-radius: 0;
+}
+
+/*下框线*/
+.protyle-wysiwyg *[custom-f="dt"] .li:nth-last-child(2)::after {
+    border-bottom: 2px solid var(--b3-border-color1) !important;
+    border-radius: 0;
+}
+
+/*后继承线*/
+.list[custom-f="dt"] .list::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-top: 2px solid var(--b3-border-color1);
+    width: 20px;
+    height: 0;
+}
+
+/*取消根目录线*/
+div[data-node-index]>[data-type="NodeListItem"]::after,
+div[data-node-index]>[data-type="NodeListItem"]::before {
+    display: none;
+}
+
+
+
+
+/*————————————————————————————————————————————————————————————————————————*/
+
+/* -----------------------------------------------------------便利贴样式------------------------------------------------- */
+/* ————————————————————浅色便利贴———————————————————— */
+/* 设置统一属性 */
+.protyle-wysiwyg [data-node-id][custom-q*="blt"] {
+    padding: 20px 10px !important;
+    margin: 20px 5px !important;
+    width: 300px !important;
+    min-height: 300px !important;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--b3-right-bottom-shadow);
+    box-sizing: border-box !important;
+    text-align: justify;
+}
+
+/* 单独设置属性 */
+.protyle-wysiwyg [data-node-id][custom-q="blt1"] {
+    color: var(--b3-card-error-color) !important;
+    background-color: var(--b3-card-error-background) !important;
+    border-top: 3px solid var(--b3-font-color1);
+}
+
+.protyle-wysiwyg [data-node-id][custom-q="blt2"] {
+    color: var(--b3-card-warning-color) !important;
+    background-color: var(--b3-card-warning-background) !important;
+    border-top: 3px solid var(--b3-font-color3);
+}
+
+.protyle-wysiwyg [data-node-id][custom-q="blt3"] {
+    color: var(--b3-card-info-color) !important;
+    background-color: var(--b3-card-info-background) !important;
+    border-top: 3px solid var(--b3-font-color6);
+}
+
+.protyle-wysiwyg [data-node-id][custom-q="blt4"] {
+    color: var(--b3-card-success-color) !important;
+    background-color: var(--b3-card-success-background) !important;
+    border-top: 3px solid var(--b3-font-color4);
+}
+
+/* ————————————————————深色便利贴———————————————————— */
+/* 设置统一属性 */
+.protyle-wysiwyg [data-node-id][custom-s*=blt] {
+    color: white !important;
+    border-left: 0px solid transparent !important;
+    box-sizing: border-box !important;
+    border-radius: var(--b3-border-radius-noraml) !important;
+    box-shadow: var(--b3-right-bottom-shadow);
+    padding: 20px 10px !important;
+    margin: 20px 5px !important;
+    position: relative;
+    z-index: 2;
+    width: 300px !important;
+    min-height: 300px !important;
+    border-top: 3px solid black !important;
+    text-align: justify;
+}
+
+/* 单独设置属性 */
+.protyle-wysiwyg [data-node-id][custom-s="blt1"] {
+    background: var(--b3-card-darker-red) !important;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 0),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 0),
+        linear-gradient(hsla(0, 0%, 100%, .1)1px,
+            transparent 0),
+        linear-gradient(90deg, hsla(0, 0%, 100%, .1) 1px,
+            transparent 0) !important;
+    background-size: 75px 75px, 75px 75px,
+        15px 15px, 15px 15px !important;
+}
+
+.protyle-wysiwyg [data-node-id][custom-s="blt2"] {
+    background: var(--b3-card-darker-yellow) !important;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 0),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 0),
+        linear-gradient(hsla(0, 0%, 100%, .1)1px,
+            transparent 0),
+        linear-gradient(90deg, hsla(0, 0%, 100%, .1) 1px,
+            transparent 0) !important;
+    background-size: 75px 75px, 75px 75px,
+        15px 15px, 15px 15px !important;
+}
+
+.protyle-wysiwyg [data-node-id][custom-s="blt3"] {
+    background: var(--b3-card-darker-blue) !important;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 0),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 0),
+        linear-gradient(hsla(0, 0%, 100%, .1)1px,
+            transparent 0),
+        linear-gradient(90deg, hsla(0, 0%, 100%, .1) 1px,
+            transparent 0) !important;
+    background-size: 75px 75px, 75px 75px,
+        15px 15px, 15px 15px !important;
+}
+
+.protyle-wysiwyg [data-node-id][custom-s="blt4"] {
+    background: var(--b3-card-darker-green) !important;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 0),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 0),
+        linear-gradient(hsla(0, 0%, 100%, .1)1px,
+            transparent 0),
+        linear-gradient(90deg, hsla(0, 0%, 100%, .1) 1px,
+            transparent 0) !important;
+    background-size: 75px 75px, 75px 75px,
+        15px 15px, 15px 15px !important;
+}
+
+/* -----------------------------------------------------------便利贴样式 END------------------------------------------------- */
+/* -----------------------------------------------------块的自定义属性结束-------------------------------------------- */

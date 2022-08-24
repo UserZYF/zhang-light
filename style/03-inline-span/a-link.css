@@ -1,0 +1,53 @@
+/* -----------------------------------------超链接 a----------------------------------- */
+.item__main a,
+.protyle-wysiwyg [data-node-id] span[data-type='a'] {
+    color: inherit;
+    padding: 0.1em 0.2em;
+    padding-bottom: 0.05em !important;
+    margin: 2px;
+    border-bottom: 1px solid gray;
+    word-break: break-all;
+}
+
+.b3-typography a {
+    word-break: break-all;
+}
+
+
+/* ——————————给超链接（包括导入的PDF文件等）前面加入图标—————————— */
+/* .item__main a::before,
+.protyle-wysiwyg [data-node-id] span[data-type="a"]:before {
+    content: "💬";
+    margin-right: 2px;
+    font-size: 80%;
+    position: relative;
+    top: -0.1em;
+} */
+
+.item__main a:hover,
+.protyle-wysiwyg [data-node-id] span[data-type='a']:hover {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-background-link-hover);
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid gray;
+    text-decoration: none;
+}
+
+/* ————————————————————标题上的链接去掉下划线，2群群友123的建议———————————————————— */
+.h1 span[data-type="a"],
+.h2 span[data-type="a"],
+.h3 span[data-type="a"],
+.h4 span[data-type="a"],
+.h5 span[data-type="a"],
+.h6 span[data-type="a"] {
+    border-bottom: 1px solid transparent !important;
+}
+
+/* ————————————————————正文中的超链接保持原来的颜色———————————————————— */
+.item__main a,
+.p [data-type="a"] {
+    color: var(--b3-theme-primary) !important;
+}
+
+
+/* -----------------------------------------超链接 END----------------------------------- */

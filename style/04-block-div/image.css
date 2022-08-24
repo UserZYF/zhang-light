@@ -1,0 +1,69 @@
+/* --------------------------------------------图片img----------------------------------------------- */
+.protyle-wysiwyg img:not(img.emoji),
+.b3-typography img:not(img.emoji) {
+    cursor: pointer;
+    border: var(--b3-border-normal);
+    border-radius: var(--b3-border-radius-noraml);
+    text-align: left;
+    box-shadow: var(--b3-point-shadow);
+    position: relative;
+    /* transition: var(--b3-transition); */
+    /* width: auto; */
+}
+
+/* 改变边际区域中默认图片大小（不包括自定义emoji图片） */
+.protyle-wysiwyg img:not(img.emoji),
+.b3-typography img:not(img.emoji) {
+    max-width: 50vw;
+}
+
+/* ——————————————————————调整网络图片左上角的图标格式—————————————————————————— */
+.protyle-wysiwyg [data-node-id] .img__net {
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    color: transparent;
+    background-color: var(--b3-theme-background-gray);
+    border-top: var(--b3-border-wider) !important;
+    border-left: var(--b3-border-wider) !important;
+    border-radius: 5px 0px;
+    border-radius: var(--b3-border-radius-image-emoji);
+    box-shadow: var(--b3-img-net-shadow);
+}
+
+.protyle-wysiwyg [data-node-id] .img__net::before {
+    content: "🔍";
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    color: var(--b3-theme-primary);
+    font-size: 10px;
+}
+
+/* ————————————————————设置图片右上角按钮背景颜色———————————————————— */
+.img .protyle-icons {
+    background-color: var(--b3-theme-background2);
+    top: 7px;
+    right: 4px;
+    border: var(--b3-border-wider);
+    border-radius: 0px !important;
+}
+
+/* ————————————————————设置文档的自定义属性 限制图片宽度———————————————————— */
+.protyle-wysiwyg[custom-f~=picwidth] img,
+.b3-typography[custom-f~=picwidth] img,
+.protyle-wysiwyg[custom-f~=tpkd] img,
+.b3-typography[custom-f~=tpkd] img {
+    max-width: 50em;
+}
+
+/* 设置文档自定义属性，去掉网络图标左上角的图标 */
+.protyle-wysiwyg[custom-f~=picno] .img__net {
+    display: none !important;
+}
+
+/* --------------------------------------------图片 END----------------------------------------------- */

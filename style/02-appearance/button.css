@@ -1,0 +1,65 @@
+/* ------------------------------------------------------------按钮样式----------------------------------------------------------- */
+/* ————————————————————按钮默认样式———————————————————— */
+.b3-button--text,
+.b3-button--cancel,
+.b3-button--outline {
+    border-radius: var(--b3-border-radius-noraml);
+    background-color: var(--b3-theme-tm1);
+    color: var(--b3-theme-primary);
+    box-sizing: border-box;
+}
+
+/* ————————————————————鼠标悬浮时按钮样式———————————————————— */
+.b3-button--text:hover,
+.b3-button--text:focus,
+.b3-button--cancel:hover,
+.b3-button--cancel:focus,
+.b3-button--outline:hover,
+.b3-button--outline:focus {
+    transition: all 0.1s ease-in-out;
+    color: white;
+    background-color: var(--b3-theme-primary);
+    box-sizing: border-box;
+}
+
+/* 有外框的按钮取消显示外框 */
+.b3-button--outline {
+    box-shadow: none;
+}
+
+.b3-button--outline:hover,
+.b3-button--outline:focus {
+    box-shadow: none;
+}
+
+/* -------------------------------------------------------按钮样式 END------------------------------------------------------- */
+
+
+/* 设置界面中切换按钮 */
+.b3-switch,
+.b3-switch:checked {
+    height: 16px;
+    border-radius: 40px;
+}
+
+/* 设置界面中小圆形位置 */
+.b3-dialog--open .b3-dialog__container .b3-switch:after {
+    background-color: white;
+    top: 0.04em;
+    height: 12px;
+    width: 12px;
+    left: 3px;
+}
+
+.b3-dialog--open .b3-dialog__container .b3-switch:checked:after {
+    left: -7px;
+}
+
+/* 切换时设置鼠标悬浮时设置为透明色 */
+.b3-switch:focus:not(:disabled):before {
+    background-color: transparent !important;
+}
+
+.b3-switch:before {
+    background-color: transparent !important;
+}

@@ -36,6 +36,8 @@
     --b3-theme-error: #ec8d8deb;
     /* 08 透明背景，适用于设置背景中引用的背景 */
     --b3-theme-background-tm: #fafafa66;
+    /* 设置鼠标在文档树dock栏悬浮时item的背景颜色为透明色 */
+    --b3-theme-background-light: transparent;
 
     /* ————————————————————文字色———————————————————— */
     /* 01 正文文字颜色 */
@@ -114,7 +116,7 @@
     --b3-font-color5: #35737d;
     --b3-font-color6: #245bdb;
     --b3-font-color7: #6425d0;
-    --b3-font-color8: #b3b3b3;
+    --b3-font-color8: #7a878b70;
     --b3-font-color9: white;
     --b3-font-color10: white;
     --b3-font-color11: white;
@@ -229,7 +231,7 @@
     --b3-protyle-inline-link-color: #408bba;
     --b3-protyle-inline-link-hover-color: red;
     /* 高亮颜色/标记颜色 */
-    --b3-protyle-inline-mark-background: yellow;
+    --b3-protyle-inline-mark-background: #fff88f;
     --b3-protyle-inline-mark-color: black;
     /* 标签颜色 */
     --b3-protyle-inline-tag-background: var(--b3-theme-primary);

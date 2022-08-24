@@ -1,0 +1,45 @@
+/* ---------------------------左上方点击更多按钮弹出的选择菜单相关设置----------------------- */
+.b3-menu, .b3-menu .b3-menu__submenu {
+    border-radius: var(--b3-border-radius-noraml);
+    /* padding: 6px 6px 6px; */
+    min-width: 200px !important;
+    background-color: var(--b3-menu-background);
+    padding: 4px;
+}
+
+.b3-menu .b3-menu__submenu {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px 6px 5px;
+}
+
+/* 鼠标悬浮都是圆角 */
+button.b3-menu__item:hover {
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+/* --------------------------------------------------“更多”按钮...hover时的背景颜色------------------------------------------------ */
+.b3-menu__item:hover:not(.b3-menu__item--readonly):not(.b3-menu__item--custom), .b3-menu__item--current,
+.b3-menu__icon--current {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-tm1);
+}
+
+.b3-menu__item:hover .b3-menu__icon {
+    color: var(--b3-theme-primary);
+}
+
+/* ------------------给“更多”按钮...弹出的小面板设置和文档树一样的背景色 ------------*/
+/* 给“更多”按钮弹出的面板设置上下的内边距 */
+/* .b3-menu, .b3-menu .b3-menu__submenu {
+    background-color: var(--b3-theme-background2);
+    padding: 5px 0px;
+} */
+
+/* 给每个条目设置更高的行高 */
+.b3-menu .b3-menu__item {
+    background-color: var(--b3-theme-background2);
+    line-height: 35px !important;
+}
+
+/* --------------------------------------------------“更多”按钮...hover时的背景颜色 END--------------------------------------- */

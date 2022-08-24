@@ -1,0 +1,21 @@
+/* --------------------------------------------------鼠标样式----------------------------------------------- */
+/* ——————————————————————鼠标光标选中文本样式———————————————————————— */
+*:not(.pdfViewer)::selection {
+    background-color: var(--b3-theme-primary);
+    color: white;
+}
+
+/* ————————————————————————鼠标划选区域————————————————————————————*/
+.protyle-select {
+    /* background-color: var(--b3-theme-tm1) !important; */
+    background-color: transparent !important;
+}
+
+
+/* ————————————————————————————选中块—————————————————————————————— */
+.protyle-wysiwyg--select, .protyle-wysiwyg--select .hljs {
+    background-color: var(--b3-theme-hover2) !important;
+    /* background-color: red !important; */
+}
+
+/* --------------------------------------------------鼠标样式 END----------------------------------------------- */

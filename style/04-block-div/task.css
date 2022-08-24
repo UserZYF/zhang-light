@@ -1,0 +1,15 @@
+/* —————————————————————完成的待办事项删除线样式和颜色（包括字体样式）——————————————————————— */
+.li.protyle-task--done .p {
+    text-decoration: line-through;
+    color: var(--b3-font-color8);
+}
+
+
+.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action--task::after {
+    border-radius: 0px;
+}
+
+
+.protyle-wysiwyg [data-node-id].li>.protyle-action--task:hover:after {
+    border-radius: 0px;
+}

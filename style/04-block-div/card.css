@@ -1,0 +1,29 @@
+/* 设置4种样式的格式 */
+.p[data-node-id][data-type="NodeParagraph"][style*="background-color: var(--b3-card-"],
+.list[style*="background-color: var(--b3-card-"] {
+    padding: 16px 8px;
+}
+
+.p[data-node-id][data-type="NodeParagraph"][style*="background-color: var(--b3-card-"]::after,
+.list[style*="background-color: var(--b3-card-"]::after {
+    content: url(../../src/pin.svg);
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    z-index: 2;
+}
+
+
+
+/* 4种样式和13种背景中间的引用设置透明度 */
+.protyle-wysiwyg [style*="background-color"] .bq,
+.protyle-wysiwyg [style*="background-color"] .code-block,
+.protyle-wysiwyg [style*="background-color"] .render-node,
+.protyle-wysiwyg [style*="background-color"] tbody tr {
+    background-color: var(--b3-theme-background-tm) !important;
+}
+
+/* -----------------------------------------------------到此为止结束-------------------------------------------- */

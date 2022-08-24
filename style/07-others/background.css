@@ -1,0 +1,45 @@
+/* ---------------------------设置页面格子背景-------------------------------------------------------- */
+/* 格子背景（适合light主题，其他主题需要重新设置颜色 */
+.protyle-content {
+    background-image: var(--b3-theme-background-gezi);
+    background-size: 30px 30px;
+    background-position: 50% center;
+    /* 可以决定格子背景是否跟着正文一起滚动 */
+    /* background-attachment: local; */
+    /* 页面平滑滚动，不再傻快傻快 */
+    /* scroll-behavior: smooth; */
+    text-align: justify;
+}
+
+
+/* .protyle-content {
+    background-color: #faf8df !important;
+} */
+
+/* 对README文件也设置格子背景 */
+.config-bazaar__readme .item__main {
+    background-image: var(--b3-theme-background-gezi);
+    background-size: 30px 30px;
+    background-position: 50% center;
+    text-align: justify;
+    border: var(--b3-border-gezi);
+}
+
+/* 圆点背景 */
+/* .protyle-content {
+    background: white;
+    background-image:
+        linear-gradient(white 28px, transparent 0),
+        linear-gradient(90deg, rgba(60, 10, 30, 0.3) 2px, transparent 0);
+    background-size: 30px 30px, 30px 30px;
+    background-attachment: local;
+} */
+
+/* 横线背景 */
+/* .protyle-content {
+    background-image: linear-gradient(1turn, rgba(60, 10, 30, 0.09) 2%, transparent 0px);
+    background-size: 40px 40px !important;
+    background-position: 50% center;
+} */
+
+/* ---------------------------设置页面格子背景END----------------------------------------------------- */

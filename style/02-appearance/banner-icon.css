@@ -1,0 +1,175 @@
+/* ————————————————————给头图emoji下方增加一点距离，否则icon和提示文字会遮挡文档文字———————————————————— */
+.protyle-background {
+    border-bottom: 20px solid transparent !important
+}
+
+/* ————————————————————修改icon和提示文字的背景颜色———————————————————— */
+.protyle-background__iconw .protyle-icons {
+    background-color: transparent;
+    height: 24px !important;
+    opacity: 0;
+    top: 84px;
+    position: absolute;
+    left: 0px;
+    margin: 0;
+}
+
+/* ————————————————————设置icon和提示文字的宽度———————————————————————— */
+.protyle-background__iconw {
+    width: 50%;
+}
+
+/* ————————————————————修改图标/icon颜色———————————————————— */
+.protyle-background__iconw .protyle-icons .b3-tooltips {
+    display: inline-flex;
+    height: 28px;
+    border-radius: var(--b3-border-radius-noraml);
+    padding: 0 8px 0 6px;
+    color: var(--b3-font-color-gray);
+    background-color: transparent;
+}
+
+/* ————————————————————鼠标悬浮时单个icon和提示文字的背景颜色—————————————————————— */
+.protyle-background__iconw .protyle-icons .b3-tooltips:hover {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-tm1);
+}
+
+.protyle-background__iconw .protyle-icons .b3-tooltips:hover:after {
+    color: var(--b3-theme-primary);
+}
+
+/* ————————————————————设置icon的大小———————————————————— */
+.protyle-background__iconw .protyle-icons .b3-tooltips svg {
+    height: 14px;
+    padding: 7px 6px 0 0;
+    display: inline-flex;
+}
+
+/* ————————————————————修改提示文字颜色———————————————————— */
+.protyle-background__iconw .protyle-icons .b3-tooltips::after {
+    display: inline-flex;
+    height: 28px;
+    font-size: 14px;
+    line-height: 28px;
+    transform: none;
+    transition: none;
+    opacity: 1;
+    color: var(--b3-font-color-gray-tm);
+    background-color: transparent;
+    position: static;
+    margin: 0;
+    padding: 0;
+}
+
+/* ————————————————————直接设置emoji大小———————————————————— */
+.protyle-background .protyle-background__icon svg {
+    width: 78px;
+    height: 78px;
+}
+
+/* ————————————————————设置win10默认emoji的大小（如果设置了的话）———————————————————— */
+.protyle-background__icon {
+    font-size: 54px !important;
+    line-height: 78px !important;
+    text-align: center;
+    width: 78px !important;
+    height: 78px !important;
+}
+
+/* 调整头图下方自定义表情的圆角大小 */
+.protyle-background__icon img {
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+/* ——————————————————————鼠标悬浮时emoji下方的背景，一般为透明，注释掉也可———————————————————————— */
+.protyle-background .protyle-background__icon:hover {
+    background-color: var(--b3-theme-tm1);
+}
+
+/* ————————————————————取消单个icon和提示文本下方的箭头———————————————————— */
+.protyle-background .protyle-icons .b3-tooltips::before {
+    border: none
+}
+
+/* --------------------------------------设置emoji下方的3个icon和提示文字 END-------------------------------------- */
+/* -------------------------------------------------头图图片设置------------------------------------------------- */
+/*————————————————————头图选项(上传，链接，随机，移动，删除）的背景颜色和位置————————————————————*/
+.protyle-background__img .protyle-icons {
+    background-color: var(--b3-theme-background) !important;
+    color: inherit;
+    box-shadow: var(--b3-img-icon-shadow);
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+.protyle-icon {
+    background-color: var(--b3-theme-background);
+}
+
+/* ——————————————————————提示文字的背景颜色设置(每个icon和文字）—————————————————————————————— */
+.protyle-background__img .protyle-icons .b3-tooltips {
+    display: inline-flex;
+    height: 28px;
+    padding: 0 10px 0 6px;
+    color: inherit;
+    box-shadow: var(--b3-img-icon-color-shadow);
+}
+
+/* —————————————————————设置前面icon的大小（每个icon）———————————————————————————— */
+.protyle-background__img .protyle-icons .b3-tooltips svg {
+    display: inline-flex;
+    width: 12px;
+    height: 12px;
+    padding: 8px 6px 0 2px;
+}
+
+/* ————————————————————设置每个icon后面提示文字的格式———————————————————————————— */
+.protyle-background__img .protyle-icons .b3-tooltips::after {
+    display: inline-flex;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    transform: none;
+    transition: none;
+    opacity: 1;
+    color: var(--b3-theme-on-background);
+    background-color: transparent;
+    position: static;
+    margin: 0;
+    padding: 0;
+}
+
+/* ————————————————————鼠标在每个icon和提示文字上悬浮时改变颜色—————————————————— */
+/* 改变背景和icon的颜色 */
+.protyle-background__img .protyle-icons .b3-tooltips:hover {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-tm1);
+}
+
+/* 改变文字的颜色 */
+.protyle-background__img .protyle-icons .b3-tooltips:hover:after {
+    color: var(--b3-theme-primary);
+}
+
+/* ————————————————————修改拖动图片时按钮的颜色—————————————————————— */
+.protyle-icons>span {
+    color: inherit;
+}
+
+.protyle-icons>span:hover {
+    color: var(--b3-theme-primary) !important;
+    background-color: var(--b3-theme-tm1);
+}
+
+/* ————————————————————题头图下方设置虚线边框———————————————————— */
+.protyle-background__img {
+    /* border-bottom: var(--b3-border-dashed); */
+    background-color: var(--b3-theme-background);
+}
+
+/* ————————————————————修复头图中上传按钮的点击范围———————————————————— */
+.protyle-icons input[type="file"] {
+    width: 60px !important;
+}
+
+/* ------------------------------------------------------头图相关设置 END---------------------------------------------------------- */

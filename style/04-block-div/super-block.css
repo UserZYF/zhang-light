@@ -1,0 +1,90 @@
+/* ----------------------------------------------------调整超级块的块间距------------------------------------------ */
+/* ————————————————————————————————————大超级块，不用设置边框—————————————————————————————— */
+/* .protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+
+/* —————————————————————————————————————次超级块大小—————————————————————————————————————— */
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] .sb {
+    border: var(--b3-border-dashed-gray-wider);
+    border-radius: var(--b3-border-radius-none);
+    box-sizing: border-box;
+    margin: 0.1em 0 0.1em 0.1em;
+}
+
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] .sb:nth-last-child(2) {
+    margin-right: 0.1em;
+}
+
+/* ——————————————————————————————————————每个子超级块—————————————————————————————————————— */
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>[data-node-id] {
+    border: var(--b3-border-dashed-gray-wider);
+    border-radius: var(--b3-border-radius-none);
+    box-sizing: border-box;
+    margin: 0.1em 0 0.1em 0.1em;
+}
+
+/* 最后一个子超级块不设置右边距 */
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>[data-node-id]:nth-last-child(2) {
+    margin-right: 0.1em;
+}
+
+
+/* 取消显示超级块和列表中的标题衬底 */
+/* div.list div[data-type="NodeHeading"]::after, */
+div.sb div.sb div[data-type="NodeHeading"]::after {
+    display: none !important;
+}
+
+/* 取消显示超级块中的自动编号 */
+div.sb div.sb div[data-type="NodeHeading"]>::before {
+    display: none !important;
+}
+
+/* 去掉超级块中标题和第一个段落的上边距 */
+div.sb div[data-type="NodeHeading"] {
+    margin-top: 0px !important;
+    border-radius: 0 !important;
+}
+
+
+/* 超级块中的标题颜色设置为默认的颜色 */
+div.sb>div[data-type="NodeHeading"] {
+    color: inherit !important;
+}
+
+
+/* 增加超级块的自定义属性，增加外边距 */
+.protyle-wysiwyg [data-node-id][custom-f~=super].sb[data-sb-layout="col"]>div,
+.protyle-wysiwyg [data-node-id][custom-f~=cjk].sb[data-sb-layout="col"]>div {
+    margin: 0.1em 3em 0.1em 0.1em;
+}
+
+.protyle-wysiwyg [data-node-id][custom-f~=super].sb[data-sb-layout="col"]>div:nth-last-child(2),
+.protyle-wysiwyg [data-node-id][custom-f~=cjk].sb[data-sb-layout="col"]>div:nth-last-child(2) {
+    margin-right: 0;
+}
+
+/* 增加超级块的自定义属性，不显示边框 */
+.protyle-wysiwyg [data-node-id][custom-f~=superno].sb[data-sb-layout="col"] .sb,
+.protyle-wysiwyg [data-node-id][custom-f~=cjkno].sb[data-sb-layout="col"] .sb,
+.protyle-wysiwyg [data-node-id][custom-f~=superno].sb[data-sb-layout="col"]>div,
+.protyle-wysiwyg [data-node-id][custom-f~=cjkno].sb[data-sb-layout="col"]>div {
+    border-color: transparent !important;
+}
+
+/* 去掉超级块右上角可能会出现的bug */
+/* div.sb .protyle-attr {
+    display: none;
+} */
+
+
+/* 修改引用计数的样式 */
+.protyle-attr--refcount {
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-tm2);
+}
+
+/* ----------------------------------------------------调整超级块的块间距 END------------------------------------------ */

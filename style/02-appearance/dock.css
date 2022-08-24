@@ -1,0 +1,8 @@
+#dockright {
+    border-left: var(--b3-border-wider);
+}
+
+/* 设置侧边栏图标active状态时的颜色为主题色 */
+.dock__item--active {
+    color: var(--b3-theme-primary);
+}

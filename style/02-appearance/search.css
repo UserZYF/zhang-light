@@ -1,0 +1,11 @@
+/* ----------------------------------------------------搜索栏------------------------------------------------- */
+.search__header .b3-text-field--text {
+    background-color: var(--b3-theme-hover2);
+    color: var(--b3-theme-primary);
+    /* border: 1px solid transparent;
+    border-bottom: 1px solid var(--b3-theme-primary); */
+}
+
+.b3-form__icon.search__header {
+    background-color: var(--b3-theme-hover2);
+}

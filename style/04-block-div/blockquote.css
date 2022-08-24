@@ -1,0 +1,31 @@
+/* ----------------------------------------------引用---------------------------------------------- */
+/* ——————————————————————————设置引用格式———————————————————————————— */
+.protyle-wysiwyg [data-node-id].bq,
+.b3-typography blockquote {
+    min-height: 40px;
+    border-top: 3px solid #d83931;
+    border-bottom: var(--b3-border-wider);
+    color: gray;
+    background-color: var(--b3-theme-background2) !important;
+    border-left: none !important;
+    padding: 5px 20px;
+    border-radius: var(--b3-border-radius-noraml);
+    margin: 4px;
+}
+
+/* ——————————修复无序列表中因为before伪元素造成的左边线条位置错乱—————————— */
+.protyle-wysiwyg [data-node-id].li>[data-node-id].bq:before {
+    left: -18px !important;
+}
+
+/* ——————————————————————————引用前加入引号图标———————————————————————————— */
+.protyle-wysiwyg [data-node-id].bq:not([style*="color"]),
+.b3-typography blockquote:not([style*="color"]) {
+    background-image: url('../../src/blockquote.svg');
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    position: 10px 10px;
+    line-height: 6px !important;
+}
+
+/* ----------------------------------------------引用 END---------------------------------------------- */

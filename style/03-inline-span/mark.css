@@ -1,0 +1,30 @@
+/* -------------------------------------------------高亮----------------------------------------------- */
+mark {
+    border-radius: var(--b3-border-radius-noraml);
+    margin: 0px 0px;
+}
+
+/* 搜索高亮 */
+.protyle-wysiwyg [data-node-id] span[data-type="search-mark"] {
+    animation-name: change;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+@keyframes change {
+    0% {
+        color: white;
+        background-color: var(--b3-theme-primary);
+    }
+
+    100% {
+        color: white;
+        background-color: var(--b3-theme-hover);
+    }
+}
+
+
+/* -------------------------------------------------高亮 END----------------------------------------------- */

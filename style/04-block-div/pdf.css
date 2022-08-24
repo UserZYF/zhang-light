@@ -1,0 +1,181 @@
+/* ————————————————————修改PDF双链样式———————————————————— */
+.protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref'] {
+    color: var(--b3-theme-on-surface);
+    background-color: var(--b3-theme-background-gray);
+    display: inline-block;
+    position: relative;
+    left: 1px;
+    top: 1px;
+    background-image: url('../../src/blockquote.svg');
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    padding: 1px 10px 1px 15px;
+    border-radius: var(--b3-border-radius-noraml);
+    text-align: justify;
+    margin: 4px;
+}
+
+/* ————————————————————给PDF双链后边增加emoji图标———————————————————— */
+.protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref']::before {
+    display: none;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref']::after {
+    content: " 🔗";
+    font-size: 12px;
+    /* align-items: center; */
+    vertical-align: 2px;
+}
+
+/* ————————————————————鼠标悬浮时更改PDF双链样式———————————————————— */
+.protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref']:hover {
+    color: var(--b3-font-color4);
+    background-color: var(--b3-font-background4);
+    background-image: url('../../src/bq-c.svg');
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref']:hover:after {
+    content: " 🔎";
+}
+
+/* ——————————————————————pdf搜索高亮———————————————————— */
+.textLayer .highlight.selected {
+    background-color: var(--b3-search-highlight);
+}
+
+/* ——————————————————————PDF搜索候选词高亮———————————————————— */
+.textLayer .highlight {
+    background-color: var(--b3-font-background1);
+}
+
+/* ————————————————————pdf光标选中文本样式———————————————————— */
+.pdf__outer ::selection {
+    background-color: var(--b3-pdf-selcect-hightlight);
+    color: transparent !important;
+}
+
+/* ————————————————————PDF标注弹出项目———————————————————— */
+.pdf__util.b3-menu .b3-color__square {
+    height: 25px;
+    width: 25px;
+    border-radius: var(--b3-border-radius-none);
+}
+
+/* ————————————————————PDF标注弹出项目鼠标悬浮时的样式———————————————————— */
+.pdf__util.b3-menu .b3-color__square:hover {
+    border: 2px solid gray;
+}
+
+/* ——————————————————————————————————————给PDF标注下方加一条横线—————————————————————————————————————————— */
+/* ————————————————————给横线设置统一的格式———————————————————— */
+.pdf__rect.popover__block>div:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px !important;
+    height: 100%;
+    width: 100%;
+}
+
+/* ————————————————————1红色———————————————————— */
+.pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background1)"]:before {
+    background-color: var(--b3-pdf-background1);
+    border-bottom: 2px solid var(--b3-font-color1);
+}
+
+/* ————————————————————2橙色———————————————————— */
+.pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background2)"]:before {
+    background-color: var(--b3-pdf-background2);
+    border-bottom: 2px solid var(--b3-font-color2);
+}
+
+/* ————————————————————3黄色———————————————————— */
+.pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background3)"]:before {
+    background-color: var(--b3-pdf-background3);
+    border-bottom: 2px solid var(--b3-font-color3);
+}
+
+/* ————————————————————4绿色———————————————————— */
+.pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background4)"]:before {
+    background-color: var(--b3-pdf-background4);
+    border-bottom: 2px solid var(--b3-font-color4);
+}
+
+/* ————————————————————5青色———————————————————— */
+.pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background5)"]:before {
+    background-color: var(--b3-pdf-background5);
+    border-bottom: 2px solid var(--b3-font-color5);
+}
+
+/* ————————————————————6蓝色———————————————————— */
+.pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background6)"]:before {
+    background-color: var(--b3-pdf-background6);
+    border-bottom: 2px solid var(--b3-font-color6);
+}
+
+/* ————————————————————7紫色———————————————————— */
+.pdf__rect.popover__block>[style*="background-color: var(--b3-pdf-background7)"]:before {
+    background-color: var(--b3-pdf-background7);
+    border-bottom: 2px solid var(--b3-font-color7);
+}
+
+/* ————————————————————PDF搜索栏设置—————————————————— */
+.findbar {
+    padding: 5px 8px;
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+/* ————————————————————PDF鼠标悬浮时无双链的标注不显示链接弹窗———————————————————— */
+.block__popover--open[data-oid="undefined"] {
+    display: none;
+    box-shadow: var(--b3-point-shadow);
+}
+
+/* ————————————————————调整弹窗的阴影———————————————————— */
+.block__popover--open {
+    box-shadow: var(--b3-point-shadow);
+}
+
+/* ------------------------------------------------------------pdf双链 END-------------------------------------------------------- */
+
+
+
+/* ————————————————————设置PDF标注的格式———————————————————— */
+button.b3-color__square[style*="background-color:var(--b3-pdf"] {
+    border-radius: var(--b3-border-radius-noraml) !important;
+    border: var(--b3-border-normal) !important;
+}
+
+/* ————————————————————设置PDF标注的相关文字———————————————————— */
+button.b3-color__square[style*="background-color:var(--b3-pdf-background"]::before {
+    color: #202124;
+    font-family: "Microsoft YaHei";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background1)"]::before {
+    content: "红";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background2)"]::before {
+    content: "橙";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background3)"]::before {
+    content: "黄";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background4)"]::before {
+    content: "绿";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background5)"]::before {
+    content: "青";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background6)"]::before {
+    content: "蓝";
+}
+
+button.b3-color__square[style="background-color:var(--b3-pdf-background7)"]::before {
+    content: "紫";
+}

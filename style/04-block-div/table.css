@@ -1,0 +1,44 @@
+/* -------------------------------表格start------------------------------------- */
+/* 表格100%宽度 */
+.protyle-wysiwyg table,
+.b3-typography table {
+    display: table;
+    width: 100%;
+}
+
+/* 表格居中的自定义属性 */
+div.table[data-node-id][custom-table~=center] {
+    margin: 0 auto !important;
+}
+
+
+/* 设置表头区域顶部边框，使表格更明显 */
+/* table thead {
+    border-top: 0.15em solid var(--b3-theme-primary) !important;
+} */
+
+
+/*设置表格表头样式，颜色，背景，加粗，居中对齐*/
+table th {
+    font-weight: bold;
+    text-align: center;
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-table-th-color);
+}
+
+/* 设置表格内部边框 */
+th, td {
+    min-width: 1em;
+    border: 0.1em solid var(--b3-table-border-color) !important;
+    border-collapse: collapse;
+    color: inherit;
+}
+
+
+/* 设置表格行悬浮高亮 */
+table tr:hover {
+    background: var(--b3-theme-hover2) !important;
+    /* color: var(--b3-theme-primary) !important; */
+}
+
+/* -------------------------------表格end------------------------------------- */

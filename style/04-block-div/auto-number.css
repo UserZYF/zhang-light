@@ -1,0 +1,72 @@
+.protyle-wysiwyg, .b3-typography {
+    counter-reset: h1 0 h2 0 h3 0 h4 0 h5 0 h6 0;
+}
+
+.protyle-wysiwyg [data-node-id].h1, .b3-typography h1 {
+    counter-reset: h2 0 h3 0 h4 0 h5 0 h6 0;
+}
+
+.protyle-wysiwyg [data-node-id].h2, .b3-typography h2 {
+    counter-reset: h3 0 h4 0 h5 0 h6 0;
+}
+
+.protyle-wysiwyg [data-node-id].h3, .b3-typography h3 {
+    counter-reset: h4 0 h5 0 h6 0;
+}
+
+.protyle-wysiwyg [data-node-id].h4, .b3-typography h4 {
+    counter-reset: h5 0 h6 0;
+}
+
+.protyle-wysiwyg [data-node-id].h5, .b3-typography h5 {
+    counter-reset: h6 0;
+}
+
+/* 设置各级列表前后的内容  */
+/* 为所有标题设置统一的内容 */
+
+.protyle-wysiwyg .h1>::before,
+.b3-typography h1:before {
+    counter-increment: h1;
+    content: "第"counter(h1, cjk-ideographic) "章  ";
+}
+
+.protyle-wysiwyg .h2>::before,
+.b3-typography h2:before {
+    counter-increment: h2;
+    content: "第"counter(h2, cjk-ideographic) "节  ";
+}
+
+.protyle-wysiwyg .h3>::before,
+.b3-typography h3:before {
+    counter-increment: h3;
+    content: counter(h3, cjk-ideographic) "、";
+}
+
+.protyle-wysiwyg .h4>::before,
+.b3-typography h4:before {
+    counter-increment: h4;
+    content: "("counter(h4, cjk-ideographic) "). ";
+}
+
+.protyle-wysiwyg .h5>::before,
+.b3-typography h5:before {
+    counter-increment: h5;
+    content: counter(h5, decimal) ". ";
+}
+
+.protyle-wysiwyg .h6>::before,
+.b3-typography h6:before {
+    counter-increment: h6;
+    content: "("counter(h6, decimal) "). ";
+}
+
+/* ——————————消除h1-h6标题中含有引用时导致计数出现自动编号的影响—————————— */
+.protyle-attr::before,
+.protyle-attr--refcount.popover__block::before {
+    display: none;
+}
+
+
+
+/* -----------------------------------------------------自动编号结束-------------------------------------------- */

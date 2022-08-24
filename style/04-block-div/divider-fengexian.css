@@ -1,0 +1,4 @@
+/* ————————————————————修改分割线样式———————————————————— */
+.protyle-wysiwyg [data-node-id].hr>div {
+    border-bottom: 2px dashed var(--b3-border-color1);
+}

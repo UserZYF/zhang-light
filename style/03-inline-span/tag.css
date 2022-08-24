@@ -1,0 +1,94 @@
+/* ------------------------------------------标签 tag--------------------------------------------- */
+.protyle-wysiwyg [data-node-id] span[data-type='tag']:not(:empty) {
+    color: var(--b3-protyle-inline-tag-color);
+    background-color: var(--b3-protyle-inline-tag-background);
+    border-radius: var(--b3-border-radius-half-round);
+    margin: 0px;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    vertical-align: 0.1em;
+    opacity: 1;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type="tag"] {
+    border-bottom: none;
+}
+
+/* ————————————————————标签#号———————————————————— */
+.protyle-wysiwyg [data-node-id] span[data-type='tag']:not(:empty)::before {
+    content: "★ ";
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='tag']:hover {
+    color: gray;
+    background-color: var(--b3-theme-background-gray);
+}
+
+/* ————————————————————修改以下内容的标签样式———————————————————— */
+/* 判断 */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="判断"]:not(:empty) {
+    background-color: #ff8b8b;
+    color: #f9f8e6;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="判断"]:not(:empty)::before {
+    content: "√ ";
+}
+
+/* 填空 */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="填空"]:not(:empty) {
+    color: #f6f3eb;
+    background-color: #384d9d;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="填空"]:not(:empty)::before {
+    content: "__ ";
+}
+
+/* 选择 */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="选择"]:not(:empty) {
+    color: #f4f4f4;
+    background-color: #17c37b;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="选择"]:not(:empty)::before {
+    content: " A  ";
+}
+
+/* 排序 */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="排序"]:not(:empty) {
+    color: #502f7e;
+    background-color: #b396db;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="排序"]:not(:empty)::before {
+    content: "① ";
+}
+
+/* 地理 */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="地理"]:not(:empty)::before {
+    content: "✈ ";
+    font-family: "宋体";
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='tag'][data-content="地理"]:not(:empty) {
+    color: inherit;
+    background-color: skyblue;
+}
+
+/* ————————————————————给头图上方的标签设置一样的样式，但是不修改颜色———————————————————— */
+.protyle-background__tags .item {
+    border-radius: var(--b3-border-radius-half-round);
+    margin: 4px 8px 2px 0px;
+    cursor: pointer;
+    font-size: 90%;
+    padding: 0px 8px !important;
+    line-height: 1.625;
+    border: var(--b3-border-dashed-gray);
+}
+
+.protyle-background__tags .item:before {
+    content: "★ ";
+}
+
+/* ------------------------------------------标签 END--------------------------------------------- */

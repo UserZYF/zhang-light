@@ -1,0 +1,157 @@
+/* --------------------------------将'/'弹出的选择窗口分为4栏，便于直观进行选择（分栏）---------------------------------------- */
+.b3-menu.b3-list.b3-list--background {
+    column-count: auto;
+    column-width: 148px !important;
+    column-gap: 5px;
+    min-width: 50vw !important;
+    max-height: 480px !important;
+    border: var(--b3-border-column);
+    padding: 4px;
+}
+
+/* 设置项目之间的分割线颜色 */
+.b3-menu.b3-list.b3-list--background .b3-menu__separator {
+    background-color: var(--b3-theme-primary);
+    height: 0.05em;
+}
+
+/* ————————————————————将每个项目的文字和图标大小设置更小点———————————————————— */
+/* 设置单个项目 */
+button.b3-list-item.b3-list-item--two.fn__block {
+    /* display: flex; */
+    font-size: 90%;
+    border: var(--b3-border-column-item);
+    box-sizing: border-box;
+    vertical-align: middle;
+    padding: 2px 8px !important;
+    margin-bottom: 0.1em;
+    /* overflow: hidden; */
+}
+
+/* 设置图标颜色 */
+button.b3-list-item.b3-list-item--two.fn__block .b3-list-item__graphic {
+    color: gray;
+    position: absolute;
+    top: 8px;
+}
+
+/* 鼠标悬浮时更改图标颜色 */
+button.b3-list-item.b3-list-item--two.fn__block:hover .b3-list-item__graphic {
+    color: var(--b3-font-color-hover);
+}
+
+/* 设置文本颜色 */
+button.b3-list-item.b3-list-item--two.fn__block .b3-list-item__text {
+    vertical-align: middle;
+    padding-left: 18px;
+    /* -webkit-line-clamp: 1 !important;
+    display: -webkit-box; */
+}
+
+/* 快捷键大小 */
+button.b3-list-item.b3-list-item--two.fn__block .b3-menu__accelerator {
+    font-size: 80%;
+    color: var(--b3-font-color-gray-tm);
+    font-weight: bold;
+    font-family: var(--b3-font-family-code);
+}
+
+/* 设置鼠标悬浮时文字完整显示 */
+/* button.b3-list-item.b3-list-item--two.fn__block:hover .b3-list-item__meta {
+    white-space: normal !important;
+} */
+
+/* button.b3-list-item.b3-list-item--two.fn__block:hover .b3-list-item__text {
+    -webkit-line-clamp: 2 !important;
+    display: -webkit-box;
+} */
+
+/* ————————————————————将每个项目的文字和图标大小设置更小点 END———————————————————— */
+/* 鼠标悬浮 */
+button.b3-list-item.b3-list-item--two.fn__block:hover {
+    font-size: 90% !important;
+}
+
+/* 快捷键大小 */
+.b3-menu__accelerator {
+    height: 28px;
+    font-size: 80%;
+    font-family: var(--b3-font-family-code);
+}
+
+/* [[调出引用块时候底部文件路径设置 */
+.b3-list-item--two .b3-list-item__meta {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5em;
+    color: var(--b3-theme-primary);
+}
+
+/* 设置新建文档栏目的行高 */
+button.b3-list-item.b3-list-item--two.fn__block[data-value*="((newFile"] {
+    line-height: 46px !important;
+}
+
+/* 设置新建文档按钮中图标的对齐 */
+button.b3-list-item.b3-list-item--two.fn__block[data-value*="((newFile"] .b3-list-item__graphic {
+    top: 17px !important;
+}
+
+/* ————————————————————给新建文档栏目特殊标注———————————————————— */
+button.b3-list-item.b3-list-item--two.fn__block[data-value="%E2%80%8B"],
+button.b3-list-item.b3-list-item--two.fn__block[data-value="%E2%80%8B4"] {
+    background-color: var(--b3-theme-tm1) !important;
+}
+
+button.b3-list-item.b3-list-item--two.fn__block[data-value="%E2%80%8B"] .b3-list-item__text,
+button.b3-list-item.b3-list-item--two.fn__block[data-value="%E2%80%8B4"] .b3-list-item__text {
+    color: var(--b3-theme-primary) !important;
+}
+
+button.b3-list-item.b3-list-item--two.fn__block[data-value="%E2%80%8B"] .b3-list-item__graphic,
+button.b3-list-item.b3-list-item--two.fn__block[data-value="%E2%80%8B4"] .b3-list-item__graphic {
+    color: var(--b3-theme-primary) !important;
+}
+
+/* ————————————————————调整挂件和模板窗口的分栏效果，仍旧分为4栏—————————————————————————————— */
+.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList) {
+    column-count: 4;
+    column-gap: 5px;
+    min-width: 50vw !important;
+    font-size: 90%;
+    /* border: 0.2em solid #ffffff4d; */
+    border: var(--b3-border-column-item);
+}
+
+
+/* ————————————————————设置挂件和模板窗口每个项目的宽度———————————————————— */
+.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList) .b3-list-item {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ————————————————————调整emoji窗口的选择效果，向右拉动滚动条查看所有emoji———————————————————— */
+/* 控制整个表情面板是左右滑动而不是上下滑动 */
+.b3-menu.b3-list.b3-list--background .emojis__panel {
+    overflow: inherit !important;
+}
+
+/* 控制表情的内容能够正常显示而不是折叠 */
+.b3-menu.b3-list.b3-list--background .emojis__content {
+    display: block !important;
+}
+
+/* 去掉模板搜索中的空隙，修复bug */
+.protyle-util .b3-list-item {
+    padding: 0px;
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+.b3-list.fn__flex-1.b3-list--background {
+    padding: 4px 8px;
+}
+
+/* --------------------------------将'/'弹出的选择窗口分为4栏 END-------------------------------------------------- */

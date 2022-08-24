@@ -1,0 +1,72 @@
+/* ----------------------------------无序列表和有序列表前面的符号--------------------------------------- */
+/* -------------------------列表悬浮------------------------ */
+/* 大圆背景 */
+.protyle-wysiwyg [data-node-id].li>.protyle-action:hover:after {
+    background-color: var(--b3-font-color8) !important;
+    border-radius: var(--b3-border-radius-half-round);
+}
+
+/* 小圆点颜色 */
+.protyle-wysiwyg [data-node-id].li>.protyle-action:hover {
+    color: gray !important;
+}
+
+/* -------------------------列表悬浮 END------------------------ */
+/* -------------------------列表折叠------------------------ */
+/* 大圆背景 */
+.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action:after {
+    background-color: var(--b3-theme-tm1) !important;
+    border-radius: var(--b3-border-radius-half-round);
+}
+
+/* 小圆点颜色 */
+.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action {
+    color: var(--b3-theme-primary) !important;
+}
+
+/* 修改集市里边无序列表前小圆点颜色 */
+::marker {
+    color: var(--b3-font-color-gray);
+}
+
+/* 调整集市里边文字行高，大一点看着好看 */
+.item__readme.b3-typography {
+    line-height: 2;
+    padding: 5px;
+    text-align: left;
+}
+
+/* ——————————————————————去除无序列表底部外边距———————————————————— */
+.protyle-wysiwyg [data-node-id].li>[data-node-id] {
+    margin-bottom: 0px;
+}
+
+/* ————————————————————减小前面符号·的大小———————————————————— */
+/* .list[data-node-id][data-type="NodeList"] .protyle-action>svg {
+    width: 11px;
+} */
+
+/* -------------------------列表折叠 END------------------------ */
+/* ----------------------------------列表 END--------------------------------------- */
+
+/* -------------------------------无序列表前的小竖线颜色-------------------------------------------- */
+.protyle-wysiwyg [data-node-id].li>[data-node-id]:before {
+    content: "";
+    position: absolute;
+    border-left: var(--b3-border-wider);
+    top: 4px;
+    left: -18px;
+    z-index: 3;
+}
+
+/* ---------------------给有颜色背景的块设置前面无序列表的样式---------------- */
+.list[style*="background-color: var(--b3-font-background"] .li>:before {
+    border-color: #00000033 !important;
+}
+
+/* ————————————————————缩短嵌入块中小竖线的高度———————————————————— */
+.render-node div.list:before {
+    top: -10px !important;
+}
+
+/* -------------------------------无序列表前的小竖线颜色 END-------------------------------------------- */

@@ -1,0 +1,70 @@
+/* --------------------------------------------------标签页 Tab--------------------------------------------- */
+/* ————————————————————————标签页样式——————————————————————————*/
+.layout-tab-bar .item {
+    padding: 1px 4px 1px 4px;
+    margin: 0px;
+    border: 1px solid var(--b3-border-color);
+    border-collapse: collapse !important;
+    border-radius: var(--b3-border-radius-none) !important;
+    background-color: var(--b3-theme-tab);
+    box-sizing: border-box;
+    height: 35px;
+}
+
+.layout-tab-bar .item:first-child {
+    border-left: 1px solid var(--b3-border-color) !important;
+}
+
+.layout-tab-bar .item:last-child {
+    border-right: 1px solid var(--b3-border-color) !important;
+}
+
+
+/* ——————————————————————设置文字最小宽度，标签过多时才能看清楚文字—————————————————————— */
+.layout-tab-bar .item__text {
+    width: 6em;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    display: inline;
+}
+
+/* ————————————————————鼠标悬浮在标签页上面———————————————————— */
+.layout-tab-bar .item:not(.item--focus):hover {
+    background-color: var(--b3-theme-tab) !important;
+}
+
+
+/* ——————————————————————————选中的标签页—————————————————————— */
+.layout-tab-bar .item--focus {
+    background-color: var(--b3-theme-background2);
+    border: 1px solid transparent;
+    border-top: var(--b3-border-normal) !important;
+}
+
+/* 去掉标签上方阴影 */
+.layout__wnd--active .layout-tab-bar .item--focus {
+    box-shadow: none;
+}
+
+.layout-tab-bar .item:not(:last-child) {
+    box-shadow: none;
+}
+
+.layout__wnd--active .layout-tab-bar .item--focus {
+    box-shadow: inset 0 2px 0 0 transparent !important;
+}
+
+/* 设置标签页中emoji的大小 */
+.layout-tab-bar .item__icon>img,
+.layout-tab-bar .item__icon>svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* 设置固定的标签页宽度 */
+.layout-tab-bar .item--pin .item__text {
+    width: 1em;
+}
+
+/* --------------------------------------------------标签页 END--------------------------------------------- */

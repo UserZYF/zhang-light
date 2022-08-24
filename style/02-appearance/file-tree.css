@@ -1,0 +1,192 @@
+/* ————————————————————设置侧栏字体大小，不包括正文，正文字体大小在编辑器那里选择———————————————————— */
+body {
+    font-size: 15.5px;
+}
+
+/* ————————————————————文档树、大纲、反向链接的背景颜色 */
+.layout-tab-container:not(.fn_flex-1) {
+    background-image: linear-gradient(180deg,
+            rgba(255, 232, 232, 0.4) 0%,
+            rgba(236, 236, 255, 0.54) 25%,
+            rgba(228, 247, 236, 0.3) 50%,
+            rgba(223, 254, 224, 0.2) 75%,
+            rgba(245, 247, 249, 0.99) 100%);
+}
+
+/* 给大纲/文档树添加边框 */
+.fn__flex-1.graph.file-tree,
+.fn__flex-1.fn__flex-column.file-tree {
+    border: var(--b3-border-normal);
+    box-sizing: border-box;
+}
+
+/* ————————————————————文档树、大纲、反向链接顶部的背景颜色 */
+.block__icons {
+    background-color: transparent;
+    border-bottom: var(--b3-border-dashed);
+    padding: 1px 8px;
+    box-sizing: border-box;
+    height: 33px;
+}
+
+/* ————————————————————大纲等文字显示主题色———————————————————— */
+.block__logo {
+    font-weight: 600;
+    color: var(--b3-menu-highlight-focus-color);
+}
+
+/* 取消文档树、大纲、反向链接左边的icon，感觉显示重复了 */
+.block__logo svg {
+    display: none;
+}
+
+
+/* ------------------------------------------------------文档树--------------------------------------- */
+/* ————————————————————————————文件树文档图标悬浮放大———————————————————————— */
+.b3-list--files .b3-list-item__icon {
+    transition: all 0.1s ease-in-out;
+}
+
+.b3-list--files .b3-list-item__icon:hover {
+    transform: scale(1.2);
+    transition: all 0.1s ease-in-out;
+}
+
+/* ————————————————————————————dock栏和顶部图标放大动效—————————————————————— */
+.dock--vertical .dock__item:hover svg,
+.toolbar__item:hover svg {
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
+}
+
+.block__icon:hover svg {
+    transform: scale(0.9) !important;
+}
+
+.dock--vertical .dock__item svg,
+.toolbar__item svg,
+.block__icon svg {
+    transition: all 0.1s ease-in-out;
+}
+
+/* ————————————————————————文档树区分有子文档和无子文档的文档—————————————————————— */
+.b3-list-item.b3-list-item--hide-action .b3-list-item__toggle.fn__hidden::before {
+    content: "•";
+    display: block;
+    position: absolute;
+    visibility: visible;
+    transition: var(--b3-transition);
+    margin-bottom: 2px;
+}
+
+/* ——————————————————————————————取消默认的隐藏效果———————————————————————— */
+.file-tree--leave .b3-list-item__graphic--arrow:not(.fn__hidden) {
+    opacity: 1;
+}
+
+/* ------------------------------------------------------文档树 END--------------------------------------- */
+
+/* ——————————————————————————————点击文档树emoji不弹出修改窗口—————————————————————————— */
+span.b3-list-item__icon.b3-tooltips.b3-tooltips__n {
+    pointer-events: none;
+}
+
+
+/* -----------------------------------------------------------文档树条目------------------------------------------------- */
+/* ------------------------------------文档树文字设置为灰色------------------------------- */
+.b3-list-item__text {
+    color: var(--b3-theme-on-surface);
+}
+
+/* -----------------------------------文档树条目hover高亮-------------------------------- */
+.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
+    color: var(--b3-font-color-hover) !important;
+    background-color: var(--b3-theme-hover-gray);
+}
+
+.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) .b3-list-item__text {
+    color: var(--b3-font-color-hover) !important;
+}
+
+.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) .b3-list-item__icon svg {
+    color: var(--b3-font-color-hover) !important;
+}
+
+/* -----------------------------文档树条目focus高亮,针对背景------------------------------- */
+.b3-list--background .b3-list-item--focus {
+    background-color: var(--b3-theme-hover) !important;
+}
+
+/* -----------------------------文档树条目focus高亮,针对文字和前面图标------------------------------- */
+.b3-list--background .b3-list-item--focus .b3-list-item__text {
+    color: var(--b3-theme-primary) !important;
+}
+
+.b3-list--background .b3-list-item--focus .b3-list-item__graphic {
+    color: var(--b3-theme-primary) !important;
+}
+
+.b3-list--background .b3-list-item--focus .b3-list-item__icon svg {
+    color: var(--b3-theme-primary) !important;
+}
+
+/* -----------------------------------------------------------文档树条目 END------------------------------------------------- */
+/* ----------------------------------------修改文档树新建按钮的样式----------------------------------------- */
+/* 隐藏文档树后面的引用计数 */
+span.popover__block.counter.b3-tooltips.b3-tooltips__nw {
+    display: none;
+}
+
+/* 隐藏大纲后面的引用计数 */
+.fn__flex-1.fn__flex-column.file-tree.sy__outline span.counter {
+    display: none;
+}
+
+/* ————————————————————更改新建按钮样式———————————————————— */
+/* 隐藏原来的新建按钮的样式 */
+span.b3-list-item__action.b3-tooltips[data-type="new"] svg {
+    visibility: hidden;
+    color: gray;
+}
+
+/* 增加新的样式 */
+span.b3-list-item__action.b3-tooltips[data-type="new"] {
+    background-image: url(../../src/new.svg);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    top: 1px;
+}
+
+span.b3-list-item__action.b3-tooltips[data-type="new"]:hover {
+    background-image: url(../../src/new-c.svg);
+    background-color: transparent;
+}
+
+/* ————————————————————更改更多按钮样式———————————————————— */
+/* 隐藏原来的更多按钮的样式 */
+span.b3-list-item__action.b3-tooltips[data-type="more-root"] svg,
+span.b3-list-item__action.b3-tooltips[data-type="more-file"] svg {
+    visibility: hidden;
+}
+
+/* 增加新的样式 */
+span.b3-list-item__action.b3-tooltips[data-type="more-root"],
+span.b3-list-item__action.b3-tooltips[data-type="more-file"] {
+    background-image: url(../../src/new-file.svg);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    top: 1px;
+}
+
+span.b3-list-item__action.b3-tooltips[data-type="more-root"]:hover,
+span.b3-list-item__action.b3-tooltips[data-type="more-file"]:hover {
+    background-image: url(../../src/new-file-c.svg);
+    background-color: transparent;
+}
+
+/* 将鼠标悬浮在文档树折叠按钮时的背景颜色设置为透明色 */
+.b3-list-item__toggle--hl:hover {
+    background-color: transparent;
+}
+
+/* ----------------------------------------修改文档树新建按钮的样式 END----------------------------------------- */
