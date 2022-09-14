@@ -35,7 +35,7 @@
 /* 修改选中文字后弹出的悬浮工具栏的样式 */
 @import url("style/02-appearance/toolbar.css");
 /* 修改弹出菜单的样式 */
-@import url("style/02-appearance/meun.css");
+@import url("style/02-appearance/menu.css");
 /* 修改按钮样式 */
 @import url("style/02-appearance/button.css");
 /* 修改设置界面样式 */

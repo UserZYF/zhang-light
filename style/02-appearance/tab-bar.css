@@ -12,12 +12,12 @@
 }
 
 .layout-tab-bar .item:first-child {
-    border-left: 1px solid var(--b3-border-color) !important;
+    border-left: 1px solid transparent !important;
 }
 
-.layout-tab-bar .item:last-child {
-    border-right: 1px solid var(--b3-border-color) !important;
-}
+/* .layout-tab-bar .item:last-child {
+    border-right: 1px solid transparent !important;
+} */
 
 
 /* ——————————————————————设置文字最小宽度，标签过多时才能看清楚文字—————————————————————— */
@@ -68,3 +68,12 @@
 }
 
 /* --------------------------------------------------标签页 END--------------------------------------------- */
+
+/* v2.1.14引入 */
+.layout-tab-bar .item:not(:last-child), .layout-tab-bar .item:last-child:not(.item--focus):not(.item--readonly) {
+    box-shadow: none;
+}
+
+.layout-tab-bar .item:last-child:not(.item--readonly) {
+    margin-right: 0;
+}

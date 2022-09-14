@@ -37,9 +37,9 @@
 }
 
 /* ——————————————————————去除无序列表底部外边距———————————————————— */
-.protyle-wysiwyg [data-node-id].li>[data-node-id] {
+/* .protyle-wysiwyg [data-node-id].li>[data-node-id] {
     margin-bottom: 0px;
-}
+} */
 
 /* ————————————————————减小前面符号·的大小———————————————————— */
 /* .list[data-node-id][data-type="NodeList"] .protyle-action>svg {

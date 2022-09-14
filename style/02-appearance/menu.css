@@ -39,7 +39,7 @@ button.b3-menu__item:hover {
 /* 给每个条目设置更高的行高 */
 .b3-menu .b3-menu__item {
     background-color: var(--b3-theme-background2);
-    line-height: 35px !important;
+    /* line-height: 35px !important; */
 }
 
 /* --------------------------------------------------“更多”按钮...hover时的背景颜色 END--------------------------------------- */
