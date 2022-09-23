@@ -1,6 +1,8 @@
 /* 设置删除线中间线条的颜色 */
 .b3-typography s,
-.protyle-wysiwyg s {
+.b3-typography span[data-type~=s],
+.protyle-wysiwyg s,
+.protyle-wysiwyg span[data-type~=s] {
     text-decoration: line-through;
     text-decoration-color: var(--b3-font-color8);
     color: var(--b3-font-color8);

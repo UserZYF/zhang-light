@@ -1,5 +1,8 @@
 /* -------------------------------------------------高亮----------------------------------------------- */
-mark {
+.b3-typography mark,
+.b3-typography span[data-type~=mark],
+.protyle-wysiwyg mark,
+.protyle-wysiwyg span[data-type~=mark] {
     border-radius: var(--b3-border-radius-noraml);
     margin: 0px 0px;
 }

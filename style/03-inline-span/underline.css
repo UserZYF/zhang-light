@@ -1,7 +1,6 @@
-/* --------------------------------下划线样式--------------------------- */
-/* .b3-typography u,
-.protyle-wysiwyg u {
-    text-decoration: none;
-    border-bottom: 2px solid gray;
-    padding-bottom: 1px;
-} */
+.b3-typography u,
+.b3-typography span[data-type~=u],
+.protyle-wysiwyg u,
+.protyle-wysiwyg span[data-type~=u] {
+    border-radius: 0px;
+}

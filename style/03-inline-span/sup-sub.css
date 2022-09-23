@@ -1,4 +1,7 @@
 /* —————————————————————设置上标和下标的颜色———————————————————— */
-sub, sup {
+.b3-typography span[data-type~=sub],
+.protyle-wysiwyg span[data-type~=sub],
+.b3-typography span[data-type~=sup],
+.protyle-wysiwyg span[data-type~=sup] {
     color: var(--b3-theme-sub-color);
 }

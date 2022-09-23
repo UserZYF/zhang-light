@@ -1,63 +1,63 @@
 /* ---------------------------------------自定义13种背景样式，前7种为7种彩虹色----------------------------------------- */
 /* ———————————————为所有的字体样式设置统一的圆角，看起来更好看——————————————————— */
-.b3-typography strong, .protyle-wysiwyg strong {
-    color: var(--b3-protyle-inline-strong-color);
+span[data-type="text"] {
+    color: var(--b3-protyle-inline-span-color);
     margin: 0px 0px !important;
     font-weight: 600 !important;
     border-radius: var(--b3-border-radius-noraml);
 }
 
 /* ———————————————自定义13种背景样式，前7种为彩虹色—————————————————— */
-strong[style="background-color: var(--b3-font-background1);"] {
+span[style="background-color: var(--b3-font-background1);"] {
     color: var(--b3-font-color1) !important;
 }
 
-strong[style="background-color: var(--b3-font-background2);"] {
+span[style="background-color: var(--b3-font-background2);"] {
     color: var(--b3-font-color2) !important;
 }
 
-strong[style="background-color: var(--b3-font-background3);"] {
+span[style="background-color: var(--b3-font-background3);"] {
     color: var(--b3-font-color3) !important;
 }
 
-strong[style="background-color: var(--b3-font-background4);"] {
+span[style="background-color: var(--b3-font-background4);"] {
     color: var(--b3-font-color4) !important;
 }
 
-strong[style="background-color: var(--b3-font-background5);"] {
+span[style="background-color: var(--b3-font-background5);"] {
     color: var(--b3-font-color5) !important;
 }
 
-strong[style="background-color: var(--b3-font-background6);"] {
+span[style="background-color: var(--b3-font-background6);"] {
     color: var(--b3-font-color6) !important;
 }
 
-strong[style="background-color: var(--b3-font-background7);"] {
+span[style="background-color: var(--b3-font-background7);"] {
     color: var(--b3-font-color7) !important;
 }
 
-strong[style="background-color: var(--b3-font-background8);"] {
+span[style="background-color: var(--b3-font-background8);"] {
     color: var(--b3-font-color8) !important;
 }
 
-strong[style="background-color: var(--b3-font-background9);"] {
+span[style="background-color: var(--b3-font-background9);"] {
     color: var(--b3-font-color9) !important;
 }
 
-strong[style="background-color: var(--b3-font-background10);"] {
+span[style="background-color: var(--b3-font-background10);"] {
     color: var(--b3-font-color10) !important;
 }
 
-strong[style="background-color: var(--b3-font-background11);"] {
+span[style="background-color: var(--b3-font-background11);"] {
     color: var(--b3-font-color11) !important;
 }
 
-strong[style="background-color: var(--b3-font-background12);"] {
+span[style="background-color: var(--b3-font-background12);"] {
     color: var(--b3-font-color12) !important;
 }
 
 /* 设置第13个背景色为挖空效果 */
-strong[style="background-color: var(--b3-font-background13);"] {
+span[style="background-color: var(--b3-font-background13);"] {
     color: transparent !important;
     background-color: transparent !important;
     border-bottom: 2px solid gray !important;
@@ -67,7 +67,7 @@ strong[style="background-color: var(--b3-font-background13);"] {
     transition: color 0.1s ease-in-out;
 }
 
-strong[style="background-color: var(--b3-font-background13);"]:hover {
+span[style="background-color: var(--b3-font-background13);"]:hover {
     color: inherit !important;
 }
 
@@ -76,33 +76,33 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
 
 /* ---------------------------------------修改文字更多样式中的字体效果----------------------------------------- */
 
-strong[style="color: var(--b3-font-color8);"] {
+span[style="color: var(--b3-font-color8);"] {
     font-weight: normal !important;
 }
 
 /* ———————————————修改字体样式和下划线—————————————————— */
-strong[style="color: var(--b3-font-color9);"] {
+span[style="color: var(--b3-font-color9);"] {
     font-family: "宋体" !important;
     color: inherit !important;
 }
 
-strong[style="color: var(--b3-font-color10);"] {
+span[style="color: var(--b3-font-color10);"] {
     font-family: "楷体" !important;
     color: inherit !important;
 }
 
-strong[style="color: var(--b3-font-color11);"] {
+span[style="color: var(--b3-font-color11);"] {
     font-family: "微软雅黑" !important;
     color: inherit !important;
 }
 
-strong[style="color: var(--b3-font-color12);"] {
+span[style="color: var(--b3-font-color12);"] {
     text-decoration: underline dashed var(--b3-theme-on-background);
     text-underline-offset: 4px;
     color: inherit !important;
 }
 
-strong[style="color: var(--b3-font-color13);"] {
+span[style="color: var(--b3-font-color13);"] {
     text-decoration: underline wavy var(--b3-theme-on-background);
     text-underline-offset: 3px;
     color: inherit !important;

@@ -14,10 +14,9 @@
 /* 01 将面包屑设置为绝对布局 */
 .protyle-breadcrumb {
     position: absolute;
-    /* background-color:rgba(255, 255, 255, 0.5); */
     background-color: rgba(250, 250, 250, 0.7);
-    backdrop-filter: blur(5px);
-    z-index: 2;
+    backdrop-filter: blur(15px);
+    z-index: 10;
     width: 100%;
 }
 
@@ -26,6 +25,8 @@
     float: left;
     padding-top: 30px;
 }
+
+
 
 
 /* -------------------设置面包屑中icon大小------------------------- */

@@ -1,5 +1,7 @@
 /* ---------------------------------加粗------------------------------ */
 .b3-typography strong,
-.protyle-wysiwyg strong {
+.b3-typography span[data-type~=strong],
+.protyle-wysiwyg strong,
+.protyle-wysiwyg span[data-type~=strong] {
     color: inherit;
 }
